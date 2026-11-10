@@ -1,7 +1,7 @@
 # Anointed Staff
 
 <p align="center">
-  <img src="site/public/brand-mark.png" alt="Anointed Staff" width="280" />
+  <img src="site/public/brand/wordmark-clean-cream.png" alt="Anointed Staff" width="420" />
 </p>
 
 <p align="center"><b>A lamp-lit desk for the Word you keep — Scripture beside Strong’s, Extra-canon, Heavens, Notes, and quiet Practice.</b></p>
@@ -39,6 +39,16 @@ Campaign line: *A study desk you keep, not a cloud Bible that keeps you.*
 </p>
 
 <p align="center"><em>Heavens Cast beside Books — clocks and glory, not fortunes.</em></p>
+
+<p align="center">
+  <img src="site/public/brand/feature-staff.png" alt="Staff study atmosphere" width="220" />
+  &nbsp;
+  <img src="site/public/brand/feature-heavens.png" alt="Heavens sky wash" width="220" />
+  &nbsp;
+  <img src="site/public/brand/feature-practice.png" alt="Quiet Practice notebook" width="220" />
+  &nbsp;
+  <img src="site/public/brand/feature-shelf.png" alt="Parchment Extra-canon shelf" width="220" />
+</p>
 
 ---
 

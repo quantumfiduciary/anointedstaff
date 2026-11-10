@@ -18,13 +18,13 @@ Typography/color: [DESIGN.md](../DESIGN.md). CRO teardown: [LANDING-CRO.md](../L
 
 | Section | Job |
 |---------|-----|
-| Hero | Brand + lore H1 + Download primary / GitHub secondary (desk-heavens-cast) |
+| Hero | Clean dark wordmark + lore H1 + Download primary / GitHub secondary (desk-heavens-cast + heavens-sky wash) |
 | Why | Tabs vs one desk |
-| The Staff | Companion lore (not relic shop) |
+| The Staff | Companion lore + `brand/feature-staff` plate |
 | The Desk | PD witnesses, Strong’s, local keys + screenshot |
 | On the desk | Feature catalog (Read / Study / Tools highlights) |
 | Look inside | Screenshot gallery (real panes) |
-| Triptych | Extra-canon / Heavens / Practice → blogs |
+| Triptych | Extra-canon / Heavens / Practice brand plates → blogs |
 | The Fence | Clocks-not-fortunes; PD rights; no ritual; local-first |
 | Appearances | Five looks |
 | FAQ | Cloud? Fortunes? Which Bibles? Ritual? Free? |
@@ -43,6 +43,17 @@ Copied from desk captures for marketing (not from gitignored `extra_resources/` 
 | `desk-gematria.png` | Letter / Gematria Learn |
 | `desk-strongs.png` | Strong’s pane |
 | `desk-ai-chat.png` | AI chat + local model settings |
+
+## Brand plates (`site/public/brand/`)
+
+| File | Role |
+|------|------|
+| `wordmark-clean-cream.png` | Cream lockup (nav / README) |
+| `wordmark-clean-dark.png` | Dark lockup (hero brand signal) |
+| `feature-staff.png` | Staff lore atmosphere |
+| `feature-shelf.png` | Extra-canon parchment plate |
+| `feature-heavens.png` | Heavens sky wash |
+| `feature-practice.png` | Quiet Practice notebook |
 
 ## Blogs (`site/src/content/blog/`)
 

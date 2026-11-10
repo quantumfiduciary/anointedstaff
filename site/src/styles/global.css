@@ -92,17 +92,20 @@ a:hover {
   color: var(--night-ink);
 }
 
-.brand-lockup img {
+.brand-lockup .brand-mark {
   width: 36px;
   height: 36px;
   border-radius: 10px;
+  flex-shrink: 0;
 }
 
-.brand-lockup strong {
-  font-family: var(--font-display);
-  font-weight: 600;
-  font-size: 1.15rem;
-  letter-spacing: -0.02em;
+.brand-lockup .brand-wordmark-nav {
+  height: 2rem;
+  width: auto;
+  max-width: min(42vw, 11.5rem);
+  object-fit: contain;
+  object-position: left center;
+  border-radius: 4px;
 }
 
 .nav-links {
@@ -213,22 +216,27 @@ a:hover {
   animation: rise 0.75s ease both;
 }
 
-.hero-brand {
-  font-family: var(--font-display);
-  font-size: clamp(2.5rem, 6.2vw, 3.75rem);
-  font-weight: 600;
-  letter-spacing: -0.03em;
-  line-height: 1.05;
-  margin: 0 0 0.85rem;
+.hero-wordmark {
+  display: block;
+  width: min(100%, 22rem);
+  height: auto;
+  margin: 0 0 1rem;
+  border-radius: 10px;
+  box-shadow: 0 18px 48px color-mix(in srgb, #000 35%, transparent);
+  animation: rise 0.85s ease both;
 }
 
-.hero-brand span {
-  display: block;
-  width: 3.2rem;
-  height: 2px;
-  margin-top: 0.85rem;
-  background: var(--gold-lamp);
-  animation: grow 0.85s 0.2s ease both;
+.hero-wordmark::after {
+  content: none;
+}
+
+.brand-plate {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  aspect-ratio: 1;
+  max-height: 28rem;
 }
 
 .hero h1 {
@@ -651,7 +659,7 @@ a:hover {
   }
 
   .hero-copy,
-  .hero-brand span,
+  .hero-wordmark,
   .section.reveal,
   .btn,
   .feature-link img {
