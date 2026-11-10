@@ -2,7 +2,7 @@
 title: "Heavens: clocks, not fortunes"
 description: "Cast, Witness, Decans, and Mazzaroth study beside Scripture — seasons and geometry without monthly prognosticators."
 pubDate: 2026-11-09
-heroImage: "/screenshots/desk-heavens.png"
+heroImage: "/screenshots/desk-heavens-wheel.png"
 ---
 
 Heavens opens a chart beside an open chapter. The cast form does not whisper a weekly horoscope. Its copy is deliberate: lights mark seasons beside Scripture — clocks and glory, not fortunes. That sentence is the product.

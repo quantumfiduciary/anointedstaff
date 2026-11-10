@@ -18,15 +18,31 @@ Typography/color: [DESIGN.md](../DESIGN.md). CRO teardown: [LANDING-CRO.md](../L
 
 | Section | Job |
 |---------|-----|
-| Hero | Brand + lore H1 + Download primary / GitHub secondary |
+| Hero | Brand + lore H1 + Download primary / GitHub secondary (desk-heavens-cast) |
 | Why | Tabs vs one desk |
 | The Staff | Companion lore (not relic shop) |
 | The Desk | PD witnesses, Strong’s, local keys + screenshot |
+| On the desk | Feature catalog (Read / Study / Tools highlights) |
+| Look inside | Screenshot gallery (real panes) |
 | Triptych | Extra-canon / Heavens / Practice → blogs |
 | The Fence | Clocks-not-fortunes; PD rights; no ritual; local-first |
 | Appearances | Five looks |
 | FAQ | Cloud? Fortunes? Which Bibles? Ritual? Free? |
 | Download | Final CTA |
+
+## Screenshots (`site/public/screenshots/`)
+
+Copied from desk captures for marketing (not from gitignored `extra_resources/` at runtime — keep copies under `site/public/screenshots/`):
+
+| File | Shows |
+|------|--------|
+| `desk-heavens-cast.png` | Cast form + study tools + Books |
+| `desk-heavens-wheel.png` | Wheel + Witness |
+| `desk-extra-canon.png` | Extra-canon shelf |
+| `desk-notes-kanban.png` | Notes Kanban |
+| `desk-gematria.png` | Letter / Gematria Learn |
+| `desk-strongs.png` | Strong’s pane |
+| `desk-ai-chat.png` | AI chat + local model settings |
 
 ## Blogs (`site/src/content/blog/`)
 

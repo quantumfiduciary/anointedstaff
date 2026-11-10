@@ -32,9 +32,11 @@ Live: https://anointedstaff.pages.dev
 | `src/pages/index.astro` | Landing (Staff / Desk / Fence / FAQ / Download) |
 | `src/content/blog/` | Extra-canon, Heavens, Practice articles |
 | `src/layouts/BaseLayout.astro` | Chrome, meta, OG |
-| `public/screenshots/` | Real desk UI |
+| `public/screenshots/` | Real desk UI (Heavens, Extra-canon, Notes, Gematria, Strong’s, AI…) |
 | `public/og-atmosphere.png` | Lamp-night OG / hero wash |
 | `public/_headers` | Security headers |
+
+Feature catalog + gallery live on the home page (`#catalog`, `#gallery`). Keep new marketing shots under `public/screenshots/` (do not rely on gitignored `extra_resources/`).
 
 Voice and fences: [`docs/marketing.md`](../docs/marketing.md). Deploy checklist: [`docs/deploy-github-pages.md`](../docs/deploy-github-pages.md).
 

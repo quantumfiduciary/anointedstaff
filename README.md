@@ -4,7 +4,7 @@
   <img src="site/public/brand-mark.png" alt="Anointed Staff" width="280" />
 </p>
 
-<p align="center"><b>A lamp-lit desk for the Word you keep — Scripture beside Extra-canon, Heavens clocks, and quiet Practice.</b></p>
+<p align="center"><b>A lamp-lit desk for the Word you keep — Scripture beside Strong’s, Extra-canon, Heavens, Notes, and quiet Practice.</b></p>
 
 <p align="center">
   <a href="https://anointedstaff.pages.dev"><b>🌐 anointedstaff.pages.dev</b></a>
@@ -26,46 +26,66 @@
 
 ## What is Anointed Staff?
 
-**Anointed Staff** is a local-first Scripture study desk for Windows. The chapter stays the center of the room. Strong’s, Extra-canon shelves, Heavens clocks, and offline Practice open beside it — without shipping your notes or keys to a cloud Bible.
+**Anointed Staff** is a local-first Scripture study desk for Windows. The chapter stays the center of the room. Strong’s, Roots, Extra-canon, Heavens clocks, Notes, Gematria, Practice, and optional AI open beside it — without shipping your notes or keys to a cloud Bible.
 
-Public-domain English witnesses only. No NIV / ESV / NET. Clocks beside Scripture, not fortunes. Hermetic shelves are historical study, not ritual. The staff in the lore is a study companion you keep — not a relic shop.
+Public-domain English witnesses only. No NIV / ESV / NET. Clocks beside Scripture, not fortunes. Hermetic shelves are historical study, not ritual.
 
 Campaign line: *A study desk you keep, not a cloud Bible that keeps you.*
 
 ---
 
-## Why Anointed Staff?
+<p align="center">
+  <img src="site/public/screenshots/desk-heavens-cast.png" alt="Heavens Cast on the Anointed Staff desk" width="900" />
+</p>
 
-Most Bible apps keep you online, track reading habits, and sit behind accounts. Anointed Staff is the opposite posture: **a lamp-lit desk on your machine**. Notes, charts, and API keys stay local. The [marketing site](https://anointedstaff.pages.dev) tells the lore; the study runtime installs from a GitHub Release.
+<p align="center"><em>Heavens Cast beside Books — clocks and glory, not fortunes.</em></p>
 
 ---
 
-## The desk
+## Features
+
+### Read
+- **Bible** — Public-domain witnesses; chapter stays the altar of the desk
+- **Books** — Canon navigation and search while the verse rail stays open
+- **Compare · Listen** — Second PD witnesses and chapter read-aloud
+
+### Study
+- **Strong’s** — Number lookup, This verse, Paleo notes, Hear, Ask about this word
+- **Roots** — Strong’s chains, Hitchcock names, English trees
+- **Notes** — Highlights, Write, Wiki, Kanban, Cards, Table, Board (notes stay on device)
+- **Extra-canon** — PD shelf beside the sixty-six (Enoch, Sophia, Gospels.net, Fathers, Hermetic…)
+- **AI** — Optional local/cloud model beside the chapter; session-only keys by default
+- **Voice** — Hands-free study window
+
+### Tools
+- **Gematria** — Letter study, mothers/doubles/simples, count, Hear, drills
+- **Heavens** — Cast, Witness, Decans, Circle, Camp, Job 38, Psalm 19 (clocks-not-fortunes)
+- **Practice** — Temple walk, Drill, Cards, Meditate, Quiet music
+
+### Desk
+- **Five appearances** — Light · Dark · Mystic · Parchment · Ink
+- **Local-first** — Leave-device confirms; notes and charts stay on the machine
+
+---
+
+## Gallery
 
 <p align="center">
-  <img src="site/public/screenshots/desk-bible.png" alt="Bible study desk" width="820" />
+  <img src="site/public/screenshots/desk-heavens-wheel.png" alt="Heavens wheel" width="420" />
+  &nbsp;
+  <img src="site/public/screenshots/desk-extra-canon.png" alt="Extra-canon" width="420" />
 </p>
 
-<p align="center"><em>Bible rail — Scripture beside study tools on a local desk.</em></p>
-
-### Highlights
-
-- **Scripture desk** — Reader, notes, wiki, Strong’s, Roots, Gematria, and optional AI chat on a local machine.
-- **Extra-canon shelf** — Public-domain library beside the sixty-six, with clear credits on each work.
-- **Heavens** — Cast and Witness as clocks beside Scripture (Isaiah 47 stance — not fortune-telling).
-- **Practice** — Offline Temple walk, Hebrew Hear clips, Quiet music, and five desk looks (Light · Dark · Mystic · Parchment · Ink).
-- **Local-first privacy** — Session-only keys by default; notes and charts stay on device.
-
 <p align="center">
-  <img src="site/public/screenshots/desk-extra-canon.png" alt="Extra-canon shelf" width="400" />
+  <img src="site/public/screenshots/desk-notes-kanban.png" alt="Notes Kanban" width="420" />
   &nbsp;
-  <img src="site/public/screenshots/desk-heavens.png" alt="Heavens Cast" width="400" />
+  <img src="site/public/screenshots/desk-gematria.png" alt="Gematria" width="420" />
 </p>
 
 <p align="center">
-  <img src="site/public/screenshots/desk-practice.png" alt="Practice Temple" width="400" />
+  <img src="site/public/screenshots/desk-strongs.png" alt="Strong’s" width="420" />
   &nbsp;
-  <img src="site/public/screenshots/desk-themes.png" alt="Theme picker" width="400" />
+  <img src="site/public/screenshots/desk-ai-chat.png" alt="AI chat" width="420" />
 </p>
 
 ### Desk notes

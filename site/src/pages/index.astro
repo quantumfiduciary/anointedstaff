@@ -5,7 +5,58 @@ const github = "https://github.com/quantumfiduciary/anointedstaff"
 const releases = `${github}/releases`
 const title = "Anointed Staff — Local Scripture Study Desk"
 const description =
-  "A lamp-lit local desk for Scripture beside Extra-canon, Heavens clocks, and offline Practice. Public-domain texts. Notes and keys stay on your machine."
+  "A lamp-lit local desk for Scripture beside Strong’s, Extra-canon, Heavens clocks, Notes, Gematria, and optional AI. Public-domain texts. Notes and keys stay on your machine."
+
+const features = [
+  {
+    title: "Bible · Books",
+    body: "Public-domain witnesses on the rail. Chapter stays the center while Books and search move you through the canon.",
+  },
+  {
+    title: "Strong’s",
+    body: "Look up a number, walk This verse, Paleo notes, Hear, and Ask about this word beside the open line.",
+  },
+  {
+    title: "Roots",
+    body: "Strong’s chains, Hitchcock names, and English trees so language study stays next to the chapter.",
+  },
+  {
+    title: "Notes · Wiki · Kanban",
+    body: "Highlights, journals, wiki pages, cards, table, board, and Kanban lanes from To study to Applied — notes stay on this device.",
+  },
+  {
+    title: "AI beside the chapter",
+    body: "Optional local or cloud model with study chips (Explain, Strong’s, Extra-canon, Heavens…). Keys default to session-only.",
+  },
+  {
+    title: "Voice",
+    body: "Hands-free study window and chapter Listen with voices installed on your machine.",
+  },
+  {
+    title: "Extra-canon shelf",
+    body: "Public-domain books beside the sixty-six — Enoch, Sophia, Gospels.net, Fathers, Hermetic history — credited and labeled.",
+  },
+  {
+    title: "Gematria · letters",
+    body: "Learn the alef-bet, mothers/doubles/simples, count a word, Hear clips, and drills that link back to Strong’s and Scripture.",
+  },
+  {
+    title: "Heavens",
+    body: "Cast a chart, Witness path, Decans, Circle, Camp, Job 38, Psalm 19 — clocks and glory beside Scripture, not fortunes.",
+  },
+  {
+    title: "Practice",
+    body: "Temple walk, Drill, Cards, Meditate, Quiet music, and offline Hebrew Hear — stillness baked into the build.",
+  },
+  {
+    title: "Compare · Listen",
+    body: "Second PD witnesses (including non-English packs) and read-aloud for the open chapter.",
+  },
+  {
+    title: "Five appearances",
+    body: "Light, Dark, Mystic, Parchment, and Ink share Staff Gold — Outfit, Fraunces, Literata, and Noto across the desk.",
+  },
+]
 
 const faqItems = [
   {
@@ -55,6 +106,7 @@ const jsonLd = [
     url: "https://anointedstaff.com",
     downloadUrl: releases,
     offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+    featureList: features.map((f) => f.title),
   },
   {
     "@context": "https://schema.org",
@@ -71,14 +123,14 @@ const jsonLd = [
 <BaseLayout
   title={title}
   description={description}
-  ogImage="/og-atmosphere.png"
+  ogImage="/screenshots/desk-heavens-cast.png"
   jsonLd={jsonLd}
 >
   <section class="hero" aria-label="Anointed Staff">
     <div class="hero-media" aria-hidden="true">
       <img
         class="hero-desk"
-        src="/screenshots/desk-bible.png"
+        src="/screenshots/desk-heavens-cast.png"
         alt=""
         width="1600"
         height="1000"
@@ -95,8 +147,8 @@ const jsonLd = [
       <p class="hero-brand">Anointed Staff<span aria-hidden="true"></span></p>
       <h1>A lamp-lit desk for the Word you keep.</h1>
       <p>
-        Scripture at the center. Extra-canon shelves, Heavens clocks, and quiet Practice open
-        beside the chapter — on a machine that holds your notes and keys.
+        Scripture at the center. Strong’s, Extra-canon, Heavens, Notes, Gematria, and optional AI
+        open beside the chapter — on a machine that holds your notes and keys.
       </p>
       <div class="cta-row">
         <a class="btn btn-primary" href={releases}>Download for Windows</a>
@@ -143,21 +195,117 @@ const jsonLd = [
           <h2>The chapter is the altar of the room</h2>
           <p>
             Public-domain English witnesses stay on the line — KJV and listed PD packs, never
-            NIV/ESV/NET. Strong’s numbers mark the text. Optional local AI packs a study packet
-            when you ask; keys default to session-only. Your notes live in this device’s profile.
+            NIV/ESV/NET. Strong’s numbers mark the text. Optional AI packs a study packet when you
+            ask; keys default to session-only. Your notes live in this device’s profile.
           </p>
         </div>
         <div class="cta-row">
+          <a class="btn btn-ghost" href="#catalog">See what’s on the desk</a>
           <a class="btn btn-ghost" href="/blog">Read the desk notes</a>
         </div>
       </div>
       <img
-        src="/screenshots/desk-bible.png"
-        alt="Anointed Staff desk showing Scripture with Strong’s markup and the study rail"
+        src="/screenshots/desk-strongs.png"
+        alt="Strong’s pane open beside Matthew on the Anointed Staff desk"
         width="1600"
         height="1000"
         loading="lazy"
       />
+    </div>
+  </section>
+
+  <section class="section reveal" id="catalog">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">On the desk</p>
+        <h2>What you can open beside the chapter</h2>
+        <p>
+          Not every control — the ones that make the desk a whole room for Word, language, sky,
+          and notes.
+        </p>
+      </div>
+      <div class="feature-catalog">
+        {
+          features.map((f) => (
+            <article>
+              <h3>{f.title}</h3>
+              <p>{f.body}</p>
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="section muted-band reveal" id="gallery">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Look inside</p>
+        <h2>Real panes from the running desk</h2>
+        <p>Heavens, Extra-canon, Notes, Gematria, Strong’s, and AI — screenshots, not mockups.</p>
+      </div>
+      <div class="shot-grid">
+        <figure>
+          <img
+            src="/screenshots/desk-heavens-wheel.png"
+            alt="Heavens Cast wheel with Witness path beside Scripture"
+            width="1600"
+            height="1000"
+            loading="lazy"
+          />
+          <figcaption>Heavens — Cast wheel and Witness beside the chapter</figcaption>
+        </figure>
+        <figure>
+          <img
+            src="/screenshots/desk-extra-canon.png"
+            alt="Extra-canon shelf with public-domain gospel sayings"
+            width="1600"
+            height="1000"
+            loading="lazy"
+          />
+          <figcaption>Extra-canon — PD shelf outside the sixty-six</figcaption>
+        </figure>
+        <figure>
+          <img
+            src="/screenshots/desk-notes-kanban.png"
+            alt="Notes Kanban with verse cards from To study to Applied"
+            width="1600"
+            height="1000"
+            loading="lazy"
+          />
+          <figcaption>Notes — Kanban lanes for verse cards</figcaption>
+        </figure>
+        <figure>
+          <img
+            src="/screenshots/desk-gematria.png"
+            alt="Gematria letter study for Aleph with Hear and drills"
+            width="1600"
+            height="1000"
+            loading="lazy"
+          />
+          <figcaption>Gematria — letters, counts, and Hear</figcaption>
+        </figure>
+        <figure>
+          <img
+            src="/screenshots/desk-ai-chat.png"
+            alt="AI chat explaining a chapter with local Ollama settings"
+            width="1600"
+            height="1000"
+            loading="lazy"
+          />
+          <figcaption>AI — optional local model beside the chapter</figcaption>
+        </figure>
+        <figure>
+          <img
+            src="/screenshots/desk-heavens-cast.png"
+            alt="Heavens cast form with study tools and Books pane"
+            width="1600"
+            height="1000"
+            loading="lazy"
+          />
+          <figcaption>Cast form — stations, Witness, Decans, and more</figcaption>
+        </figure>
+      </div>
     </div>
   </section>
 
@@ -167,8 +315,8 @@ const jsonLd = [
         <p class="eyebrow">Three deeper rooms</p>
         <h2>Shelf, sky, and quiet practice</h2>
         <p>
-          Each note is a longer walk through one pillar of the lore — rights, clocks, and offline
-          stillness.
+          Longer walks through Extra-canon rights, Heavens clocks-not-fortunes, and offline
+          Practice.
         </p>
       </div>
       <div class="feature-grid">
@@ -182,13 +330,12 @@ const jsonLd = [
           />
           <h3>Extra-canon PD shelf</h3>
           <p>
-            Older books beside the sixty-six — Enoch, Fathers, Hermetic history — credited,
-            labeled, never smuggled as Scripture.
+            Older books beside the sixty-six — credited, labeled, never smuggled as Scripture.
           </p>
         </a>
         <a class="feature-link" href="/blog/heavens-clocks-not-fortunes">
           <img
-            src="/screenshots/desk-heavens.png"
+            src="/screenshots/desk-heavens-wheel.png"
             alt="Heavens Cast chart open on the desk"
             width="1600"
             height="1000"
@@ -202,16 +349,15 @@ const jsonLd = [
         </a>
         <a class="feature-link" href="/blog/offline-practice-quiet-desk">
           <img
-            src="/screenshots/desk-practice.png"
-            alt="Practice Temple walk on the desk"
+            src="/screenshots/desk-gematria.png"
+            alt="Gematria and letter practice on the desk"
             width="1600"
             height="1000"
             loading="lazy"
           />
-          <h3>Offline Practice · quiet desk</h3>
+          <h3>Letters · Practice · quiet desk</h3>
           <p>
-            Temple walk, Hebrew Hear, Quiet music — baked into the build. Five looks from
-            parchment morning to lamp-night.
+            Hear clips, drills, Temple walk, and Quiet music — stillness that stays offline.
           </p>
         </a>
       </div>
@@ -264,8 +410,8 @@ const jsonLd = [
   <section class="section muted-band reveal" id="appearances">
     <div class="wrap split">
       <img
-        src="/screenshots/desk-themes.png"
-        alt="Settings Desk appearance with five theme choices"
+        src="/screenshots/desk-notes-kanban.png"
+        alt="Notes Kanban on the Anointed Staff desk"
         width="1600"
         height="1000"
         loading="lazy"
