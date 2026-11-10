@@ -17,7 +17,7 @@ interface Props {
 const { post } = Astro.props
 const { Content } = await post.render()
 const path = `/blog/${post.slug}`
-const site = "https://anointedstaff.com"
+const site = "https://www.anointedstaff.com"
 const hero = post.data.heroImage
   ? `${site}${post.data.heroImage}`
   : `${site}/og-atmosphere.png`

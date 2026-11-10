@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://anointedstaff.com/sitemap-index.xml
+Sitemap: https://www.anointedstaff.com/sitemap-index.xml

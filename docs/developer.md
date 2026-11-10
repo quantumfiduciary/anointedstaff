@@ -14,7 +14,7 @@ npm run test:chart
 
 ### Marketing site (`site/`)
 
-Astro static site → Cloudflare Pages (`anointedstaff.pages.dev` / anointedstaff.com). Does **not** host the study desk runtime. Voice, section map, and blog rules: [marketing.md](marketing.md). CRO notes: [LANDING-CRO.md](../LANDING-CRO.md).
+Astro static site → Cloudflare Pages at [www.anointedstaff.com](https://www.anointedstaff.com) (origin `anointedstaff.pages.dev`). Does **not** host the study desk runtime. Voice, section map, and blog rules: [marketing.md](marketing.md). CRO notes: [LANDING-CRO.md](../LANDING-CRO.md).
 
 ```bash
 cd site

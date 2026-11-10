@@ -1,6 +1,6 @@
 # Marketing site voice and structure
 
-Public surface: Astro in [`site/`](../site/) → Cloudflare Pages (`anointedstaff.pages.dev`; `anointedstaff.com` when DNS is attached). Does **not** host the study desk runtime.
+Public surface: Astro in [`site/`](../site/) → Cloudflare Pages at [www.anointedstaff.com](https://www.anointedstaff.com) (Pages origin `anointedstaff.pages.dev`). Does **not** host the study desk runtime.
 
 ## Voice
 

@@ -1,5 +1,5 @@
 # Landing Page CRO Analysis
-## https://anointedstaff.pages.dev (target: anointedstaff.com)
+## https://www.anointedstaff.com
 ### Analysis Date: 2026-11-09
 ### Implementation: applied same day (Download-first CTAs, Fence + FAQ, mystic hero, detailed blogs)
 
@@ -119,7 +119,7 @@ No lead-capture form (correct for open-source download). No changes.
 3. Organization / WebSite / FAQPage / BreadcrumbList schema.
 
 ### Strategic (later)
-1. Custom domain DNS (anointedstaff.com CNAME).
+1. Custom domain DNS — live at www.anointedstaff.com.
 2. Optional short desk loop video (partner spend).
 3. Real user quotes only when volunteered — never invent.
 

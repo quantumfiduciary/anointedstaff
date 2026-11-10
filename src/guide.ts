@@ -16,7 +16,7 @@ export const guideSections: GuideSection[] = [
       "The Bible chapter stays in one window; Notes, AI, Strong’s, Extra-canon, and tools open beside it. Drag the handle to resize. Number keys open windows. Ctrl K opens the command palette.",
       "Appearance cycles Light → Dark → Mystic → Parchment → Ink from the topbar control; Settings → Desk and the View menu pick any look. Mystic is lamp-and-night; Parchment is warmer paper; Ink is a cool quiet night.",
       "Type: Outfit for buttons and chrome, Fraunces for titles, Literata for Scripture and long reading — so the desk feels set, not default system UI.",
-      "Product notes and download live at anointedstaff.pages.dev — this desk still keeps notes and keys on the machine.",
+      "Product notes and download live at www.anointedstaff.com — this desk still keeps notes and keys on the machine.",
     ],
     tips: [
       "Press Help → Take the tour for a short walkthrough.",

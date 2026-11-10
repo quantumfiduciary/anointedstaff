@@ -9,9 +9,9 @@ Public monorepo + Astro marketing in `site/`. Application source is Apache-2.0; 
 | Public GitHub repo | https://github.com/quantumfiduciary/anointedstaff |
 | Tag + Release `v0.1.0` + NSIS | https://github.com/quantumfiduciary/anointedstaff/releases/tag/v0.1.0 |
 | Cloudflare Pages project `anointedstaff` | Live |
-| Marketing deploy | https://anointedstaff.pages.dev |
+| Marketing deploy | https://www.anointedstaff.com |
 | Custom domain on Pages | `anointedstaff.com` (+ www) registered on the project |
-| Apex/www CNAME → `anointedstaff.pages.dev` | **Still needed in DNS dashboard** (Zone DNS Write) |
+| Apex/www CNAME → `anointedstaff.pages.dev` | **Done** — public canonical URL is `https://www.anointedstaff.com` |
 
 Marketing voice, section map, and CRO notes: [marketing.md](marketing.md), [LANDING-CRO.md](../LANDING-CRO.md).
 

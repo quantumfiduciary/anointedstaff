@@ -14,7 +14,7 @@ Redeploy:
 npx wrangler pages deploy dist --project-name=anointedstaff --commit-dirty=true
 ```
 
-Live: https://anointedstaff.pages.dev
+Live: https://www.anointedstaff.com
 
 ## Pages settings
 
@@ -23,7 +23,7 @@ Live: https://anointedstaff.pages.dev
 | Root directory | `site` |
 | Build command | `npm run build` |
 | Output directory | `dist` |
-| Custom domain | `anointedstaff.com` (CNAME pending DNS) |
+| Custom domain | `https://www.anointedstaff.com` (DNS linked to Pages) |
 
 ## Content map
 

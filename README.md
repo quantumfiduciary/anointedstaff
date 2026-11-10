@@ -7,7 +7,7 @@
 <p align="center"><b>A lamp-lit desk for the Word you keep — Scripture beside Strong’s, Extra-canon, Heavens, Notes, and quiet Practice.</b></p>
 
 <p align="center">
-  <a href="https://anointedstaff.pages.dev"><b>🌐 anointedstaff.pages.dev</b></a>
+  <a href="https://www.anointedstaff.com"><b>🌐 www.anointedstaff.com</b></a>
   &nbsp;·&nbsp;
   <a href="https://github.com/quantumfiduciary/anointedstaff/releases"><b>Download for Windows</b></a>
 </p>
@@ -90,9 +90,9 @@ Campaign line: *A study desk you keep, not a cloud Bible that keeps you.*
 
 ### Desk notes
 
-- [Extra-canon as a public-domain shelf](https://anointedstaff.pages.dev/blog/extra-canon-public-domain-shelf)
-- [Heavens: clocks, not fortunes](https://anointedstaff.pages.dev/blog/heavens-clocks-not-fortunes)
-- [Offline Practice and a quiet desk](https://anointedstaff.pages.dev/blog/offline-practice-quiet-desk)
+- [Extra-canon as a public-domain shelf](https://www.anointedstaff.com/blog/extra-canon-public-domain-shelf)
+- [Heavens: clocks, not fortunes](https://www.anointedstaff.com/blog/heavens-clocks-not-fortunes)
+- [Offline Practice and a quiet desk](https://www.anointedstaff.com/blog/offline-practice-quiet-desk)
 
 ---
 
@@ -106,7 +106,7 @@ npm install
 npm run dev
 ```
 
-3. Read the lore and blogs at [anointedstaff.pages.dev](https://anointedstaff.pages.dev).
+3. Read the lore and blogs at [www.anointedstaff.com](https://www.anointedstaff.com).
 
 ---
 
