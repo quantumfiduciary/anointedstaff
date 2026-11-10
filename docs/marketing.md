@@ -42,4 +42,4 @@ See [deploy-github-pages.md](deploy-github-pages.md). After content edits: `cd s
 
 ## Repo alignment
 
-Root [README](../README.md) stays product-facing (badges, screenshots, Download). Contributor tooling stays in [developer.md](developer.md). When marketing lore changes, update What’s New in [`src/changelog.ts`](../src/changelog.ts) and the desk Guide desk section if users should see the public URL.
+Root [README](../README.md) stays product-facing (badges, screenshots, Download). Contributor tooling stays in [developer.md](developer.md). What’s New is not a marketing or deploy log — only a brief in-desk notice when something changes for the reader.

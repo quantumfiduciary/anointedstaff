@@ -103,7 +103,7 @@ Local-first desk; browser/desktop profile is the trust boundary.
 
 1. Change UI under `src/components/` or study helpers under `src/study/`.
 2. After ingest, run the matching `scripts/build-*.py` and confirm credits.
-3. Add a short entry at the top of `src/changelog.ts`.
+3. What’s New (`src/changelog.ts`) is **brief user notice only** — what they can do or see. Never list ingest, rights gates, Gutenberg ids, packaging, CSP, or other development tracking there (use git + this doc).
 4. Update Guide copy in `src/guide.ts` when a surface changes for users.
 5. Keep the **root README** product-facing — put engineering notes here, not in the GitHub landing page.
-6. Marketing/lore edits: update `site/`, [marketing.md](marketing.md), and a short What’s New + Guide line when the public URL or Fence changes for users.
+6. Marketing/lore edits: update `site/` and [marketing.md](marketing.md). Touch What’s New only if readers need a short product notice (not a deploy diary).

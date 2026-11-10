@@ -1,6 +1,6 @@
 import { changeLog, type ChangeEntry } from "./changelog"
 
-/** User-facing What’s New / Settings → About entries. */
+/** Brief user-facing What’s New / Settings → About entries (not a development log). */
 export function releaseChangeLog(): ChangeEntry[] {
   return changeLog
 }
