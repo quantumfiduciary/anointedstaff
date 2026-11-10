@@ -29,7 +29,7 @@ npm run dev      # local preview
 npm run build    # output: site/dist
 ```
 
-Pages build settings: root directory `site`, build command `npm run build`, output `dist`. Attach the custom domain in the Cloudflare dashboard. Desktop installers ship as **GitHub Release** assets (NSIS), not inside the Pages deploy.
+Pages build settings: root directory `site`, build command `npm run build`, output `dist`. Attach the custom domain in the Cloudflare dashboard. Desktop installers ship as **GitHub Release** assets (NSIS), not inside the Pages deploy. Step-by-step push + Pages + domain: [`docs/deploy-github-pages.md`](docs/deploy-github-pages.md).
 
 ## Ship size (what users install)
 
