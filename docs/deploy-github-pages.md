@@ -7,13 +7,12 @@ Local repo is initialized on `main` with Apache-2.0 + `site/` marketing. Annotat
 | Step | State |
 |------|--------|
 | Local monorepo + commits | Done |
-| Tag `v0.1.0` | Done (local) |
+| Public GitHub repo | https://github.com/quantumfiduciary/anointedstaff |
+| Tag + Release `v0.1.0` + NSIS | https://github.com/quantumfiduciary/anointedstaff/releases/tag/v0.1.0 |
 | Cloudflare Pages project `anointedstaff` | Done |
 | Direct upload of `site/dist` | Live at https://anointedstaff.pages.dev |
-| Custom domain `anointedstaff.com` on Pages project | Registered (pending DNS CNAME) |
-| Apex/www CNAME → `anointedstaff.pages.dev` | Needs DNS Write (dashboard or API token) |
-| GitHub public repo + push | Needs `gh auth login` |
-| GitHub Release + NSIS asset | After push (`release/Anointed Staff_0.1.0_x64-setup.exe` already built, gitignored) |
+| Custom domain on Pages project | `anointedstaff.com` (+ www) registered |
+| Apex/www CNAME → `anointedstaff.pages.dev` | **Do in dashboard** (API token lacks DNS Write) |
 
 ## 1. GitHub (public monorepo)
 
