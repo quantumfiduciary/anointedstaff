@@ -1,10 +1,11 @@
 # Landing Page CRO Analysis
 ## https://anointedstaff.pages.dev (target: anointedstaff.com)
 ### Analysis Date: 2026-11-09
+### Implementation: applied same day (Download-first CTAs, Fence + FAQ, mystic hero, detailed blogs)
 
 ---
 
-## Overall CRO Score: 52/100 → target 72/100 after this pass
+## Overall CRO Score: 52/100 → ~70/100 after this pass (pending live A/B on CTA hierarchy)
 
 ## Page Type: App Download
 ## Current Estimated Conversion Rate: 4–8% of qualified visitors (thin lore, GitHub-first CTA)

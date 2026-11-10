@@ -14,16 +14,17 @@ npm run test:chart
 
 ### Marketing site (`site/`)
 
-Astro static site → Cloudflare Pages (`anointedstaff.pages.dev` / anointedstaff.com). Does **not** host the study desk runtime.
+Astro static site → Cloudflare Pages (`anointedstaff.pages.dev` / anointedstaff.com). Does **not** host the study desk runtime. Voice, section map, and blog rules: [marketing.md](marketing.md). CRO notes: [LANDING-CRO.md](../LANDING-CRO.md).
 
 ```bash
 cd site
 npm install
 npm run dev
 npm run build    # site/dist
+npx wrangler pages deploy dist --project-name=anointedstaff --commit-dirty=true
 ```
 
-Pages: root `site`, build `npm run build`, output `dist`. Installers ship as GitHub Release assets, not inside Pages. See [deploy-github-pages.md](deploy-github-pages.md).
+Pages (git connect): root `site`, build `npm run build`, output `dist`. Installers ship as GitHub Release assets, not inside Pages. See [deploy-github-pages.md](deploy-github-pages.md).
 
 ## Ship size
 
@@ -65,10 +66,13 @@ Python builds need `pypdf` and (for xlsx) `openpyxl`.
 | `public/` | Runtime JSON, brand, dictionaries, Practice audio |
 | `scripts/` | PD ingest and compactors |
 | `extra_resources/` | Thin rebuild kit (gitignored bulk) |
-| `site/` | Astro marketing |
+| `site/` | Astro marketing (landing + blogs) |
+| `site/src/content/blog/` | Desk-note articles |
 | `src/changelog.ts` | What’s New |
 | `src/guide.ts` | In-app Guide |
 | `DESIGN.md` | Visual system |
+| `docs/marketing.md` | Marketing voice + section map |
+| `LANDING-CRO.md` | Landing CRO scores / A/B notes |
 
 ## Content rules
 
@@ -102,3 +106,4 @@ Local-first desk; browser/desktop profile is the trust boundary.
 3. Add a short entry at the top of `src/changelog.ts`.
 4. Update Guide copy in `src/guide.ts` when a surface changes for users.
 5. Keep the **root README** product-facing — put engineering notes here, not in the GitHub landing page.
+6. Marketing/lore edits: update `site/`, [marketing.md](marketing.md), and a short What’s New + Guide line when the public URL or Fence changes for users.

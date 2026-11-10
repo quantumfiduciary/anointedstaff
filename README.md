@@ -102,4 +102,4 @@ Credits also live in-app: **Settings → About → Licenses & acknowledgments**.
 
 ## Developers
 
-Build scripts, ingest rules, packaging notes, and security detail live in **[docs/developer.md](docs/developer.md)**. Deploy checklist: **[docs/deploy-github-pages.md](docs/deploy-github-pages.md)**. Visual system: **[DESIGN.md](DESIGN.md)**. Landing CRO notes: **[LANDING-CRO.md](LANDING-CRO.md)**.
+Build scripts, ingest rules, packaging notes, and security detail live in **[docs/developer.md](docs/developer.md)**. Marketing voice: **[docs/marketing.md](docs/marketing.md)**. Deploy checklist: **[docs/deploy-github-pages.md](docs/deploy-github-pages.md)**. Visual system: **[DESIGN.md](DESIGN.md)**. Landing CRO notes: **[LANDING-CRO.md](LANDING-CRO.md)**.

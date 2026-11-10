@@ -10,6 +10,15 @@ export type ChangeEntry = {
 export const changeLog: ChangeEntry[] = [
   {
     date: "2026-11-09",
+    title: "Public desk · anointedstaff.com",
+    items: [
+      "Anointed Staff is public: GitHub monorepo, Windows v0.1.0 Release, and a lamp-lit marketing site at anointedstaff.pages.dev (anointedstaff.com when DNS is attached).",
+      "Site lore covers the Staff, Desk, Fence, and FAQ — clocks-not-fortunes, public-domain Extra-canon, offline Practice. Three detailed desk notes live under Blog.",
+      "Download for Windows from GitHub Releases; this desk still keeps notes and keys on your machine.",
+    ],
+  },
+  {
+    date: "2026-11-09",
     title: "Appearance · Parchment + Ink",
     items: [
       "Two new desk looks: Parchment (warmer paper) and Ink (cool night, quiet steel). Light, Dark, and Mystic stay — with softer gold glow.",
