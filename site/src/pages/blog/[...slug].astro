@@ -17,25 +17,64 @@ interface Props {
 const { post } = Astro.props
 const { Content } = await post.render()
 const path = `/blog/${post.slug}`
----
+const site = "https://anointedstaff.com"
+const hero = post.data.heroImage
+  ? `${site}${post.data.heroImage}`
+  : `${site}/og-atmosphere.png`
 
-<BaseLayout
-  title={`${post.data.title} · Anointed Staff`}
-  description={post.data.description}
-  ogImage={post.data.heroImage || "/screenshots/desk-bible.png"}
-  canonicalPath={path}
-  jsonLd={{
+const title = `${post.data.title} · Anointed Staff`
+const description = post.data.description
+
+const jsonLd = [
+  {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     headline: post.data.title,
-    description: post.data.description,
+    description,
     datePublished: post.data.pubDate.toISOString(),
-    image: post.data.heroImage
-      ? `https://anointedstaff.com${post.data.heroImage}`
-      : undefined,
-    author: { "@type": "Organization", name: "Anointed Staff" },
-    mainEntityOfPage: `https://anointedstaff.com${path}`,
-  }}
+    image: hero,
+    author: { "@type": "Organization", name: "Anointed Staff", url: site },
+    publisher: {
+      "@type": "Organization",
+      name: "Anointed Staff",
+      logo: { "@type": "ImageObject", url: `${site}/brand-mark.png` },
+    },
+    mainEntityOfPage: { "@type": "WebPage", "@id": `${site}${path}` },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: site,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Blog",
+        item: `${site}/blog`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: post.data.title,
+        item: `${site}${path}`,
+      },
+    ],
+  },
+]
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  ogImage={post.data.heroImage || "/og-atmosphere.png"}
+  ogType="article"
+  canonicalPath={path}
+  jsonLd={jsonLd}
 >
   <article class="wrap prose">
     <h1>{post.data.title}</h1>
@@ -47,6 +86,7 @@ const path = `/blog/${post.slug}`
           day: "numeric",
         })}
       </time>
+      · <a href="/blog">All notes</a> · <a href="/">Home</a>
     </p>
     {
       post.data.heroImage && (

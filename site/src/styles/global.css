@@ -5,6 +5,7 @@
 :root {
   --gold: #8f5e24;
   --gold-deep: #7a4e1a;
+  --gold-lamp: #e8c878;
   --ink: #26251e;
   --body: #5a5852;
   --muted: #807d72;
@@ -13,6 +14,10 @@
   --canvas-soft: #f7f7f4;
   --panel: #fffdf8;
   --on-gold: #fffdf8;
+  --night: #0a0c14;
+  --night-stage: #12151f;
+  --night-ink: #f2efe6;
+  --night-muted: #a8a49a;
   --font-ui: "Outfit Variable", Outfit, system-ui, sans-serif;
   --font-display: "Fraunces Variable", Fraunces, Georgia, serif;
   --font-read: "Literata Variable", Literata, Georgia, serif;
@@ -35,8 +40,8 @@ body {
   font-family: var(--font-ui);
   color: var(--ink);
   background:
-    radial-gradient(ellipse 70% 45% at 12% 0%, color-mix(in srgb, var(--gold) 18%, transparent), transparent 70%),
-    radial-gradient(ellipse 55% 40% at 88% 8%, color-mix(in srgb, #e8c878 12%, transparent), transparent 65%),
+    radial-gradient(ellipse 70% 45% at 12% 0%, color-mix(in srgb, var(--gold) 16%, transparent), transparent 70%),
+    radial-gradient(ellipse 50% 35% at 92% 4%, color-mix(in srgb, var(--gold-lamp) 10%, transparent), transparent 60%),
     var(--canvas);
   line-height: 1.55;
   -webkit-font-smoothing: antialiased;
@@ -66,9 +71,9 @@ a:hover {
   position: sticky;
   top: 0;
   z-index: 20;
-  backdrop-filter: blur(10px);
-  background: color-mix(in srgb, var(--canvas-soft) 88%, transparent);
-  border-bottom: 1px solid var(--hairline);
+  backdrop-filter: blur(12px);
+  background: color-mix(in srgb, var(--night) 72%, transparent);
+  border-bottom: 1px solid color-mix(in srgb, var(--gold-lamp) 18%, transparent);
 }
 
 .site-header .inner {
@@ -84,7 +89,7 @@ a:hover {
   align-items: center;
   gap: 0.7rem;
   text-decoration: none;
-  color: inherit;
+  color: var(--night-ink);
 }
 
 .brand-lockup img {
@@ -110,11 +115,11 @@ a:hover {
 
 .nav-links a {
   text-decoration: none;
-  color: var(--body);
+  color: var(--night-muted);
 }
 
 .nav-links a:hover {
-  color: var(--ink);
+  color: var(--night-ink);
 }
 
 .btn {
@@ -148,8 +153,13 @@ a:hover {
 
 .btn-ghost {
   background: transparent;
-  border-color: color-mix(in srgb, var(--gold) 45%, var(--hairline));
-  color: var(--ink);
+  border-color: color-mix(in srgb, var(--gold-lamp) 40%, transparent);
+  color: inherit;
+}
+
+.hero .btn-ghost {
+  color: var(--night-ink);
+  border-color: color-mix(in srgb, var(--gold-lamp) 45%, transparent);
 }
 
 .hero {
@@ -158,7 +168,8 @@ a:hover {
   display: grid;
   align-items: end;
   overflow: hidden;
-  border-bottom: 1px solid var(--hairline);
+  border-bottom: 1px solid color-mix(in srgb, var(--gold) 25%, var(--night));
+  background: var(--night);
 }
 
 .hero-media {
@@ -167,11 +178,19 @@ a:hover {
   z-index: 0;
 }
 
-.hero-media img {
+.hero-media .hero-desk,
+.hero-media .hero-atmosphere {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: top center;
+}
+
+.hero-media .hero-atmosphere {
+  opacity: 0.42;
+  mix-blend-mode: soft-light;
 }
 
 .hero-media::after {
@@ -179,7 +198,8 @@ a:hover {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(180deg, color-mix(in srgb, var(--canvas) 18%, transparent) 0%, color-mix(in srgb, #0c0c0b 72%, transparent) 58%, #0c0c0b 100%);
+    radial-gradient(ellipse 55% 50% at 70% 20%, color-mix(in srgb, var(--gold) 22%, transparent), transparent 70%),
+    linear-gradient(180deg, color-mix(in srgb, var(--night) 25%, transparent) 0%, color-mix(in srgb, var(--night) 78%, transparent) 55%, var(--night) 100%);
 }
 
 .hero-copy {
@@ -188,14 +208,14 @@ a:hover {
   width: min(100% - 2rem, var(--max));
   margin: 0 auto;
   padding: 5.5rem 0 3.25rem;
-  color: #f4f3ef;
-  max-width: 38rem;
-  animation: rise 0.7s ease both;
+  color: var(--night-ink);
+  max-width: 40rem;
+  animation: rise 0.75s ease both;
 }
 
 .hero-brand {
   font-family: var(--font-display);
-  font-size: clamp(2.4rem, 6vw, 3.6rem);
+  font-size: clamp(2.5rem, 6.2vw, 3.75rem);
   font-weight: 600;
   letter-spacing: -0.03em;
   line-height: 1.05;
@@ -207,14 +227,14 @@ a:hover {
   width: 3.2rem;
   height: 2px;
   margin-top: 0.85rem;
-  background: var(--gold);
-  animation: grow 0.8s 0.2s ease both;
+  background: var(--gold-lamp);
+  animation: grow 0.85s 0.2s ease both;
 }
 
 .hero h1 {
   margin: 0 0 0.75rem;
   font-family: var(--font-display);
-  font-size: clamp(1.35rem, 3vw, 1.85rem);
+  font-size: clamp(1.35rem, 3vw, 1.9rem);
   font-weight: 550;
   letter-spacing: -0.02em;
   line-height: 1.25;
@@ -223,7 +243,7 @@ a:hover {
 
 .hero p {
   margin: 0 0 1.35rem;
-  color: color-mix(in srgb, #f4f3ef 82%, transparent);
+  color: color-mix(in srgb, var(--night-ink) 84%, transparent);
   font-size: 1.05rem;
   max-width: 34rem;
 }
@@ -238,15 +258,28 @@ a:hover {
   padding: 4.5rem 0;
 }
 
+.section.reveal {
+  animation: rise 0.7s ease both;
+}
+
 .section-head {
-  max-width: 38rem;
+  max-width: 40rem;
   margin-bottom: 2rem;
+}
+
+.section-head .eyebrow {
+  margin: 0 0 0.45rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 560;
 }
 
 .section-head h2 {
   margin: 0 0 0.55rem;
   font-family: var(--font-display);
-  font-size: clamp(1.55rem, 3vw, 2rem);
+  font-size: clamp(1.55rem, 3vw, 2.05rem);
   font-weight: 600;
   letter-spacing: -0.02em;
 }
@@ -254,11 +287,25 @@ a:hover {
 .section-head p {
   margin: 0;
   color: var(--body);
+  font-size: 1.02rem;
+}
+
+.lore-band {
+  background:
+    radial-gradient(ellipse 60% 80% at 0% 50%, color-mix(in srgb, var(--gold) 12%, transparent), transparent 65%),
+    color-mix(in srgb, var(--panel) 55%, var(--canvas));
+  border-block: 1px solid var(--hairline);
+}
+
+.lore-band .section-head p {
+  font-family: var(--font-read);
+  font-size: 1.08rem;
+  line-height: 1.65;
 }
 
 .feature-grid {
   display: grid;
-  gap: 1.5rem;
+  gap: 1.75rem;
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
@@ -277,6 +324,12 @@ a:hover {
   border-radius: var(--radius);
   border: 1px solid var(--hairline);
   background: #111;
+  transition: border-color 0.2s ease, transform 0.25s ease;
+}
+
+.feature-link:hover img {
+  border-color: color-mix(in srgb, var(--gold) 55%, var(--hairline));
+  transform: translateY(-2px);
 }
 
 .feature-link h3 {
@@ -306,7 +359,7 @@ a:hover {
 .split img {
   border-radius: var(--radius);
   border: 1px solid var(--hairline);
-  box-shadow: 0 18px 40px color-mix(in srgb, #000 12%, transparent);
+  box-shadow: 0 18px 40px color-mix(in srgb, #000 14%, transparent);
 }
 
 .muted-band {
@@ -314,10 +367,37 @@ a:hover {
   border-block: 1px solid var(--hairline);
 }
 
+.fence-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 1rem;
+  max-width: 42rem;
+}
+
+.fence-list li {
+  padding: 1rem 1.15rem;
+  border-left: 2px solid var(--gold);
+  background: color-mix(in srgb, var(--panel) 80%, transparent);
+}
+
+.fence-list strong {
+  display: block;
+  font-family: var(--font-display);
+  margin-bottom: 0.25rem;
+}
+
+.fence-list span {
+  color: var(--body);
+  font-size: 0.95rem;
+}
+
 .theme-strip {
   display: flex;
   flex-wrap: wrap;
   gap: 0.55rem;
+  margin-top: 1.25rem;
 }
 
 .theme-chip {
@@ -329,16 +409,83 @@ a:hover {
   background: var(--panel);
 }
 
+.faq {
+  display: grid;
+  gap: 0.85rem;
+  max-width: 44rem;
+}
+
+.faq details {
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius);
+  background: var(--panel);
+  padding: 0.85rem 1.1rem;
+}
+
+.faq summary {
+  cursor: pointer;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.05rem;
+  list-style: none;
+}
+
+.faq summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq details[open] summary {
+  color: var(--gold-deep);
+  margin-bottom: 0.55rem;
+}
+
+.faq p {
+  margin: 0;
+  color: var(--body);
+  font-size: 0.96rem;
+}
+
+.download-band {
+  background:
+    radial-gradient(ellipse 70% 90% at 50% 120%, color-mix(in srgb, var(--gold) 22%, transparent), transparent 55%),
+    var(--night-stage);
+  color: var(--night-ink);
+  border-block: 1px solid color-mix(in srgb, var(--gold-lamp) 20%, transparent);
+}
+
+.download-band .section-head p {
+  color: var(--night-muted);
+}
+
+.download-band .btn-ghost {
+  color: var(--night-ink);
+}
+
 .site-footer {
   padding: 2.5rem 0 3rem;
-  border-top: 1px solid var(--hairline);
-  color: var(--muted);
+  background: var(--night);
+  border-top: 1px solid color-mix(in srgb, var(--gold-lamp) 16%, transparent);
+  color: var(--night-muted);
   font-size: 0.9rem;
 }
 
 .site-footer .inner {
   display: grid;
-  gap: 0.75rem;
+  gap: 0.85rem;
+}
+
+.site-footer a {
+  color: var(--gold-lamp);
+}
+
+.site-footer a:hover {
+  color: var(--night-ink);
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem 1.25rem;
 }
 
 .prose {
@@ -367,6 +514,12 @@ a:hover {
   font-family: var(--font-display);
   font-size: 1.35rem;
   margin: 2rem 0 0.65rem;
+}
+
+.prose h3 {
+  font-family: var(--font-display);
+  font-size: 1.12rem;
+  margin: 1.5rem 0 0.5rem;
 }
 
 .prose p,
@@ -435,6 +588,10 @@ a:hover {
   .hero {
     min-height: min(100dvh, 760px);
   }
+
+  .nav-links .btn {
+    padding: 0.55rem 0.9rem;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -444,7 +601,9 @@ a:hover {
 
   .hero-copy,
   .hero-brand span,
-  .btn {
+  .section.reveal,
+  .btn,
+  .feature-link img {
     animation: none;
     transition: none;
   }

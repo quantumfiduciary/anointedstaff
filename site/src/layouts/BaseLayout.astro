@@ -6,14 +6,16 @@ interface Props {
   description: string
   ogImage?: string
   canonicalPath?: string
+  ogType?: string
   jsonLd?: Record<string, unknown> | Record<string, unknown>[]
 }
 
 const {
   title,
   description,
-  ogImage = "/screenshots/desk-bible.png",
+  ogImage = "/og-atmosphere.png",
   canonicalPath = Astro.url.pathname.replace(/\/$/, "") || "/",
+  ogType = "website",
   jsonLd,
 } = Astro.props
 
@@ -21,6 +23,7 @@ const site = "https://anointedstaff.com"
 const canonical = new URL(canonicalPath === "/" ? "/" : canonicalPath, site).href
 const og = new URL(ogImage, site).href
 const github = "https://github.com/quantumfiduciary/anointedstaff"
+const releases = `${github}/releases`
 ---
 
 <!doctype html>
@@ -31,11 +34,12 @@ const github = "https://github.com/quantumfiduciary/anointedstaff"
     <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content={ogType} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
     <meta property="og:image" content={og} />
+    <meta property="og:site_name" content="Anointed Staff" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
@@ -54,9 +58,10 @@ const github = "https://github.com/quantumfiduciary/anointedstaff"
         </a>
         <nav class="nav-links" aria-label="Primary">
           <a href="/#desk">Desk</a>
+          <a href="/#fence">Fence</a>
           <a href="/blog">Blog</a>
           <a href={github}>GitHub</a>
-          <a class="btn btn-primary" href={github}>Open the repo</a>
+          <a class="btn btn-primary" href={releases}>Download</a>
         </nav>
       </div>
     </header>
@@ -66,12 +71,19 @@ const github = "https://github.com/quantumfiduciary/anointedstaff"
     <footer class="site-footer">
       <div class="wrap inner">
         <p>
-          Anointed Staff is a local-first Scripture desk. Marketing site on Cloudflare Pages —
-          the study runtime ships from the repo and desktop releases.
+          Anointed Staff is a local-first Scripture desk — lamp-lit study beside the Word,
+          not a cloud account that keeps you. Marketing on Cloudflare Pages; the study runtime
+          ships from Releases and the monorepo.
         </p>
         <p>
-          Code: Apache-2.0. Texts and media: see NOTICE in the repository. Hermetic shelves are
-          historical study, not ritual. Heavens stay clocks beside Scripture — not fortunes.
+          Code: Apache-2.0. Texts and media: see NOTICE. Hermetic shelves are historical study,
+          not ritual. Heavens stay clocks beside Scripture — not fortunes.
+        </p>
+        <p class="footer-links">
+          <a href="/blog">Blog</a>
+          <a href={releases}>Download for Windows</a>
+          <a href={github}>GitHub</a>
+          <a href="/#faq">FAQ</a>
         </p>
       </div>
     </footer>

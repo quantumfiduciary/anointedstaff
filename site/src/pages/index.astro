@@ -2,66 +2,149 @@
 import BaseLayout from "../layouts/BaseLayout.astro"
 
 const github = "https://github.com/quantumfiduciary/anointedstaff"
-const title = "Anointed Staff — a local Scripture study desk"
+const releases = `${github}/releases`
+const title = "Anointed Staff — Local Scripture Study Desk"
 const description =
-  "Study Scripture beside Strong’s, Extra-canon, Heavens, and Practice on a desk that keeps notes and keys on your machine."
+  "A lamp-lit local desk for Scripture beside Extra-canon, Heavens clocks, and offline Practice. Public-domain texts. Notes and keys stay on your machine."
+
+const faqItems = [
+  {
+    q: "Is this a cloud Bible app?",
+    a: "No. Anointed Staff is local-first. The marketing site educates; the study runtime installs from GitHub Releases or runs from the monorepo. Notes and API keys stay on your machine by default.",
+  },
+  {
+    q: "Is Heavens astrology or fortune-telling?",
+    a: "No. Cast and Witness mark seasons and geometry beside Scripture — clocks and glory, not monthly prognosticators. Isaiah 47 is the product fence.",
+  },
+  {
+    q: "Which Bible translations ship?",
+    a: "Public-domain English witnesses only (KJV and listed PD packs). No NIV, ESV, or NET. Cross-references credit Open Bible (CC BY).",
+  },
+  {
+    q: "Are hermetic texts for ritual use?",
+    a: "No. Hermetic and world shelves are historical study beside the Word — credited, labeled, and never packaged as ceremony instructions.",
+  },
+  {
+    q: "Is Anointed Staff free?",
+    a: "Yes. Application source is Apache-2.0. Scripture and Extra-canon keep their own PD/CC credits — see NOTICE and Settings → About.",
+  },
+]
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "Anointed Staff",
+    url: "https://anointedstaff.com",
+    logo: "https://anointedstaff.com/brand-mark.png",
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "Anointed Staff",
+    url: "https://anointedstaff.com",
+    description,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: "Anointed Staff",
+    applicationCategory: "EducationalApplication",
+    operatingSystem: "Windows",
+    description,
+    url: "https://anointedstaff.com",
+    downloadUrl: releases,
+    offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqItems.map((item) => ({
+      "@type": "Question",
+      name: item.q,
+      acceptedAnswer: { "@type": "Answer", text: item.a },
+    })),
+  },
+]
 ---
 
 <BaseLayout
   title={title}
   description={description}
-  ogImage="/og.png"
-  jsonLd={{
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    name: "Anointed Staff",
-    applicationCategory: "EducationalApplication",
-    operatingSystem: "Windows, Linux, Web (local)",
-    description,
-    url: "https://anointedstaff.com",
-    offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
-  }}
+  ogImage="/og-atmosphere.png"
+  jsonLd={jsonLd}
 >
   <section class="hero" aria-label="Anointed Staff">
     <div class="hero-media" aria-hidden="true">
-      <img src="/screenshots/desk-bible.png" alt="" width="1600" height="1000" />
+      <img
+        class="hero-desk"
+        src="/screenshots/desk-bible.png"
+        alt=""
+        width="1600"
+        height="1000"
+      />
+      <img
+        class="hero-atmosphere"
+        src="/og-atmosphere.png"
+        alt=""
+        width="1600"
+        height="1000"
+      />
     </div>
     <div class="hero-copy">
       <p class="hero-brand">Anointed Staff<span aria-hidden="true"></span></p>
-      <h1>A study desk you keep — not a cloud Bible that keeps you.</h1>
+      <h1>A lamp-lit desk for the Word you keep.</h1>
       <p>
-        Scripture at the center. Strong’s, Extra-canon, Heavens, and Practice open beside the
-        chapter. Notes and model keys stay on this machine.
+        Scripture at the center. Extra-canon shelves, Heavens clocks, and quiet Practice open
+        beside the chapter — on a machine that holds your notes and keys.
       </p>
       <div class="cta-row">
-        <a class="btn btn-primary" href={github}>Open on GitHub</a>
-        <a class="btn btn-ghost" href={`${github}/releases`}>Download for Windows</a>
+        <a class="btn btn-primary" href={releases}>Download for Windows</a>
+        <a class="btn btn-ghost" href={github}>View source</a>
       </div>
     </div>
   </section>
 
-  <section class="section" id="why">
+  <section class="section reveal" id="why">
     <div class="wrap">
       <div class="section-head">
-        <h2>Most study stacks scatter the walk</h2>
+        <p class="eyebrow">Why the desk</p>
+        <h2>Most study walks scatter across tabs</h2>
         <p>
-          One tab for the chapter. Another for a lexicon. Another for a chart. Another for a
-          cloud notebook that never quite stays yours. Anointed Staff keeps the chapter as the
-          center of the desk and opens the rest as windows beside it.
+          One window for the chapter. Another for a lexicon. Another for a chart. Another for a
+          notebook that never quite stays yours. Anointed Staff keeps the open chapter as the
+          center of the desk and opens language, older shelves, and the sky as panes beside it —
+          not as a maze of accounts.
         </p>
       </div>
     </div>
   </section>
 
-  <section class="section muted-band" id="desk">
+  <section class="section lore-band reveal" id="staff">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">The Staff</p>
+        <h2>Companion for the walk, not a relic shop</h2>
+        <p>
+          In the lore of this desk, the staff is what you lean on while you read: a quiet
+          companion for Word, language, and sky. It is not merchandise for seals or ceremony.
+          Anointing here means set-apart attention — the chapter lit, the side shelves labeled,
+          the room kept local so study does not leak into someone else’s cloud.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section muted-band reveal" id="desk">
     <div class="wrap split">
       <div>
         <div class="section-head">
-          <h2>The chapter is the center</h2>
+          <p class="eyebrow">The Desk</p>
+          <h2>The chapter is the altar of the room</h2>
           <p>
-            Public-domain English witnesses (KJV and listed PD packs). Strong’s numbers on the
-            line. Optional local AI for study packets — session-only keys by default. Your notes
-            stay in the browser profile on this device.
+            Public-domain English witnesses stay on the line — KJV and listed PD packs, never
+            NIV/ESV/NET. Strong’s numbers mark the text. Optional local AI packs a study packet
+            when you ask; keys default to session-only. Your notes live in this device’s profile.
           </p>
         </div>
         <div class="cta-row">
@@ -70,7 +153,7 @@ const description =
       </div>
       <img
         src="/screenshots/desk-bible.png"
-        alt="Anointed Staff desk showing John 3:16 with Strong’s markup and the study rail"
+        alt="Anointed Staff desk showing Scripture with Strong’s markup and the study rail"
         width="1600"
         height="1000"
         loading="lazy"
@@ -78,11 +161,15 @@ const description =
     </div>
   </section>
 
-  <section class="section" id="features">
+  <section class="section reveal" id="features">
     <div class="wrap">
       <div class="section-head">
-        <h2>Three places the desk goes deeper</h2>
-        <p>Each note is a short walk through one pillar of the product.</p>
+        <p class="eyebrow">Three deeper rooms</p>
+        <h2>Shelf, sky, and quiet practice</h2>
+        <p>
+          Each note is a longer walk through one pillar of the lore — rights, clocks, and offline
+          stillness.
+        </p>
       </div>
       <div class="feature-grid">
         <a class="feature-link" href="/blog/extra-canon-public-domain-shelf">
@@ -94,7 +181,10 @@ const description =
             loading="lazy"
           />
           <h3>Extra-canon PD shelf</h3>
-          <p>Public-domain books beside the sixty-six — credited, not smuggled.</p>
+          <p>
+            Older books beside the sixty-six — Enoch, Fathers, Hermetic history — credited,
+            labeled, never smuggled as Scripture.
+          </p>
         </a>
         <a class="feature-link" href="/blog/heavens-clocks-not-fortunes">
           <img
@@ -105,7 +195,10 @@ const description =
             loading="lazy"
           />
           <h3>Heavens: clocks, not fortunes</h3>
-          <p>Cast and Witness mark seasons beside Scripture. Isaiah 47 stays the fence.</p>
+          <p>
+            Cast and Witness mark seasons and geometry beside the open chapter. Isaiah 47 keeps
+            the fence.
+          </p>
         </a>
         <a class="feature-link" href="/blog/offline-practice-quiet-desk">
           <img
@@ -116,13 +209,59 @@ const description =
             loading="lazy"
           />
           <h3>Offline Practice · quiet desk</h3>
-          <p>Temple walk, Hebrew Hear, Quiet music — baked offline, five appearances.</p>
+          <p>
+            Temple walk, Hebrew Hear, Quiet music — baked into the build. Five looks from
+            parchment morning to lamp-night.
+          </p>
         </a>
       </div>
     </div>
   </section>
 
-  <section class="section muted-band" id="local">
+  <section class="section lore-band reveal" id="fence">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">The Fence</p>
+        <h2>What the desk will not become</h2>
+        <p>
+          Lore without a fence turns into marketing fog. These lines stay visible on the product
+          and on this page.
+        </p>
+      </div>
+      <ul class="fence-list">
+        <li>
+          <strong>Clocks, not fortunes</strong>
+          <span>
+            Heavens will not sell monthly prognosticators. Aspects are geometry on the wheel —
+            tension or ease in old tables — not a ruling over a life.
+          </span>
+        </li>
+        <li>
+          <strong>Public-domain honesty</strong>
+          <span>
+            Extra-canon titles ship only when English rights clear. Brill wrappers and sacred-name
+            “restored” editions without a PD dedication stay out.
+          </span>
+        </li>
+        <li>
+          <strong>Historical shelves, not ritual kits</strong>
+          <span>
+            Hermetic and world canons are study texts with credits. The desk will not teach seals
+            or ceremony.
+          </span>
+        </li>
+        <li>
+          <strong>Local by default</strong>
+          <span>
+            Practice audio is offline. Leave-device confirms cover place search, web search, and
+            cloud model tests. Session-only keys are the default.
+          </span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section muted-band reveal" id="appearances">
     <div class="wrap split">
       <img
         src="/screenshots/desk-themes.png"
@@ -133,10 +272,12 @@ const description =
       />
       <div>
         <div class="section-head">
-          <h2>Local by default</h2>
+          <p class="eyebrow">Appearances</p>
+          <h2>Five rooms, one Staff Gold</h2>
           <p>
-            Leave-device confirms before place search, web search, or a cloud model test. Practice
-            audio is offline. Hermetic shelves are historical study — not ritual instruction.
+            Light, Dark, Mystic, Parchment, and Ink share the same gold voltage and type stack —
+            Outfit for chrome, Fraunces for titles, Literata for Scripture, Noto for Hebrew and
+            Greek. Pick the lamp that matches the hour.
           </p>
         </div>
         <div class="theme-strip" aria-label="Desk appearances">
@@ -150,18 +291,39 @@ const description =
     </div>
   </section>
 
-  <section class="section" id="download">
+  <section class="section reveal" id="faq">
     <div class="wrap">
       <div class="section-head">
-        <h2>Run the desk</h2>
+        <p class="eyebrow">Questions</p>
+        <h2>Before you download</h2>
+        <p>Plain answers to the objections that usually stop a careful reader.</p>
+      </div>
+      <div class="faq">
+        {
+          faqItems.map((item) => (
+            <details>
+              <summary>{item.q}</summary>
+              <p>{item.a}</p>
+            </details>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="section download-band reveal" id="download">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Keep the desk</p>
+        <h2>Run Anointed Staff on your machine</h2>
         <p>
-          Clone the monorepo and run locally, or take the Windows NSIS build from GitHub Releases
-          when published. This site does not host the ~150&nbsp;MB study runtime.
+          Take the Windows NSIS build from GitHub Releases, or clone the monorepo and run locally.
+          This site does not host the ~150&nbsp;MB study runtime — that is intentional.
         </p>
       </div>
       <div class="cta-row">
-        <a class="btn btn-primary" href={github}>View source</a>
-        <a class="btn btn-ghost" href={`${github}/releases`}>Releases</a>
+        <a class="btn btn-primary" href={releases}>Download for Windows</a>
+        <a class="btn btn-ghost" href={github}>View source</a>
       </div>
     </div>
   </section>

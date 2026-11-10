@@ -4,7 +4,7 @@
   <img src="site/public/brand-mark.png" alt="Anointed Staff" width="280" />
 </p>
 
-<p align="center"><b>A study desk you keep — Scripture beside language, Extra-canon, and the sky.</b></p>
+<p align="center"><b>A lamp-lit desk for the Word you keep — Scripture beside Extra-canon, Heavens clocks, and quiet Practice.</b></p>
 
 <p align="center">
   <a href="https://anointedstaff.pages.dev"><b>🌐 anointedstaff.pages.dev</b></a>
@@ -26,17 +26,17 @@
 
 ## What is Anointed Staff?
 
-**Anointed Staff** is a local-first Scripture study desk for Windows. Read the Word beside notes, Strong’s, Roots, Extra-canon, Heavens clocks, and offline Practice — without shipping your notes or keys to a cloud Bible.
+**Anointed Staff** is a local-first Scripture study desk for Windows. The chapter stays the center of the room. Strong’s, Extra-canon shelves, Heavens clocks, and offline Practice open beside it — without shipping your notes or keys to a cloud Bible.
 
-Public-domain English witnesses only. No NIV / ESV / NET. Clocks beside Scripture, not fortunes. Hermetic shelves are historical study, not ritual.
+Public-domain English witnesses only. No NIV / ESV / NET. Clocks beside Scripture, not fortunes. Hermetic shelves are historical study, not ritual. The staff in the lore is a study companion you keep — not a relic shop.
+
+Campaign line: *A study desk you keep, not a cloud Bible that keeps you.*
 
 ---
 
 ## Why Anointed Staff?
 
-Most Bible apps keep you online, track reading habits, and sit behind accounts. Anointed Staff is the opposite posture: **a desk you keep on the machine**. Notes, charts, and API keys stay local. The marketing site educates; the study runtime installs from a GitHub Release.
-
-Campaign line: *A study desk you keep, not a cloud Bible that keeps you.*
+Most Bible apps keep you online, track reading habits, and sit behind accounts. Anointed Staff is the opposite posture: **a lamp-lit desk on your machine**. Notes, charts, and API keys stay local. The [marketing site](https://anointedstaff.pages.dev) tells the lore; the study runtime installs from a GitHub Release.
 
 ---
 
@@ -68,6 +68,12 @@ Campaign line: *A study desk you keep, not a cloud Bible that keeps you.*
   <img src="site/public/screenshots/desk-themes.png" alt="Theme picker" width="400" />
 </p>
 
+### Desk notes
+
+- [Extra-canon as a public-domain shelf](https://anointedstaff.pages.dev/blog/extra-canon-public-domain-shelf)
+- [Heavens: clocks, not fortunes](https://anointedstaff.pages.dev/blog/heavens-clocks-not-fortunes)
+- [Offline Practice and a quiet desk](https://anointedstaff.pages.dev/blog/offline-practice-quiet-desk)
+
 ---
 
 ## Get started
@@ -80,7 +86,7 @@ npm install
 npm run dev
 ```
 
-3. Read the product story and blogs at [anointedstaff.pages.dev](https://anointedstaff.pages.dev).
+3. Read the lore and blogs at [anointedstaff.pages.dev](https://anointedstaff.pages.dev).
 
 ---
 
@@ -96,4 +102,4 @@ Credits also live in-app: **Settings → About → Licenses & acknowledgments**.
 
 ## Developers
 
-Build scripts, ingest rules, packaging notes, and security detail live in **[docs/developer.md](docs/developer.md)**. Deploy checklist: **[docs/deploy-github-pages.md](docs/deploy-github-pages.md)**. Visual system: **[DESIGN.md](DESIGN.md)**.
+Build scripts, ingest rules, packaging notes, and security detail live in **[docs/developer.md](docs/developer.md)**. Deploy checklist: **[docs/deploy-github-pages.md](docs/deploy-github-pages.md)**. Visual system: **[DESIGN.md](DESIGN.md)**. Landing CRO notes: **[LANDING-CRO.md](LANDING-CRO.md)**.

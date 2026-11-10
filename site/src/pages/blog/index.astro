@@ -5,16 +5,42 @@ import BaseLayout from "../../layouts/BaseLayout.astro"
 const posts = (await getCollection("blog")).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 )
+
+const title = "Desk Notes · Anointed Staff Blog"
+const description =
+  "Longer walks through Extra-canon rights, Heavens clocks-not-fortunes, and offline Practice on the local Scripture desk."
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: "https://anointedstaff.com",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Blog",
+      item: "https://anointedstaff.com/blog",
+    },
+  ],
+}
 ---
 
-<BaseLayout
-  title="Blog · Anointed Staff"
-  description="Notes on Extra-canon, Heavens, Practice, and the local desk."
->
+<BaseLayout title={title} description={description} canonicalPath="/blog" jsonLd={jsonLd}>
   <div class="wrap">
     <div class="section-head" style="padding-top: 3rem;">
-      <h2>Desk notes</h2>
-      <p>Three short walks through the product. More later.</p>
+      <p class="eyebrow">Desk notes</p>
+      <h1 style="font-family: var(--font-display); font-size: clamp(1.8rem, 4vw, 2.4rem); margin: 0 0 0.55rem;">
+        Lore beside the chapter
+      </h1>
+      <p>
+        Detailed notes on the public-domain shelf, Heavens clocks, and quiet Practice — the same
+        fences as the desk, written for the lamp-lit landing.
+      </p>
     </div>
     <div class="blog-list">
       {
