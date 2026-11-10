@@ -1,0 +1,79 @@
+---
+import "../styles/global.css"
+
+interface Props {
+  title: string
+  description: string
+  ogImage?: string
+  canonicalPath?: string
+  jsonLd?: Record<string, unknown> | Record<string, unknown>[]
+}
+
+const {
+  title,
+  description,
+  ogImage = "/screenshots/desk-bible.png",
+  canonicalPath = Astro.url.pathname.replace(/\/$/, "") || "/",
+  jsonLd,
+} = Astro.props
+
+const site = "https://anointedstaff.com"
+const canonical = new URL(canonicalPath === "/" ? "/" : canonicalPath, site).href
+const og = new URL(ogImage, site).href
+const github = "https://github.com/anointedstaff/anointedstaff"
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={og} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={og} />
+    <link rel="icon" href="/brand-mark.png" type="image/png" />
+    {jsonLd && (
+      <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+    )}
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="wrap inner">
+        <a class="brand-lockup" href="/">
+          <img src="/brand-mark.png" alt="" width="36" height="36" />
+          <strong>Anointed Staff</strong>
+        </a>
+        <nav class="nav-links" aria-label="Primary">
+          <a href="/#desk">Desk</a>
+          <a href="/blog">Blog</a>
+          <a href={github}>GitHub</a>
+          <a class="btn btn-primary" href={github}>Open the repo</a>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <slot />
+    </main>
+    <footer class="site-footer">
+      <div class="wrap inner">
+        <p>
+          Anointed Staff is a local-first Scripture desk. Marketing site on Cloudflare Pages —
+          the study runtime ships from the repo and desktop releases.
+        </p>
+        <p>
+          Code: Apache-2.0. Texts and media: see NOTICE in the repository. Hermetic shelves are
+          historical study, not ritual. Heavens stay clocks beside Scripture — not fortunes.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

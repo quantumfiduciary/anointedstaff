@@ -1,0 +1,41 @@
+# Dependencies & build outputs
+node_modules/
+dist/
+site/dist/
+site/node_modules/
+site/.astro/
+target/
+release/
+
+# Local dumps / installers
+data/raw/
+e-sword_1500_setup.exe
+.tmp-tauri-build.log
+
+# Secrets / env (never commit)
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials.json
+secrets.json
+
+# Offline ingest dumps / archives (not part of the shipped desk)
+extra_resources/
+
+# Scratch / temp
+tmp/
+.tmp-*
+tmp-*
+.tools/
+extra_resources_audit.txt
+_extra_resources_sizes.txt
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/*
+!.vscode/extensions.json

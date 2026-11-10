@@ -1,0 +1,84 @@
+{
+  "credit": "Anointed Staff original practice scripts. Desk-safe spiritual disciplines framed by Scripture — not a third-party ascension list. Spoken guides: /audio/practice (ElevenLabs · River).",
+  "stance": "Practice these as quiet disciplines beside the Word. They are not magic, not fortune, and not medical advice. Sun-gazing, astral travel, and occult contract language are refused on this desk.",
+  "sessions": [
+    {
+      "id": "breath",
+      "title": "Whole-body breath",
+      "minutes": 5,
+      "verse": "Genesis 2:7",
+      "audio": "/audio/practice/guide-breath.mp3",
+      "steps": [
+        "Sit or stand where you can be still. Place one hand on the belly.",
+        "Breathe in slowly so the belly rises first — as a child breathes — then let the breath fill the chest without strain.",
+        "On the out-breath, thank the Giver of breath (Genesis 2:7). Imagine nothing fancy; simply receive air as gift.",
+        "Continue for the timer. If the mind wanders, return to the next breath and the Name who gives it."
+      ]
+    },
+    {
+      "id": "rejoice",
+      "title": "Rejoice and laugh",
+      "minutes": 3,
+      "verse": "Philippians 4:4",
+      "audio": "/audio/practice/guide-rejoice.mp3",
+      "steps": [
+        "Recall one true kindness or absurd mercy from this week — not forced positivity.",
+        "Let a real smile or laugh loosen the jaw and chest (Philippians 4:4).",
+        "Say aloud or silently: Rejoice in the Lord — then breathe once more in that lightness.",
+        "End by naming one person you can encourage today."
+      ]
+    },
+    {
+      "id": "word",
+      "title": "Read the Word slowly",
+      "minutes": 10,
+      "verse": "Psalm 119:105",
+      "audio": "/audio/practice/guide-word.mp3",
+      "steps": [
+        "Open the Bible window to a short passage (Psalm 19, Psalm 119, or the chapter already on the desk).",
+        "Read one verse aloud. Pause. Read it again under your breath.",
+        "Ask: What does this show of the Lord’s character? Write one line in Notes if you wish.",
+        "Close with: Your word is a lamp to my feet (Psalm 119:105)."
+      ]
+    },
+    {
+      "id": "creation",
+      "title": "Walk in creation",
+      "minutes": 8,
+      "verse": "Psalm 19:1",
+      "audio": "/audio/practice/guide-creation.mp3",
+      "steps": [
+        "If you can, step outside or to a window. Feel feet on solid ground or floor.",
+        "Look at sky, tree, or light for one unhurried minute without a phone (Psalm 19:1).",
+        "Name three created things you see and thank their Maker — not the things as gods.",
+        "Return indoors settled; open Heavens → Circle if you want the same glory framed as study clocks."
+      ]
+    },
+    {
+      "id": "fast-frame",
+      "title": "Fasting frame (short)",
+      "minutes": 4,
+      "verse": "Matthew 6:16",
+      "audio": "/audio/practice/guide-fast-frame.mp3",
+      "steps": [
+        "This session prepares a fast; it does not force hunger. If health forbids fasting, stop and pray only.",
+        "Choose one meal or snack you will set aside for prayer later today (Matthew 6:16–18).",
+        "Ask the Lord what hunger should point to — Scripture, not self-display.",
+        "When the timer ends, write the commitment in Notes → Write."
+      ]
+    },
+    {
+      "id": "psalm-tone",
+      "title": "Psalm tone",
+      "minutes": 5,
+      "verse": "Psalm 150:6",
+      "audio": "/audio/practice/guide-psalm-tone.mp3",
+      "steps": [
+        "Choose a short line: Let every thing that hath breath praise the Lord (Psalm 150:6), or Holy, holy, holy.",
+        "Hum or speak the line on one gentle tone for a few breaths — prayer, not a technique sold as vibration magic.",
+        "If speech is hard, intone the words silently with the same intention.",
+        "Finish in quiet, then open a psalm in the Bible window."
+      ]
+    }
+  ]
+}

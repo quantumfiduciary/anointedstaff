@@ -1,0 +1,168 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro"
+
+const github = "https://github.com/anointedstaff/anointedstaff"
+const title = "Anointed Staff — a local Scripture study desk"
+const description =
+  "Study Scripture beside Strong’s, Extra-canon, Heavens, and Practice on a desk that keeps notes and keys on your machine."
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  ogImage="/og.png"
+  jsonLd={{
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: "Anointed Staff",
+    applicationCategory: "EducationalApplication",
+    operatingSystem: "Windows, Linux, Web (local)",
+    description,
+    url: "https://anointedstaff.com",
+    offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+  }}
+>
+  <section class="hero" aria-label="Anointed Staff">
+    <div class="hero-media" aria-hidden="true">
+      <img src="/screenshots/desk-bible.png" alt="" width="1600" height="1000" />
+    </div>
+    <div class="hero-copy">
+      <p class="hero-brand">Anointed Staff<span aria-hidden="true"></span></p>
+      <h1>A study desk you keep — not a cloud Bible that keeps you.</h1>
+      <p>
+        Scripture at the center. Strong’s, Extra-canon, Heavens, and Practice open beside the
+        chapter. Notes and model keys stay on this machine.
+      </p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href={github}>Open on GitHub</a>
+        <a class="btn btn-ghost" href={`${github}/releases`}>Download for Windows</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="why">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Most study stacks scatter the walk</h2>
+        <p>
+          One tab for the chapter. Another for a lexicon. Another for a chart. Another for a
+          cloud notebook that never quite stays yours. Anointed Staff keeps the chapter as the
+          center of the desk and opens the rest as windows beside it.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section muted-band" id="desk">
+    <div class="wrap split">
+      <div>
+        <div class="section-head">
+          <h2>The chapter is the center</h2>
+          <p>
+            Public-domain English witnesses (KJV and listed PD packs). Strong’s numbers on the
+            line. Optional local AI for study packets — session-only keys by default. Your notes
+            stay in the browser profile on this device.
+          </p>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-ghost" href="/blog">Read the desk notes</a>
+        </div>
+      </div>
+      <img
+        src="/screenshots/desk-bible.png"
+        alt="Anointed Staff desk showing John 3:16 with Strong’s markup and the study rail"
+        width="1600"
+        height="1000"
+        loading="lazy"
+      />
+    </div>
+  </section>
+
+  <section class="section" id="features">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Three places the desk goes deeper</h2>
+        <p>Each note is a short walk through one pillar of the product.</p>
+      </div>
+      <div class="feature-grid">
+        <a class="feature-link" href="/blog/extra-canon-public-domain-shelf">
+          <img
+            src="/screenshots/desk-extra-canon.png"
+            alt="Extra-canon shelf open beside Scripture"
+            width="1600"
+            height="1000"
+            loading="lazy"
+          />
+          <h3>Extra-canon PD shelf</h3>
+          <p>Public-domain books beside the sixty-six — credited, not smuggled.</p>
+        </a>
+        <a class="feature-link" href="/blog/heavens-clocks-not-fortunes">
+          <img
+            src="/screenshots/desk-heavens.png"
+            alt="Heavens Cast chart open on the desk"
+            width="1600"
+            height="1000"
+            loading="lazy"
+          />
+          <h3>Heavens: clocks, not fortunes</h3>
+          <p>Cast and Witness mark seasons beside Scripture. Isaiah 47 stays the fence.</p>
+        </a>
+        <a class="feature-link" href="/blog/offline-practice-quiet-desk">
+          <img
+            src="/screenshots/desk-practice.png"
+            alt="Practice Temple walk on the desk"
+            width="1600"
+            height="1000"
+            loading="lazy"
+          />
+          <h3>Offline Practice · quiet desk</h3>
+          <p>Temple walk, Hebrew Hear, Quiet music — baked offline, five appearances.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section muted-band" id="local">
+    <div class="wrap split">
+      <img
+        src="/screenshots/desk-themes.png"
+        alt="Settings Desk appearance with five theme choices"
+        width="1600"
+        height="1000"
+        loading="lazy"
+      />
+      <div>
+        <div class="section-head">
+          <h2>Local by default</h2>
+          <p>
+            Leave-device confirms before place search, web search, or a cloud model test. Practice
+            audio is offline. Hermetic shelves are historical study — not ritual instruction.
+          </p>
+        </div>
+        <div class="theme-strip" aria-label="Desk appearances">
+          <span class="theme-chip">Light</span>
+          <span class="theme-chip">Dark</span>
+          <span class="theme-chip">Mystic</span>
+          <span class="theme-chip">Parchment</span>
+          <span class="theme-chip">Ink</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="download">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Run the desk</h2>
+        <p>
+          Clone the monorepo and run locally, or take the Windows NSIS build from GitHub Releases
+          when published. This site does not host the ~150&nbsp;MB study runtime.
+        </p>
+      </div>
+      <div class="cta-row">
+        <a class="btn btn-primary" href={github}>View source</a>
+        <a class="btn btn-ghost" href={`${github}/releases`}>Releases</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,49 @@
+{
+  "credit": "Offline River TTS phrases for Anointed Staff. Bake with ElevenLabs MCP; desk plays local mp3 only.",
+  "voice": "River - Relaxed, Neutral, Informative",
+  "model": "eleven_multilingual_v2",
+  "letters": {
+    "alef": "Alef. Soft glottal stop or silent. Picture of an ox.",
+    "bet": "Bet. Sound: B. Picture of a house.",
+    "gimel": "Gimel. Sound: G. Picture of a camel.",
+    "dalet": "Dalet. Sound: D. Picture of a door.",
+    "he": "He. Sound: H. Picture of a window.",
+    "vav": "Vav. Sound: V. Picture of a hook.",
+    "zayin": "Zayin. Sound: Z. Picture of a weapon.",
+    "chet": "Chet. Soft throat sound, like ch in Bach. Picture of a fence.",
+    "tet": "Tet. Sound: T. Picture of a basket.",
+    "yod": "Yod. Sound: Y. Picture of a hand.",
+    "kaf": "Kaf. Sound: K. Picture of a palm.",
+    "lamed": "Lamed. Sound: L. Picture of a goad.",
+    "mem": "Mem. Sound: M. Picture of water.",
+    "nun": "Nun. Sound: N. Picture of a fish.",
+    "samekh": "Samekh. Sound: S. Picture of a support.",
+    "ayin": "Ayin. Deep throat sound, often silent in English reading. Picture of an eye.",
+    "pe": "Pe. Sound: P. Picture of a mouth.",
+    "tsade": "Tsade. Sound: TS. Picture of a hook.",
+    "qof": "Qof. Sound: Q. Picture of the horizon.",
+    "resh": "Resh. Sound: R. Picture of a head.",
+    "shin": "Shin. Sound: SH. Picture of a tooth.",
+    "tav": "Tav. Sound: T. Picture of a mark.",
+    "kaf-sofit": "Kaf sofit. Final form of Kaf. Sound: K. Counts five hundred in mispar.",
+    "mem-sofit": "Mem sofit. Final form of Mem. Sound: M. Counts six hundred in mispar.",
+    "nun-sofit": "Nun sofit. Final form of Nun. Sound: N. Counts seven hundred in mispar.",
+    "pe-sofit": "Pe sofit. Final form of Pe. Sound: P. Counts eight hundred in mispar.",
+    "tsade-sofit": "Tsade sofit. Final form of Tsade. Sound: TS. Counts nine hundred in mispar."
+  },
+  "names": {
+    "adam": "Adam. Meaning: earthy, red.",
+    "eve": "Eve. Meaning: living, enlivening.",
+    "abraham": "Abraham. Meaning: father of a great multitude.",
+    "moses": "Moses. Meaning: taken out, drawn forth.",
+    "david": "David. Meaning: beloved.",
+    "israel": "Israel. Meaning: who prevails with God.",
+    "jerusalem": "Jerusalem. Meaning: vision of peace.",
+    "jesus": "Jesus. Meaning: savior, deliverer.",
+    "mary": "Mary. Meaning: bitterness, rebellion; also exalted.",
+    "peter": "Peter. Meaning: a rock or stone."
+  },
+  "guides": {
+    "temple": "Welcome to the temple walk. Body is the outer court, soul the inner court, and spirit the holy of holies. Glory is the center. Open a gate, read its verse, and mark it walked when you are ready. This is a quiet walk beside Scripture — not a ritual."
+  }
+}

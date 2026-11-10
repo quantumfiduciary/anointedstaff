@@ -1,0 +1,48 @@
+Anointed Staff
+Copyright 2026 Anointed Staff contributors
+
+This product includes application source code licensed under the Apache License,
+Version 2.0. See the LICENSE file.
+
+---------------------------------------------------------------------------
+Content and media (not covered by the Apache License alone)
+---------------------------------------------------------------------------
+
+Scripture translations shipped under public/ are public-domain English witnesses
+(for example KJV, ASV, YLT, Darby, BBE, Douay-Rheims, and other listed packs).
+They are not relicensed by this NOTICE. Prefer the credits shown in the desk
+(Settings → About and per-work Extra-canon footers).
+
+Cross-references: Open Bible Labs cross-reference data (CC BY). Credit Open Bible
+when redistributing study packs that include them.
+https://www.openbible.info/labs/cross-references/
+
+Extra-canon library and writings: public-domain or otherwise credited English
+editions as labeled on each work. Hermetic and world shelves are historical
+study texts, not ritual instruction. Do not treat modern copyright editions
+(Brill/CGLP, sacred-name “restored” wrappers, etc.) as PD.
+
+Practice audio (public/audio/practice/):
+  Spoken guides, quiz cues, Hebrew letter/name clips, and Temple walk were
+  generated for Anointed Staff with ElevenLabs (River voice) and baked offline
+  into the desk. Meditate quiet music is local Comfy YuE2; reading quiet music
+  is an offline instrumental bake. The running desk does not call ElevenLabs or
+  Comfy live. Redistribution of baked clips must comply with your ElevenLabs
+  account terms at the time of generation; regenerators need their own account
+  (see docs/practice-audio.md and docs/regenerate-practice-media.md).
+
+Brand art (public/brand/ marks, wordmarks, atmosphere, posters, empty states):
+  Anointed Staff desk art — all rights reserved unless a file notes otherwise.
+  Atmosphere and empty-state stills were desk-generated (Comfy).
+
+Word-art plates (public/brand/words/):
+  Credit fathersalphabet; redistribution of those image plates remains under
+  review. Do not use them on anointedstaff.com marketing pages until cleared.
+  Separate fathersalphabet library teaching sheets in Extra-canon keep the
+  credits printed on each work (often Public Domain / CC0 as labeled).
+
+Fonts: Outfit, Fraunces, Literata, Noto — OFL / respective font licenses via
+@fontsource packages.
+
+Trademarks: “Anointed Staff” and the staff mark are product names/marks of the
+project and are not licensed under Apache-2.0 for branding third-party forks.

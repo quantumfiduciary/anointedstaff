@@ -1,0 +1,77 @@
+{
+    "note": "Compare packs. English + PD languages from bibles_json_6.0; Cherokee NT from seven1m/open-bibles USFX. WLC/TR via originals.json.",
+  "packs": [
+    {
+      "id": "web",
+      "label": "World English Bible",
+      "path": "witnesses/web.json",
+      "rights": "Public Domain"
+    },
+    {
+      "id": "geneva",
+      "label": "Geneva",
+      "path": "witnesses/geneva.json",
+      "rights": "Public Domain"
+    },
+    {
+      "id": "bishops",
+      "label": "Bishops",
+      "path": "witnesses/bishops.json",
+      "rights": "Public Domain"
+    },
+    {
+      "id": "coverdale",
+      "label": "Coverdale",
+      "path": "witnesses/coverdale.json",
+      "rights": "Public Domain"
+    },
+    {
+      "id": "rv1909",
+      "label": "Reina Valera 1909",
+      "path": "witnesses/rv1909.json",
+      "rights": "Public Domain"
+    },
+    {
+      "id": "cuvs",
+      "label": "Chinese Union Simplified",
+      "path": "witnesses/cuvs.json",
+      "rights": "Public Domain"
+    },
+    {
+      "id": "cuvt",
+      "label": "Chinese Union Traditional",
+      "path": "witnesses/cuvt.json",
+      "rights": "Public Domain"
+    },
+    {
+      "id": "segond",
+      "label": "Louis Segond 1910",
+      "path": "witnesses/segond.json",
+      "rights": "Public Domain"
+    },
+    {
+      "id": "luther1912",
+      "label": "Luther 1912",
+      "path": "witnesses/luther1912.json",
+      "rights": "Public Domain"
+    },
+    {
+      "id": "cherokee",
+      "label": "Cherokee New Testament",
+      "path": "witnesses/cherokee.json",
+      "rights": "Public Domain"
+    },
+    {
+      "id": "wlc",
+      "label": "Hebrew WLC (OT)",
+      "path": "originals.json#wlc",
+      "rights": "Public Domain"
+    },
+    {
+      "id": "tr",
+      "label": "Greek TR (NT)",
+      "path": "originals.json#tr",
+      "rights": "Public Domain"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+---
+import { getCollection } from "astro:content"
+import BaseLayout from "../../layouts/BaseLayout.astro"
+
+const posts = (await getCollection("blog")).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+)
+---
+
+<BaseLayout
+  title="Blog · Anointed Staff"
+  description="Notes on Extra-canon, Heavens, Practice, and the local desk."
+>
+  <div class="wrap">
+    <div class="section-head" style="padding-top: 3rem;">
+      <h2>Desk notes</h2>
+      <p>Three short walks through the product. More later.</p>
+    </div>
+    <div class="blog-list">
+      {
+        posts.map((post) => (
+          <a href={`/blog/${post.slug}`}>
+            <h2>{post.data.title}</h2>
+            <p>{post.data.description}</p>
+          </a>
+        ))
+      }
+    </div>
+  </div>
+</BaseLayout>

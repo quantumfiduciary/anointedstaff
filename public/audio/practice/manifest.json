@@ -1,0 +1,66 @@
+{
+  "credit": "Spoken guides, quiz cues, Hebrew letter/name clips, and Temple guide generated for Anointed Staff (ElevenLabs · River). Meditate bed from local YuE2; read bed from ElevenLabs music_v2 (offline bake). Offline media only in the desk build.",
+  "voice": "River - Relaxed, Neutral, Informative",
+  "guides": {
+    "breath": "/audio/practice/guide-breath.mp3",
+    "rejoice": "/audio/practice/guide-rejoice.mp3",
+    "word": "/audio/practice/guide-word.mp3",
+    "creation": "/audio/practice/guide-creation.mp3",
+    "fast-frame": "/audio/practice/guide-fast-frame.mp3",
+    "psalm-tone": "/audio/practice/guide-psalm-tone.mp3",
+    "temple": "/audio/practice/guide-temple.mp3"
+  },
+  "cues": {
+    "correct": "/audio/practice/cue-correct.mp3",
+    "again": "/audio/practice/cue-again.mp3",
+    "complete": "/audio/practice/cue-complete.mp3",
+    "next": "/audio/practice/cue-next.mp3",
+    "reveal": "/audio/practice/cue-reveal.mp3",
+    "drill": "/audio/practice/cue-drill.mp3"
+  },
+  "letters": {
+    "alef": "/audio/practice/letter-alef.mp3",
+    "bet": "/audio/practice/letter-bet.mp3",
+    "gimel": "/audio/practice/letter-gimel.mp3",
+    "dalet": "/audio/practice/letter-dalet.mp3",
+    "he": "/audio/practice/letter-he.mp3",
+    "vav": "/audio/practice/letter-vav.mp3",
+    "zayin": "/audio/practice/letter-zayin.mp3",
+    "chet": "/audio/practice/letter-chet.mp3",
+    "tet": "/audio/practice/letter-tet.mp3",
+    "yod": "/audio/practice/letter-yod.mp3",
+    "kaf": "/audio/practice/letter-kaf.mp3",
+    "lamed": "/audio/practice/letter-lamed.mp3",
+    "mem": "/audio/practice/letter-mem.mp3",
+    "nun": "/audio/practice/letter-nun.mp3",
+    "samekh": "/audio/practice/letter-samekh.mp3",
+    "ayin": "/audio/practice/letter-ayin.mp3",
+    "pe": "/audio/practice/letter-pe.mp3",
+    "tsade": "/audio/practice/letter-tsade.mp3",
+    "qof": "/audio/practice/letter-qof.mp3",
+    "resh": "/audio/practice/letter-resh.mp3",
+    "shin": "/audio/practice/letter-shin.mp3",
+    "tav": "/audio/practice/letter-tav.mp3",
+    "kaf-sofit": "/audio/practice/letter-kaf-sofit.mp3",
+    "mem-sofit": "/audio/practice/letter-mem-sofit.mp3",
+    "nun-sofit": "/audio/practice/letter-nun-sofit.mp3",
+    "pe-sofit": "/audio/practice/letter-pe-sofit.mp3",
+    "tsade-sofit": "/audio/practice/letter-tsade-sofit.mp3"
+  },
+  "names": {
+    "adam": "/audio/practice/name-adam.mp3",
+    "eve": "/audio/practice/name-eve.mp3",
+    "abraham": "/audio/practice/name-abraham.mp3",
+    "moses": "/audio/practice/name-moses.mp3",
+    "david": "/audio/practice/name-david.mp3",
+    "israel": "/audio/practice/name-israel.mp3",
+    "jerusalem": "/audio/practice/name-jerusalem.mp3",
+    "jesus": "/audio/practice/name-jesus.mp3",
+    "mary": "/audio/practice/name-mary.mp3",
+    "peter": "/audio/practice/name-peter.mp3"
+  },
+  "beds": {
+    "meditate": "/audio/practice/bed-meditate.mp3",
+    "read": "/audio/practice/bed-read.mp3"
+  }
+}

@@ -1,0 +1,432 @@
+{
+  "works": [
+    {
+      "id": "3-maccabees",
+      "title": "3 Maccabees",
+      "credit": "Public-domain English of 3 Maccabees (not in the KJVA Bible window). Update_02 extract.",
+      "shelf": "enoch",
+      "file": "3-maccabees.json"
+    },
+    {
+      "id": "4-maccabees",
+      "title": "4 Maccabees",
+      "credit": "Public-domain English of 4 Maccabees (not in the KJVA Bible window). Update_02 extract.",
+      "shelf": "enoch",
+      "file": "4-maccabees.json"
+    },
+    {
+      "id": "aaronic-blessing-paleo",
+      "title": "Aaronic Blessing in Paleo-Hebrew",
+      "credit": "fathersalphabet Public Domain",
+      "shelf": "hebrew",
+      "file": "aaronic-blessing-paleo.json"
+    },
+    {
+      "id": "paul-thecla",
+      "title": "Acts of Paul and Thecla",
+      "credit": "Public-domain English of the Acts of Paul and Thecla. Update_02 extract.",
+      "shelf": "fathers",
+      "file": "paul-thecla.json"
+    },
+    {
+      "id": "acts-peter-twelve",
+      "title": "Acts of Peter and the Twelve Apostles",
+      "credit": "Samuel Zinner, tr.; Mark M. Mattison, ed. Public domain English from the Coptic (Other Gospels / Luminescence Nag Hammadi initiative). Translation body only — not Brill/CGLP, not Stevan Davies. Historical Extra-canon study, not Scripture.",
+      "shelf": "fathers",
+      "file": "acts-peter-twelve.json"
+    },
+    {
+      "id": "acts-thomas",
+      "title": "Acts of Thomas",
+      "credit": "M. R. James, The Apocryphal New Testament (Oxford: Clarendon, 1924). Public domain English. Via Early Christian Writings / NASSCAL e-Clavis pointer. Historical Extra-canon study, not Scripture.",
+      "shelf": "fathers",
+      "file": "acts-thomas.json"
+    },
+    {
+      "id": "baruch",
+      "title": "Apocalypse of Baruch (2 Baruch)",
+      "credit": "R. H. Charles, Syriac Apocalypse of Baruch, in APOT vol. II (Oxford, 1913). Public domain. OCR reading text; not a sacred-name edition / not a modern critical apparatus text.",
+      "shelf": "enoch",
+      "file": "baruch.json"
+    },
+    {
+      "id": "apocalypse-paul",
+      "title": "Apocalypse of Paul",
+      "credit": "Public-domain English of the Apocalypse of Paul. Update_02 extract.",
+      "shelf": "fathers",
+      "file": "apocalypse-paul.json"
+    },
+    {
+      "id": "apocalypse-peter",
+      "title": "Apocalypse of Peter",
+      "credit": "Public-domain English of the Apocalypse of Peter. Update_02 extract.",
+      "shelf": "fathers",
+      "file": "apocalypse-peter.json"
+    },
+    {
+      "id": "apocryphon-john",
+      "title": "Apocryphon of John (Secret Writing According to John)",
+      "credit": "Samuel Zinner, tr.; Mark M. Mattison, ed. Public domain English from the Coptic (Other Gospels / Luminescence Nag Hammadi initiative). Translation body only — not Brill/CGLP, not Stevan Davies. Historical Extra-canon study, not Scripture. Codex II witness (Zinner).",
+      "shelf": "sophia",
+      "file": "apocryphon-john.json"
+    },
+    {
+      "id": "beginnings",
+      "title": "Beginnings",
+      "credit": "Original desk walk through Genesis 1, Job 38, the Mazzaroth, and a Budge sample. Not a modern creation PDF.",
+      "shelf": "egyptian",
+      "file": "beginnings.json"
+    },
+    {
+      "id": "bhagavad-gita",
+      "title": "Bhagavad Gita (Arnold)",
+      "credit": "Sir Edwin Arnold, The Song Celestial, 1885. Public domain. Not a modern ISKCON edition.",
+      "shelf": "world",
+      "file": "bhagavad-gita.json"
+    },
+    {
+      "id": "jasher",
+      "title": "Book of Jasher",
+      "credit": "Sefer Ha-yashar, 1840 English edition. Public domain. Referred to in Joshua 10:13 and 2 Samuel 1:18.",
+      "shelf": "hebrew",
+      "file": "jasher.json"
+    },
+    {
+      "id": "jubilees",
+      "title": "Book of Jubilees",
+      "credit": "R. H. Charles, The Book of Jubilees, SPCK London 1917 (sacred-texts print). Public domain. Desk OCR fixes (e.g. V1→VI); not a sacred-name edition.",
+      "shelf": "enoch",
+      "file": "jubilees.json"
+    },
+    {
+      "id": "mormon",
+      "title": "Book of Mormon (1830)",
+      "credit": "1830 English wording via Project Gutenberg eBook #17. Public domain. Not the 1990 Church of Christ Independence edition. Other-canon shelf, not Scripture.",
+      "shelf": "other",
+      "file": "mormon.json"
+    },
+    {
+      "id": "dead",
+      "title": "Book of the Dead (selected)",
+      "credit": "E. A. Wallis Budge, The Papyrus of Ani, 1895. Public domain. Selected hymns only; the whole papyrus is not shipped.",
+      "shelf": "egyptian",
+      "file": "dead.json"
+    },
+    {
+      "id": "daemonologie",
+      "title": "Daemonologie",
+      "credit": "King James I, 1597. Public domain. Original desk notes; the Forgotten Books scan has no extractable text.",
+      "shelf": "witnesses",
+      "file": "daemonologie.json"
+    },
+    {
+      "id": "emerald-tablet",
+      "title": "Emerald Tablet of Hermes",
+      "credit": "Emerald Tablet of Hermes — historical public-domain English renderings (Newton c.1680; Twelfth-century Latin; Jabir/Holmyard 1923; Beato/Davis 1926; Bacstrom). Compiled via Internet Sacred Text Archive. Not Doreal’s Emerald Tablets of Thoth. Hermetic historical study, not ritual instruction.",
+      "shelf": "hermetic",
+      "file": "emerald-tablet.json"
+    },
+    {
+      "id": "enoch-readings",
+      "title": "Enoch readings",
+      "credit": "Original desk list of Scripture and 1 Enoch passages. Not J. J. Hurtak’s Keys of Enoch (1973/1977/2009), which is in copyright and is not shipped.",
+      "shelf": "enoch",
+      "file": "enoch-readings.json"
+    },
+    {
+      "id": "barnabas",
+      "title": "Epistle of Barnabas",
+      "credit": "Public-domain English of the Epistle of Barnabas. Update_02 extract.",
+      "shelf": "fathers",
+      "file": "barnabas.json"
+    },
+    {
+      "id": "epistula-apostolorum",
+      "title": "Epistle of the Apostles",
+      "credit": "Public-domain English of the Epistula Apostolorum. Update_02 extract.",
+      "shelf": "fathers",
+      "file": "epistula-apostolorum.json"
+    },
+    {
+      "id": "laodiceans",
+      "title": "Epistle to the Laodiceans (Latin forgery)",
+      "credit": "M.R. James, The Apocryphal New Testament (1924), public domain. Labeled forgery pastiche — not Paul’s lost letter named in Colossians 4:16.",
+      "shelf": "fathers",
+      "file": "laodiceans.json"
+    },
+    {
+      "id": "adam-eve",
+      "title": "First Book of Adam and Eve",
+      "credit": "Rutherford H. Platt, Jr., The First Book of Adam and Eve. Public domain.",
+      "shelf": "hebrew",
+      "file": "adam-eve.json"
+    },
+    {
+      "id": "bond-gematria",
+      "title": "Gematria: A Preliminary Investigation of the Cabala (Bond & Lea)",
+      "credit": "F. Bligh Bond and Thomas Simcox Lea, Gematria (1917, London). Public domain. Historical gematria study — not a spell book. Desk Gematria Learn stays Anointed Staff.",
+      "shelf": "hermetic",
+      "file": "bond-gematria.json"
+    },
+    {
+      "id": "bartholomew",
+      "title": "Gospel of Bartholomew",
+      "credit": "Public-domain English of the Gospel of Bartholomew. Update_02 extract.",
+      "shelf": "gospels",
+      "file": "bartholomew.json"
+    },
+    {
+      "id": "nicodemus",
+      "title": "Gospel of Nicodemus (Acts of Pilate)",
+      "credit": "Public-domain English of the Gospel of Nicodemus / Acts of Pilate. Update_02 extract.",
+      "shelf": "fathers",
+      "file": "nicodemus.json"
+    },
+    {
+      "id": "ebionites",
+      "title": "Gospel of the Ebionites",
+      "credit": "Public-domain fragments of the Gospel of the Ebionites. Update_02 extract.",
+      "shelf": "fathers",
+      "file": "ebionites.json"
+    },
+    {
+      "id": "greater-key-solomon",
+      "title": "Greater Key of Solomon",
+      "credit": "S. L. MacGregor Mathers edition. Public domain historical grimoire text for study, not practice instruction.",
+      "shelf": "hermetic",
+      "file": "greater-key-solomon.json"
+    },
+    {
+      "id": "paleo-alphabet-messiah",
+      "title": "How the Paleo-Hebrew Alphabet Points to the Messiah",
+      "credit": "fathersalphabet Public Domain teaching sheet",
+      "shelf": "hebrew",
+      "file": "paleo-alphabet-messiah.json"
+    },
+    {
+      "id": "lesser-key-goetia",
+      "title": "Lesser Key of Solomon (Goetia)",
+      "credit": "L. W. de Laurence, ed., The Lesser Key of Solomon — Goetia (Chicago, 1916). Public domain in the USA via Project Gutenberg eBook #72679. Hermetic historical study text only — not ritual instruction.",
+      "shelf": "hermetic",
+      "file": "lesser-key-goetia.json"
+    },
+    {
+      "id": "scott-demonology",
+      "title": "Letters on Demonology and Witchcraft",
+      "credit": "Sir Walter Scott, 1830. Public domain.",
+      "shelf": "witnesses",
+      "file": "scott-demonology.json"
+    },
+    {
+      "id": "bensiira",
+      "title": "Lilith and Adam (desk notes)",
+      "credit": "Original wording of the medieval Alphabet of Ben Sira legend and the Isaiah 34 night-creature. Not Nydle, not Ezrahi/Gafni, not a modern Lilith book.",
+      "shelf": "hebrew",
+      "file": "bensiira.json"
+    },
+    {
+      "id": "mazzaroth-rolleston",
+      "title": "Mazzaroth (Frances Rolleston)",
+      "credit": "Frances Rolleston, Mazzaroth; or, The Constellations (1862). Public domain. Historical reading beside Job 38:32 — not Anointed Staff chart engine data, not a fortune table. Desk Witness path stays original Scripture prose.",
+      "shelf": "witnesses",
+      "file": "mazzaroth-rolleston.json"
+    },
+    {
+      "id": "myths-china",
+      "title": "Myths and Legends of China",
+      "credit": "E. T. C. Werner. Public domain. Selected chapters.",
+      "shelf": "world",
+      "file": "myths-china.json"
+    },
+    {
+      "id": "myths-celtic",
+      "title": "Myths and Legends of the Celtic Race",
+      "credit": "T. W. Rolleston. Public domain. Selected chapters.",
+      "shelf": "world",
+      "file": "myths-celtic.json"
+    },
+    {
+      "id": "odes-solomon",
+      "title": "Odes of Solomon",
+      "credit": "Public-domain English of the Odes of Solomon. Update_02 extract.",
+      "shelf": "enoch",
+      "file": "odes-solomon.json"
+    },
+    {
+      "id": "origin-world",
+      "title": "On the Origin of the World",
+      "credit": "Samuel Zinner, tr.; Mark M. Mattison, ed. Public domain English from the Coptic (Other Gospels / Luminescence Nag Hammadi initiative). Translation body only — not Brill/CGLP, not Stevan Davies. Historical Extra-canon study, not Scripture.",
+      "shelf": "sophia",
+      "file": "origin-world.json"
+    },
+    {
+      "id": "alphabet-chart",
+      "title": "Paleo-Hebrew Alphabet Chart",
+      "credit": "fathersalphabet Public Domain alphabet chart",
+      "shelf": "hebrew",
+      "file": "alphabet-chart.json"
+    },
+    {
+      "id": "ramayana",
+      "title": "Ramayana (Valmiki, English)",
+      "credit": "Public-domain English of the Ramayana when the PDF passes the gate. Selected books.",
+      "shelf": "world",
+      "file": "ramayana.json"
+    },
+    {
+      "id": "raphael-astrology",
+      "title": "Raphael’s Medical Astrology",
+      "credit": "Raphael’s Guide to Astrology (Foulsham, early 20th c. English). Public-domain claim for US desk; historical study only — clocks-not-fortunes.",
+      "shelf": "hermetic",
+      "file": "raphael-astrology.json"
+    },
+    {
+      "id": "yetzirah",
+      "title": "Sefer Yetzirah (desk notes)",
+      "credit": "Original short notes on the traditional Book of Formation. Not Kaplan, not the 1985 Thompson–Marson English of Saadia, not a modern commentary PDF.",
+      "shelf": "hebrew",
+      "file": "yetzirah.json"
+    },
+    {
+      "id": "hermas",
+      "title": "Shepherd of Hermas",
+      "credit": "Public-domain English of the Shepherd of Hermas. Update_02 extract.",
+      "shelf": "fathers",
+      "file": "hermas.json"
+    },
+    {
+      "id": "sibylline",
+      "title": "Sibylline Oracles",
+      "credit": "Public-domain English of the Sibylline Oracles. Update_02 extract.",
+      "shelf": "enoch",
+      "file": "sibylline.json"
+    },
+    {
+      "id": "sixth-seventh-moses",
+      "title": "Sixth and Seventh Books of Moses",
+      "credit": "Johann Scheible tradition English (New York, c.1880 scan). Public domain. Internet Archive OCR of the Scheible Sixth and Seventh Books of Moses (same family as the sacred-texts Scheibel edition). Hermetic historical study only — not ritual instruction. OCR retains scan artifacts.",
+      "shelf": "hermetic",
+      "file": "sixth-seventh-moses.json"
+    },
+    {
+      "id": "sophia-jesus",
+      "title": "Sophia of Jesus Christ",
+      "credit": "Samuel Zinner, tr.; Mark M. Mattison, ed. Public domain English from the Coptic (Other Gospels / Luminescence Nag Hammadi initiative). Translation body only — not Brill/CGLP, not Stevan Davies. Historical Extra-canon study, not Scripture.",
+      "shelf": "sophia",
+      "file": "sophia-jesus.json"
+    },
+    {
+      "id": "archons",
+      "title": "Substance of the Archons",
+      "credit": "Samuel Zinner, tr.; Mark M. Mattison, ed. Public domain English from the Coptic (Other Gospels / Luminescence Nag Hammadi initiative). Translation body only — not Brill/CGLP, not Stevan Davies. Historical Extra-canon study, not Scripture.",
+      "shelf": "sophia",
+      "file": "archons.json"
+    },
+    {
+      "id": "talmud",
+      "title": "Talmud (map and sample)",
+      "credit": "Arsène Darmesteter, The Talmud, JPS 1897, tr. Henrietta Szold. Michael L. Rodkinson, Babylonian Talmud, 1918, Tract Sabbath sample. Both public domain.",
+      "shelf": "talmud",
+      "file": "talmud.json"
+    },
+    {
+      "id": "tao-te-ching",
+      "title": "Tao Te Ching",
+      "credit": "Public-domain English of the Tao Te Ching (Laozi). One edition from update_02.",
+      "shelf": "world",
+      "file": "tao-te-ching.json"
+    },
+    {
+      "id": "targum-exodus",
+      "title": "Targum on Exodus",
+      "credit": "J. W. Etheridge, 1862–1865, public domain. Original desk notes; the Google scan has no extractable text.",
+      "shelf": "targum",
+      "file": "targum-exodus.json"
+    },
+    {
+      "id": "targum-genesis",
+      "title": "Targum on Genesis",
+      "credit": "J. W. Etheridge, 1862–1865, public domain. Original desk notes; the Google scan has no extractable text.",
+      "shelf": "targum",
+      "file": "targum-genesis.json"
+    },
+    {
+      "id": "ten-commandments-paleo",
+      "title": "Ten Commandments in Paleo-Hebrew",
+      "credit": "fathersalphabet Public Domain",
+      "shelf": "hebrew",
+      "file": "ten-commandments-paleo.json"
+    },
+    {
+      "id": "golden-bough",
+      "title": "The Golden Bough (selected)",
+      "credit": "Sir James George Frazer. Public-domain early edition. Selected chapters only.",
+      "shelf": "world",
+      "file": "golden-bough.json"
+    },
+    {
+      "id": "kabala-numbers",
+      "title": "The Kabala of Numbers",
+      "credit": "Sepharial. Early twentieth-century public-domain numerology text when the PDF passes the gate.",
+      "shelf": "hermetic",
+      "file": "kabala-numbers.json"
+    },
+    {
+      "id": "kabbalah-unveiled",
+      "title": "The Kabbalah Unveiled",
+      "credit": "S. L. MacGregor Mathers. Public domain English of Zoharic selections.",
+      "shelf": "hermetic",
+      "file": "kabbalah-unveiled.json"
+    },
+    {
+      "id": "kybalion",
+      "title": "The Kybalion",
+      "credit": "Three Initiates, 1908. Public domain.",
+      "shelf": "hermetic",
+      "file": "kybalion.json"
+    },
+    {
+      "id": "prose-edda",
+      "title": "The Prose Edda",
+      "credit": "Snorri Sturluson, public-domain English. Update_02 extract.",
+      "shelf": "world",
+      "file": "prose-edda.json"
+    },
+    {
+      "id": "secret-teachings",
+      "title": "The Secret Teachings of All Ages",
+      "credit": "Manly P. Hall, 1928. Public domain in the US. Selected chapters when extract is large.",
+      "shelf": "hermetic",
+      "file": "secret-teachings.json"
+    },
+    {
+      "id": "thunder",
+      "title": "The Thunder, Perfect Mind",
+      "credit": "Samuel Zinner, tr.; Mark M. Mattison, ed. Public domain English from the Coptic (Other Gospels / Luminescence Nag Hammadi initiative). Translation body only — not Brill/CGLP, not Stevan Davies. Historical Extra-canon study, not Scripture.",
+      "shelf": "sophia",
+      "file": "thunder.json"
+    },
+    {
+      "id": "upanishads",
+      "title": "The Upanishads (Max Müller)",
+      "credit": "F. Max Müller translation. Public domain. Selected sections.",
+      "shelf": "world",
+      "file": "upanishads.json"
+    },
+    {
+      "id": "to-the-watchmen",
+      "title": "To the Watchmen",
+      "credit": "M. Dawson / fathersalphabet.com. CC0 1.0 — Ancient Calendar of Israel, biblical timelines, end-times notes.",
+      "shelf": "hebrew",
+      "file": "to-the-watchmen.json"
+    },
+    {
+      "id": "chesed-study",
+      "title": "Word Study · Chesed",
+      "credit": "fathersalphabet Public Domain word study",
+      "shelf": "hebrew",
+      "file": "chesed-study.json"
+    }
+  ],
+  "note": "Rights: Nag Hammadi Extra-canon titles on this desk use Samuel Zinner / Mark M. Mattison public-domain English (Luminescence / Other Gospels). Older Brill/CGLP and sacred-name dumps stay refused."
+}
