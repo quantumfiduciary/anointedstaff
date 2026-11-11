@@ -3,9 +3,11 @@
 #
 # Trigger: push a version tag, e.g. git tag v0.2.0 && git push origin v0.2.0
 #
-# Optional macOS notarization (unsigned builds still upload):
+# macOS builds unsigned by default (Gatekeeper: right-click Open).
+# When Apple Developer secrets exist, add them to the build step env:
 #   APPLE_CERTIFICATE, APPLE_CERTIFICATE_PASSWORD, APPLE_SIGNING_IDENTITY,
 #   APPLE_ID, APPLE_PASSWORD, APPLE_TEAM_ID
+# Do not pass empty APPLE_* values — empty strings make codesign fail.
 name: Desktop release
 
 on:
@@ -69,12 +71,6 @@ jobs:
         uses: tauri-apps/tauri-action@v0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          APPLE_CERTIFICATE: ${{ secrets.APPLE_CERTIFICATE }}
-          APPLE_CERTIFICATE_PASSWORD: ${{ secrets.APPLE_CERTIFICATE_PASSWORD }}
-          APPLE_SIGNING_IDENTITY: ${{ secrets.APPLE_SIGNING_IDENTITY }}
-          APPLE_ID: ${{ secrets.APPLE_ID }}
-          APPLE_PASSWORD: ${{ secrets.APPLE_PASSWORD }}
-          APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
         with:
           tagName: ${{ github.ref_name }}
           releaseName: ${{ github.ref_name }}
