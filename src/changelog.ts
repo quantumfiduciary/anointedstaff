@@ -13,6 +13,14 @@ export type ChangeEntry = {
  */
 export const changeLog: ChangeEntry[] = [
   {
+    date: "2026-11-11",
+    title: "Desktop builds · Windows · Linux · macOS",
+    items: [
+      "Installers for Windows, Linux, and macOS are on GitHub Releases — pick the build for your machine.",
+      "Notes, charts, and API keys still stay on this device by default.",
+    ],
+  },
+  {
     date: "2026-11-09",
     title: "Five looks · quieter Practice",
     items: [

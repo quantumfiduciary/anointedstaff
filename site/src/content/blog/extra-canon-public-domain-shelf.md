@@ -67,7 +67,7 @@ Heavens has its own fence — clocks, not fortunes — described in [Heavens: cl
 
 ## Download and keep studying
 
-The shelf lives inside the local desk, not on this marketing site. [Download for Windows](https://github.com/quantumfiduciary/anointedstaff/releases) or clone the [monorepo](https://github.com/quantumfiduciary/anointedstaff). Then open Extra-canon beside a chapter and read the credit line first.
+The shelf lives inside the local desk, not on this marketing site. [Download desktop builds](https://github.com/quantumfiduciary/anointedstaff/releases) (Windows, Linux, macOS) or clone the [monorepo](https://github.com/quantumfiduciary/anointedstaff). Then open Extra-canon beside a chapter and read the credit line first.
 
 ## Related
 

@@ -67,7 +67,7 @@ That is the lore worth keeping — awe with a railing.
 
 ## Download and cast locally
 
-Charts and notes stay on the machine. [Download for Windows](https://github.com/quantumfiduciary/anointedstaff/releases) or open the [source monorepo](https://github.com/quantumfiduciary/anointedstaff). Cast beside a chapter; read Isaiah 47 before you read any aspect label as fate.
+Charts and notes stay on the machine. [Download desktop builds](https://github.com/quantumfiduciary/anointedstaff/releases) (Windows, Linux, macOS) or open the [source monorepo](https://github.com/quantumfiduciary/anointedstaff). Cast beside a chapter; read Isaiah 47 before you read any aspect label as fate.
 
 ## Related
 

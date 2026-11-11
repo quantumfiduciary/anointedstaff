@@ -9,12 +9,12 @@
 <p align="center">
   <a href="https://www.anointedstaff.com"><b>🌐 www.anointedstaff.com</b></a>
   &nbsp;·&nbsp;
-  <a href="https://github.com/quantumfiduciary/anointedstaff/releases"><b>Download for Windows</b></a>
+  <a href="https://github.com/quantumfiduciary/anointedstaff/releases"><b>Download desktop builds</b></a>
 </p>
 
 <p align="center">
-  <img src="https://shieldcn.dev/badge/version-0.1.0-blue.svg" alt="version" />
-  <img src="https://shieldcn.dev/badge/platform-Windows-0078D6.svg?logo=windows" alt="platform" />
+  <img src="https://shieldcn.dev/badge/version-0.2.0-blue.svg" alt="version" />
+  <img src="https://shieldcn.dev/badge/platform-Windows%20%7C%20Linux%20%7C%20macOS-0078D6.svg" alt="platform" />
   <img src="https://shieldcn.dev/badge/React-Vite-61DAFB.svg?logo=react" alt="React" />
   <img src="https://shieldcn.dev/badge/desktop-Tauri%202-FFC131.svg?logo=tauri" alt="Tauri" />
   <img src="https://shieldcn.dev/badge/license-Apache%202.0-green.svg" alt="license" />
@@ -26,7 +26,7 @@
 
 ## What is Anointed Staff?
 
-**Anointed Staff** is a local-first Scripture study desk for Windows. The chapter stays the center of the room. Strong’s, Roots, Extra-canon, Heavens clocks, Notes, Gematria, Practice, and optional AI open beside it — without shipping your notes or keys to a cloud Bible.
+**Anointed Staff** is a local-first Scripture study desk for Windows, Linux, and macOS. The chapter stays the center of the room. Strong’s, Roots, Extra-canon, Heavens clocks, Notes, Gematria, Practice, and optional AI open beside it — without shipping your notes or keys to a cloud Bible.
 
 Public-domain English witnesses only. No NIV / ESV / NET. Clocks beside Scripture, not fortunes. Hermetic shelves are historical study, not ritual.
 
@@ -108,7 +108,10 @@ Campaign line: *A study desk you keep, not a cloud Bible that keeps you.*
 
 ## Get started
 
-1. **Download** the Windows installer from [Releases](https://github.com/quantumfiduciary/anointedstaff/releases) (`Anointed Staff_0.1.0_x64-setup.exe`).
+1. **Download** a desktop build from [Releases](https://github.com/quantumfiduciary/anointedstaff/releases/tag/v0.2.0):
+   - **Windows** — NSIS setup (`.exe`)
+   - **Linux** — AppImage and `.deb`
+   - **macOS** — `.dmg` (Apple Silicon). If Gatekeeper blocks an unsigned build, right-click → Open.
 2. Or **run from source**:
 
 ```bash

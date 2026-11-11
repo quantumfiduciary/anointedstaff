@@ -8,6 +8,7 @@ Public monorepo + Astro marketing in `site/`. Application source is Apache-2.0; 
 |------|--------|
 | Public GitHub repo | https://github.com/quantumfiduciary/anointedstaff |
 | Tag + Release `v0.1.0` + NSIS | https://github.com/quantumfiduciary/anointedstaff/releases/tag/v0.1.0 |
+| Tag + Release `v0.2.0` + desktop CI | https://github.com/quantumfiduciary/anointedstaff/releases/tag/v0.2.0 (Windows NSIS, Linux AppImage/deb, macOS dmg via `desktop-release.yml`) |
 | Cloudflare Pages project `anointedstaff` | Live |
 | Marketing deploy | https://www.anointedstaff.com |
 | Custom domain on Pages | `anointedstaff.com` (+ www) registered on the project |

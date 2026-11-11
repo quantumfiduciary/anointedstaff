@@ -101,7 +101,7 @@ const jsonLd = [
     "@type": "SoftwareApplication",
     name: "Anointed Staff",
     applicationCategory: "EducationalApplication",
-    operatingSystem: "Windows",
+    operatingSystem: "Windows, Linux, macOS",
     description,
     url: "https://www.anointedstaff.com",
     downloadUrl: releases,
@@ -157,7 +157,7 @@ const jsonLd = [
         open beside the chapter — on a machine that holds your notes and keys.
       </p>
       <div class="cta-row">
-        <a class="btn btn-primary" href={releases}>Download for Windows</a>
+        <a class="btn btn-primary" href={releases}>Download desktop builds</a>
         <a class="btn btn-ghost" href={github}>View source</a>
       </div>
     </div>
@@ -477,12 +477,13 @@ const jsonLd = [
         <p class="eyebrow">Keep the desk</p>
         <h2>Run Anointed Staff on your machine</h2>
         <p>
-          Take the Windows NSIS build from GitHub Releases, or clone the monorepo and run locally.
-          This site does not host the ~150&nbsp;MB study runtime — that is intentional.
+          Take Windows (NSIS), Linux (AppImage /&nbsp;.deb), or macOS (.dmg) from GitHub Releases,
+          or clone the monorepo and run locally. This site does not host the study runtime — that
+          is intentional.
         </p>
       </div>
       <div class="cta-row">
-        <a class="btn btn-primary" href={releases}>Download for Windows</a>
+        <a class="btn btn-primary" href={releases}>Download desktop builds</a>
         <a class="btn btn-ghost" href={github}>View source</a>
       </div>
     </div>

@@ -1,6 +1,6 @@
 [package]
 name = "anointed-staff"
-version = "0.1.0"
+version = "0.2.0"
 description = "Anointed Staff — local-first Scripture desk"
 authors = ["Anointed Staff"]
 edition = "2021"

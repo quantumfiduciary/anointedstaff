@@ -64,7 +64,7 @@ The mystical landing may speak of oil and lamp. Practice still means: local file
 
 ## Download the quiet
 
-Offline audio ships inside the desk build. [Download for Windows](https://github.com/quantumfiduciary/anointedstaff/releases) or run from the [monorepo](https://github.com/quantumfiduciary/anointedstaff). Open Practice → Temple, put on Quiet music if you want, and keep the chapter one pane away.
+Offline audio ships inside the desk build. [Download desktop builds](https://github.com/quantumfiduciary/anointedstaff/releases) (Windows, Linux, macOS) or run from the [monorepo](https://github.com/quantumfiduciary/anointedstaff). Open Practice → Temple, put on Quiet music if you want, and keep the chapter one pane away.
 
 ## Related
 
