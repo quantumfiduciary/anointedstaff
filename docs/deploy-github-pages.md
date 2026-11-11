@@ -42,14 +42,23 @@ After CNAMEs exist, Pages domain status moves from pending → active.
 
 ## Release assets
 
-Do **not** commit `release/`. Attach NSIS from a local build:
+Do **not** commit `release/`, AABs, or IPAs. Do **not** upload installers to Cloudflare Pages.
+
+Preferred path: push a version tag; [`.github/workflows/desktop-release.yml`](../.github/workflows/desktop-release.yml) builds Windows NSIS, Linux AppImage + `.deb`, and macOS `.dmg`, then attaches them to the GitHub Release.
+
+```bash
+git tag v0.2.0
+git push origin v0.2.0
+```
+
+Local Windows-only fallback:
 
 ```bash
 npm run tauri:build   # requires Rust
-gh release create v0.1.0 "release/Anointed Staff_0.1.0_x64-setup.exe" --title "v0.1.0" --notes "…"
+# Attach the NSIS under src-tauri/target/release/bundle/nsis/ to the Release
 ```
 
-CTAs in `site/` and the root README already point at `quantumfiduciary/anointedstaff`.
+Per-OS toolchains and Apple signing secrets: [developer.md](developer.md). CTAs in `site/` and the root README stay Windows-first until Linux/macOS assets exist on the Release.
 
 ## Site internals
 

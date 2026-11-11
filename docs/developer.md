@@ -53,7 +53,7 @@ npm run smoke:public
 | `npm run witnesses` | Rebuild Compare packs |
 | `npm run bdb` | Compact BDB → `public/bdb.json` |
 | `npm run scripture` | Rebuild `public/scripture.json` |
-| `npm run tauri:build` | Windows NSIS (+ AppImage on Linux); needs Rust |
+| `npm run tauri:build` | Desktop bundles for the current OS; needs Rust |
 | `python scripts/build-*.py` | PD ingest / Extra-canon / Strong’s / etc. |
 
 Python builds need `pypdf` and (for xlsx) `openpyxl`.
@@ -87,8 +87,57 @@ Python builds need `pypdf` and (for xlsx) `openpyxl`.
 |-------|--------|
 | Icons | `public/brand/icons/` + `src-tauri/icons/` |
 | Fonts | Self-hosted (`@fontsource-variable/*`, Noto) |
-| Tauri 2 | `src-tauri/` — NSIS + AppImage; `npm run tauri:build` |
-| Release asset | `release/Anointed Staff_0.1.0_x64-setup.exe` (~72 MB, gitignored) |
+| Tauri 2 | `src-tauri/` — targets: `nsis`, `appimage`, `deb`, `dmg` |
+| Local Windows build | `npm run tauri:build` → NSIS under `src-tauri/target/release/bundle/` (gitignored) |
+| CI release | [`.github/workflows/desktop-release.yml`](../.github/workflows/desktop-release.yml) on `v*` tags |
+
+Installers attach to **GitHub Releases** only. Do not commit `release/`, AABs, or IPAs. Do not upload installers to Cloudflare Pages.
+
+### Per-OS toolchains (local)
+
+| OS | Host | Tooling | Bundle |
+|----|------|---------|--------|
+| Windows | This machine / `windows-latest` | Rust stable, MSVC, Node 22, WebView2 | NSIS `.exe` |
+| Linux | Linux host / `ubuntu-22.04` | Rust stable, Node 22, `libwebkit2gtk-4.1-dev`, `libayatana-appindicator3-dev`, `librsvg2-dev`, `patchelf` | AppImage + `.deb` |
+| macOS | Mac host / `macos-latest` | Rust stable, Node 22, Xcode CLT | `.dmg` (`aarch64-apple-darwin` first) |
+
+macOS and iOS cannot be cross-compiled from Windows. Use a Mac or GitHub `macos-latest`.
+
+### Tag a multi-OS release
+
+```bash
+git tag v0.2.0
+git push origin v0.2.0
+```
+
+The desktop-release workflow builds Windows, Linux, and macOS and uploads artifacts to that tag’s Release. Marketing CTAs stay “Download for Windows” until a non-Windows asset is actually on the Release — then update the root README and `site/` download copy.
+
+### Signing secrets (GitHub Actions)
+
+| Secret | Needed for | Notes |
+|--------|------------|--------|
+| `GITHUB_TOKEN` | All platforms | Provided by Actions; uploads Release assets |
+| `APPLE_CERTIFICATE` | macOS notarized production | Base64 `.p12` Developer ID Application cert |
+| `APPLE_CERTIFICATE_PASSWORD` | macOS | Password for the `.p12` |
+| `APPLE_SIGNING_IDENTITY` | macOS | e.g. `Developer ID Application: …` |
+| `APPLE_ID` | macOS notarization | Apple ID email |
+| `APPLE_PASSWORD` | macOS notarization | App-specific password |
+| `APPLE_TEAM_ID` | macOS notarization | 10-character team id |
+
+Unsigned macOS `.dmg` still builds and uploads; Gatekeeper will require right-click → Open until notarization secrets are set. Apple Developer Program is $99/year.
+
+### Mobile (deferred)
+
+Android and iOS stay **out of CI** until a phone layout exists. The desk is a multi-pane 1280-wide room; store builds before a stacked rail/chapter layout will fail review and daily use. Keep one React desk — do not fork React Native or Flutter.
+
+When ready (separate PRs):
+
+1. **Phone layout** — rail, panes, and chapter stack under ~430px; verify notes/`localStorage` and Practice audio.
+2. **Android** — `npm run tauri android init` (same id family `app.anointedstaff.desk`), JDK 17, Android SDK + NDK; ship an **AAB** to Play internal testing first.
+3. **iOS** — same Tauri mobile project on `macos-latest` + Xcode; Apple Developer Program, provisioning, privacy nutrition labels (local notes; optional network for AI/search); **TestFlight** before App Store.
+4. Watch AAB/IPA size (`public/` scripture + Practice audio). If stores reject size, make Practice audio optional later — not before the first desktop Linux/macOS ports.
+
+Play / Apple store secrets (later): `ANDROID_KEYSTORE_*`, Play service account JSON, iOS provisioning profile + distribution cert. Still never commit binaries; still never host them on Pages.
 
 ## Security (summary)
 
