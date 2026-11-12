@@ -42,14 +42,13 @@ Campaign line: *A study desk you keep, not a cloud Bible that keeps you.*
 
 <p align="center">
   <video
-    src="site/public/marketing/comfy/video/kinetic-text-16x9.mp4"
-    poster="site/public/marketing/stills/landing/hero-lamp-desk-16x9.png"
+    src="https://github.com/quantumfiduciary/anointedstaff/raw/main/site/public/marketing/comfy/video/kinetic-text-16x9.mp4"
+    poster="https://raw.githubusercontent.com/quantumfiduciary/anointedstaff/main/site/public/marketing/stills/landing/hero-lamp-desk-16x9.png"
     width="900"
     controls
     playsinline
-    controlslist="nodownload"
   >
-    <a href="https://www.anointedstaff.com/#film">Watch the desk on anointedstaff.com</a>
+    <a href="https://www.anointedstaff.com/#film">Watch the desk · 25s on anointedstaff.com</a>
   </video>
 </p>
 
