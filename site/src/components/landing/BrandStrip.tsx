@@ -4,41 +4,19 @@ export function BrandStrip() {
   const reduce = useReducedMotion()
 
   return (
-    <section className="relative isolate min-h-[min(70vh,34rem)] overflow-hidden" aria-label="Brand">
-      <img
-        src="/brand/poster-mono-grunge.png"
-        alt=""
-        className="absolute inset-0 h-full w-full object-cover"
-        width={1600}
-        height={1600}
+    <section className="relative isolate overflow-hidden" aria-label="Ancient wisdom. Modern tools.">
+      <motion.img
+        src="/marketing/posters/ancient-wisdom-modern-tools.png"
+        alt="Anointed Staff — Ancient wisdom. Modern tools. Scripture study, ancient languages, historical writings, notes, and optional AI assistance."
+        className="block h-auto w-full"
+        width={1920}
+        height={1080}
         loading="lazy"
+        initial={reduce ? false : { opacity: 0.75, scale: 1.02 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: true, margin: "-40px" }}
+        transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
       />
-      <div className="absolute inset-0 bg-gradient-to-r from-[color-mix(in_srgb,var(--night)_78%,transparent)] via-[color-mix(in_srgb,var(--night)_45%,transparent)] to-transparent" />
-      <div className="wrap relative flex min-h-[min(70vh,34rem)] items-center py-16">
-        <motion.div
-          className="max-w-lg"
-          initial={reduce ? false : { opacity: 0, x: -24 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-        >
-          <img
-            src="/brand/wordmark-cream.png"
-            alt="Anointed Staff"
-            className="mb-6 w-[min(100%,18rem)]"
-            width={720}
-            height={400}
-            loading="lazy"
-          />
-          <p className="font-[family-name:var(--font-display)] text-2xl font-semibold text-[var(--night-ink)] sm:text-3xl">
-            Ancient witnesses. One local desk.
-          </p>
-          <p className="mt-3 max-w-md text-[var(--night-muted)]">
-            Stone · gold · olive — a mark for the walk through Scripture, language, and sky. Not a
-            cloud Bible that keeps you.
-          </p>
-        </motion.div>
-      </div>
     </section>
   )
 }

@@ -8,6 +8,7 @@ import { FenceList } from "../components/landing/FenceList"
 import { FaqAccordion } from "../components/landing/FaqAccordion"
 import { HebrewPlate } from "../components/landing/HebrewPlate"
 import { PromiseBand } from "../components/landing/PromiseBand"
+import { PosterMoment } from "../components/landing/PosterMoment"
 import { DownloadOs } from "../components/landing/DownloadOs"
 import { Reveal } from "../components/landing/Reveal"
 import { downloads, github, releasePage } from "../data/downloads"
@@ -200,7 +201,21 @@ const jsonLd = [
     </div>
   </section>
 
+  <PosterMoment
+    client:visible
+    id="one-desk"
+    src="/marketing/posters/one-desk-for-the-word.png"
+    alt="Anointed Staff — One desk for the Word. Explore Scripture, Strong’s Concordance, ancient languages, and deeper study."
+  />
+
   <PromiseBand client:visible />
+
+  <PosterMoment
+    client:visible
+    id="chamber"
+    src="/marketing/posters/scripture-study-chamber.png"
+    alt="Anointed Staff — Ancient wisdom. Modern tools. Scripture at the center."
+  />
 
   <FilmStage client:visible />
 
@@ -427,6 +442,13 @@ const jsonLd = [
   </section>
 
   <FaqAccordion client:visible items={faqItems} />
+
+  <PosterMoment
+    client:visible
+    id="local"
+    src="/marketing/posters/study-deeper-keep-it-local.png"
+    alt="Anointed Staff — Study deeper. Keep it local. Personal notes, biblical research, historical texts, and optional AI tools."
+  />
 
   <DownloadOs
     client:visible

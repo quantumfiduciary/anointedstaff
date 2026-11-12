@@ -35,26 +35,33 @@ Campaign line: *A study desk you keep, not a cloud Bible that keeps you.*
 ---
 
 <p align="center">
-  <img src="site/public/screenshots/desk-heavens-cast.png" alt="Heavens Cast on the Anointed Staff desk" width="900" />
-</p>
-
-<p align="center"><em>Heavens Cast beside Books — clocks and glory, not fortunes.</em></p>
-
-<p align="center">
-  <video
-    src="https://github.com/quantumfiduciary/anointedstaff/releases/download/marketing-media/kinetic-text-16x9.mp4"
-    width="900"
-    controls
-    playsinline
-    preload="metadata"
-    poster="https://www.anointedstaff.com/marketing/stills/landing/hero-lamp-desk-16x9.png"
-  >
-    Watch the desk · 25s
-  </video>
+  <img src="site/public/marketing/posters/ancient-wisdom-modern-tools.png" alt="Anointed Staff — Ancient wisdom. Modern tools." width="900" />
 </p>
 
 <p align="center">
-  <em>Watch the desk · 25s</em> — same kinetic cut as
+  <img src="site/public/marketing/posters/one-desk-for-the-word.png" alt="Anointed Staff — One desk for the Word" width="900" />
+</p>
+
+<p align="center">
+  <img src="site/public/marketing/posters/scripture-study-chamber.png" alt="Anointed Staff — Scripture at the center" width="900" />
+</p>
+
+<p align="center">
+  <img src="site/public/marketing/posters/study-deeper-keep-it-local.png" alt="Anointed Staff — Study deeper. Keep it local." width="900" />
+</p>
+
+<p align="center">
+  <a href="https://www.anointedstaff.com/#film">
+    <img
+      src="https://www.anointedstaff.com/marketing/stills/landing/hero-lamp-desk-16x9.png"
+      alt="Watch the desk · 25s — kinetic launch film"
+      width="900"
+    />
+  </a>
+</p>
+
+<p align="center">
+  <em>Watch the desk · 25s</em> —
   <a href="https://www.anointedstaff.com/#film">anointedstaff.com/#film</a>
 </p>
 
