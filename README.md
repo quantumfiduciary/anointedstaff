@@ -41,16 +41,17 @@ Campaign line: *A study desk you keep, not a cloud Bible that keeps you.*
 <p align="center"><em>Heavens Cast beside Books — clocks and glory, not fortunes.</em></p>
 
 <p align="center">
-  <a href="https://www.anointedstaff.com/marketing/comfy/video/kinetic-text-16x9.mp4">
-    <img
-      src="https://www.anointedstaff.com/marketing/stills/landing/hero-lamp-desk-16x9.png"
-      alt="Watch the desk · 25s — kinetic launch film (same cut as the landing page)"
-      width="900"
-    />
-  </a>
+  <video
+    src="https://github.com/quantumfiduciary/anointedstaff/releases/download/marketing-media/kinetic-text-16x9.mp4"
+    width="900"
+    controls
+    playsinline
+    preload="metadata"
+    poster="https://www.anointedstaff.com/marketing/stills/landing/hero-lamp-desk-16x9.png"
+  >
+    Watch the desk · 25s
+  </video>
 </p>
-
-https://github.com/quantumfiduciary/anointedstaff/raw/main/site/public/marketing/comfy/video/kinetic-text-16x9.mp4
 
 <p align="center">
   <em>Watch the desk · 25s</em> — same kinetic cut as
