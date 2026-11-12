@@ -1,0 +1,22 @@
+---
+/**
+ * Monochrome icons from icons0 / Iconify (Lucide, Tabler, MDI).
+ * Served as CSS masks so color follows `currentColor`.
+ */
+interface Props {
+  name: string
+  class?: string
+  label?: string
+}
+
+const { name, class: className = "", label } = Astro.props
+const src = `/icons/${name}.svg`
+---
+
+<span
+  class:list={["icon", className]}
+  style={`--icon: url("${src}")`}
+  role={label ? "img" : undefined}
+  aria-label={label}
+  aria-hidden={label ? undefined : "true"}
+></span>

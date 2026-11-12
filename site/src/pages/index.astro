@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro"
-import { downloads, github, releasePage, releases } from "../data/downloads"
+import Icon from "../components/Icon.astro"
+import { downloads, github, releasePage } from "../data/downloads"
 
 const title = "Anointed Staff — Local Scripture Study Desk"
 const description =
@@ -8,52 +9,87 @@ const description =
 
 const features = [
   {
+    icon: "book-open",
     title: "Bible · Books",
     body: "Public-domain witnesses on the rail. Chapter stays the center while Books and search move you through the canon.",
   },
   {
+    icon: "hash",
     title: "Strong’s",
     body: "Look up a number, walk This verse, Paleo notes, Hear, and Ask about this word beside the open line.",
   },
   {
+    icon: "git-branch",
     title: "Roots",
     body: "Strong’s chains, Hitchcock names, and English trees so language study stays next to the chapter.",
   },
   {
+    icon: "kanban",
     title: "Notes · Wiki · Kanban",
     body: "Highlights, journals, wiki pages, cards, table, board, and Kanban lanes from To study to Applied — notes stay on this device.",
   },
   {
+    icon: "sparkles",
     title: "AI beside the chapter",
     body: "Optional local or cloud model with study chips (Explain, Strong’s, Extra-canon, Heavens…). Keys default to session-only.",
   },
   {
+    icon: "mic",
     title: "Voice",
     body: "Hands-free study window and chapter Listen with voices installed on your machine.",
   },
   {
+    icon: "library",
     title: "Extra-canon shelf",
     body: "Public-domain books beside the sixty-six — Enoch, Sophia, Gospels.net, Fathers, Hermetic history — credited and labeled.",
   },
   {
+    icon: "alphabet-hebrew",
     title: "Gematria · letters",
     body: "Learn the alef-bet, mothers/doubles/simples, count a word, Hear clips, and drills that link back to Strong’s and Scripture.",
   },
   {
+    icon: "orbit",
     title: "Heavens",
     body: "Cast a chart, Witness path, Decans, Circle, Camp, Job 38, Psalm 19 — clocks and glory beside Scripture, not fortunes.",
   },
   {
+    icon: "flower-2",
     title: "Practice",
     body: "Temple walk, Drill, Cards, Meditate, Quiet music, and offline Hebrew Hear — stillness baked into the build.",
   },
   {
+    icon: "audio-lines",
     title: "Compare · Listen",
     body: "Second PD witnesses (including non-English packs) and read-aloud for the open chapter.",
   },
   {
+    icon: "palette",
     title: "Five appearances",
     body: "Light, Dark, Mystic, Parchment, and Ink share Staff Gold — Outfit, Fraunces, Literata, and Noto across the desk.",
+  },
+]
+
+const fenceItems = [
+  {
+    icon: "clock",
+    title: "Clocks, not fortunes",
+    body: "Heavens will not sell monthly prognosticators. Aspects are geometry on the wheel — tension or ease in old tables — not a ruling over a life.",
+  },
+  {
+    icon: "scroll-text",
+    title: "Public-domain honesty",
+    body: "Extra-canon titles ship only when English rights clear. Brill wrappers and sacred-name “restored” editions without a PD dedication stay out.",
+  },
+  {
+    icon: "book-marked",
+    title: "Historical shelves, not ritual kits",
+    body: "Hermetic and world canons are study texts with credits. The desk will not teach seals or ceremony.",
+  },
+  {
+    icon: "lock",
+    title: "Local by default",
+    body: "Practice audio is offline. Leave-device confirms cover place search, web search, and cloud model tests. Session-only keys are the default.",
   },
 ]
 
@@ -159,11 +195,21 @@ const jsonLd = [
         open beside the chapter — on a machine that holds your notes and keys.
       </p>
       <div class="cta-row download-os" data-download-os>
-        <a class="btn btn-primary" data-os="windows" href={downloads.windows.href}>Windows</a>
-        <a class="btn btn-ghost" data-os="linux" href={downloads.linuxAppImage.href}>Linux AppImage</a>
-        <a class="btn btn-ghost" data-os="linux" href={downloads.linuxDeb.href}>Linux .deb</a>
-        <a class="btn btn-ghost" data-os="mac" href={downloads.mac.href}>macOS</a>
-        <a class="btn btn-ghost" href={github}>View source</a>
+        <a class="btn btn-primary" data-os="windows" href={downloads.windows.href}>
+          <Icon name="windows" />Windows
+        </a>
+        <a class="btn btn-ghost" data-os="linux" href={downloads.linuxAppImage.href}>
+          <Icon name="linux" />Linux AppImage
+        </a>
+        <a class="btn btn-ghost" data-os="linux" href={downloads.linuxDeb.href}>
+          <Icon name="linux" />Linux .deb
+        </a>
+        <a class="btn btn-ghost" data-os="mac" href={downloads.mac.href}>
+          <Icon name="apple" />macOS
+        </a>
+        <a class="btn btn-ghost" href={github}>
+          <Icon name="github" />View source
+        </a>
       </div>
       <p class="download-note">
         Or browse all assets on <a href={releasePage}>Releases v0.2.0</a>. Unsigned macOS builds:
@@ -277,7 +323,10 @@ const jsonLd = [
         {
           features.map((f) => (
             <article>
-              <h3>{f.title}</h3>
+              <h3>
+                <Icon name={f.icon} class="feature-icon" />
+                {f.title}
+              </h3>
               <p>{f.body}</p>
             </article>
           ))
@@ -424,34 +473,17 @@ const jsonLd = [
         </p>
       </div>
       <ul class="fence-list">
-        <li>
-          <strong>Clocks, not fortunes</strong>
-          <span>
-            Heavens will not sell monthly prognosticators. Aspects are geometry on the wheel —
-            tension or ease in old tables — not a ruling over a life.
-          </span>
-        </li>
-        <li>
-          <strong>Public-domain honesty</strong>
-          <span>
-            Extra-canon titles ship only when English rights clear. Brill wrappers and sacred-name
-            “restored” editions without a PD dedication stay out.
-          </span>
-        </li>
-        <li>
-          <strong>Historical shelves, not ritual kits</strong>
-          <span>
-            Hermetic and world canons are study texts with credits. The desk will not teach seals
-            or ceremony.
-          </span>
-        </li>
-        <li>
-          <strong>Local by default</strong>
-          <span>
-            Practice audio is offline. Leave-device confirms cover place search, web search, and
-            cloud model tests. Session-only keys are the default.
-          </span>
-        </li>
+        {
+          fenceItems.map((item) => (
+            <li>
+              <strong>
+                <Icon name={item.icon} class="fence-icon" />
+                {item.title}
+              </strong>
+              <span>{item.body}</span>
+            </li>
+          ))
+        }
       </ul>
     </div>
   </section>
@@ -518,25 +550,33 @@ const jsonLd = [
       </div>
       <div class="os-download-grid" data-download-os>
         <a class="os-card" data-os="windows" href={downloads.windows.href}>
+          <Icon name="windows" class="os-icon" />
           <strong>Windows</strong>
           <span>{downloads.windows.filename}</span>
         </a>
         <a class="os-card" data-os="linux" href={downloads.linuxAppImage.href}>
+          <Icon name="linux" class="os-icon" />
           <strong>Linux AppImage</strong>
           <span>{downloads.linuxAppImage.filename}</span>
         </a>
         <a class="os-card" data-os="linux" href={downloads.linuxDeb.href}>
+          <Icon name="linux" class="os-icon" />
           <strong>Linux .deb</strong>
           <span>{downloads.linuxDeb.filename}</span>
         </a>
         <a class="os-card" data-os="mac" href={downloads.mac.href}>
+          <Icon name="apple" class="os-icon" />
           <strong>macOS (Apple Silicon)</strong>
           <span>{downloads.mac.filename}</span>
         </a>
       </div>
       <div class="cta-row">
-        <a class="btn btn-ghost" href={releasePage}>All release assets</a>
-        <a class="btn btn-ghost" href={github}>View source</a>
+        <a class="btn btn-ghost" href={releasePage}>
+          <Icon name="download" />All release assets
+        </a>
+        <a class="btn btn-ghost" href={github}>
+          <Icon name="github" />View source
+        </a>
       </div>
     </div>
   </section>

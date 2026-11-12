@@ -117,12 +117,26 @@ a:hover {
 }
 
 .nav-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
   text-decoration: none;
   color: var(--night-muted);
 }
 
 .nav-links a:hover {
   color: var(--night-ink);
+}
+
+.icon {
+  display: inline-block;
+  width: 1.1em;
+  height: 1.1em;
+  flex-shrink: 0;
+  background-color: currentColor;
+  -webkit-mask: var(--icon) center / contain no-repeat;
+  mask: var(--icon) center / contain no-repeat;
+  vertical-align: -0.12em;
 }
 
 .btn {
@@ -292,9 +306,11 @@ a:hover {
 }
 
 .os-card {
-  display: flex;
-  flex-direction: column;
-  gap: 0.35rem;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto auto;
+  column-gap: 0.75rem;
+  row-gap: 0.2rem;
   padding: 1rem 1.1rem;
   border: 1px solid color-mix(in srgb, var(--gold) 28%, var(--hairline, #cfcdc4));
   border-radius: 10px;
@@ -312,6 +328,14 @@ a:hover {
 .os-card[data-preferred="true"] {
   border-color: var(--gold);
   box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--gold) 45%, transparent);
+}
+
+.os-card .os-icon {
+  grid-row: 1 / span 2;
+  align-self: center;
+  width: 1.45rem;
+  height: 1.45rem;
+  color: var(--gold-lamp);
 }
 
 .os-card strong {
@@ -439,10 +463,19 @@ a:hover {
 }
 
 .feature-catalog h3 {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
   margin: 0 0 0.3rem;
   font-family: var(--font-display);
   font-size: 1.08rem;
   font-weight: 600;
+}
+
+.feature-catalog .feature-icon {
+  width: 1.15rem;
+  height: 1.15rem;
+  color: var(--gold);
 }
 
 .feature-catalog p {
@@ -535,9 +568,17 @@ a:hover {
 }
 
 .fence-list strong {
-  display: block;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   font-family: var(--font-display);
   margin-bottom: 0.25rem;
+}
+
+.fence-list .fence-icon {
+  width: 1.1rem;
+  height: 1.1rem;
+  color: var(--gold-deep);
 }
 
 .fence-list span {
@@ -638,6 +679,12 @@ a:hover {
   display: flex;
   flex-wrap: wrap;
   gap: 0.85rem 1.25rem;
+}
+
+.footer-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
 }
 
 .prose {

@@ -7,9 +7,9 @@
 <p align="center"><b>A lamp-lit desk for the Word you keep — Scripture beside Strong’s, Extra-canon, Heavens, Notes, and quiet Practice.</b></p>
 
 <p align="center">
-  <a href="https://www.anointedstaff.com"><b>🌐 www.anointedstaff.com</b></a>
+  <a href="https://www.anointedstaff.com"><img src="https://api.iconify.design/lucide/lamp-desk.svg?color=%238f5e24&height=16" alt="" /> <b>www.anointedstaff.com</b></a>
   &nbsp;·&nbsp;
-  <a href="https://github.com/quantumfiduciary/anointedstaff/releases"><b>Download desktop builds</b></a>
+  <a href="https://github.com/quantumfiduciary/anointedstaff/releases/tag/v0.2.0"><img src="https://api.iconify.design/lucide/download.svg?color=%238f5e24&height=16" alt="" /> <b>Download v0.2.0</b></a>
 </p>
 
 <p align="center">
@@ -55,26 +55,27 @@ Campaign line: *A study desk you keep, not a cloud Bible that keeps you.*
 ## Features
 
 ### Read
-- **Bible** — Public-domain witnesses; chapter stays the altar of the desk
-- **Books** — Canon navigation and search while the verse rail stays open
-- **Compare · Listen** — Second PD witnesses and chapter read-aloud
+- <img src="https://api.iconify.design/lucide/book-open.svg?color=%238f5e24&height=16" alt="" /> **Bible** — Public-domain witnesses; chapter stays the altar of the desk
+- <img src="https://api.iconify.design/lucide/search.svg?color=%238f5e24&height=16" alt="" /> **Books** — Canon navigation and search while the verse rail stays open
+- <img src="https://api.iconify.design/lucide/audio-lines.svg?color=%238f5e24&height=16" alt="" /> **Compare · Listen** — Second PD witnesses and chapter read-aloud
 
 ### Study
-- **Strong’s** — Number lookup, This verse, Paleo notes, Hear, Ask about this word
-- **Roots** — Strong’s chains, Hitchcock names, English trees
-- **Notes** — Highlights, Write, Wiki, Kanban, Cards, Table, Board (notes stay on device)
-- **Extra-canon** — PD shelf beside the sixty-six (Enoch, Sophia, Gospels.net, Fathers, Hermetic…)
-- **AI** — Optional local/cloud model beside the chapter; session-only keys by default
-- **Voice** — Hands-free study window
+- <img src="https://api.iconify.design/lucide/hash.svg?color=%238f5e24&height=16" alt="" /> **Strong’s** — Number lookup, This verse, Paleo notes, Hear, Ask about this word
+- <img src="https://api.iconify.design/lucide/git-branch.svg?color=%238f5e24&height=16" alt="" /> **Roots** — Strong’s chains, Hitchcock names, English trees
+- <img src="https://api.iconify.design/lucide/kanban.svg?color=%238f5e24&height=16" alt="" /> **Notes** — Highlights, Write, Wiki, Kanban, Cards, Table, Board (notes stay on device)
+- <img src="https://api.iconify.design/lucide/library.svg?color=%238f5e24&height=16" alt="" /> **Extra-canon** — PD shelf beside the sixty-six (Enoch, Sophia, Gospels.net, Fathers, Hermetic…)
+- <img src="https://api.iconify.design/lucide/sparkles.svg?color=%238f5e24&height=16" alt="" /> **AI** — Optional local/cloud model beside the chapter; session-only keys by default
+- <img src="https://api.iconify.design/lucide/mic.svg?color=%238f5e24&height=16" alt="" /> **Voice** — Hands-free study window
 
 ### Tools
-- **Gematria** — Letter study, mothers/doubles/simples, count, Hear, drills
-- **Heavens** — Cast, Witness, Decans, Circle, Camp, Job 38, Psalm 19 (clocks-not-fortunes)
-- **Practice** — Temple walk, Drill, Cards, Meditate, Quiet music
+- <img src="https://api.iconify.design/tabler/alphabet-hebrew.svg?color=%238f5e24&height=16" alt="" /> **Gematria** — Letter study, mothers/doubles/simples, count, Hear, drills
+- <img src="https://api.iconify.design/lucide/orbit.svg?color=%238f5e24&height=16" alt="" /> **Heavens** — Cast, Witness, Decans, Circle, Camp, Job 38, Psalm 19 (clocks-not-fortunes)
+- <img src="https://api.iconify.design/lucide/flower-2.svg?color=%238f5e24&height=16" alt="" /> **Practice** — Temple walk, Drill, Cards, Meditate, Quiet music
 
 ### Desk
-- **Five appearances** — Light · Dark · Mystic · Parchment · Ink
-- **Local-first** — Leave-device confirms; notes and charts stay on the machine
+- <img src="https://api.iconify.design/lucide/palette.svg?color=%238f5e24&height=16" alt="" /> **Five appearances** — Light · Dark · Mystic · Parchment · Ink
+- <img src="https://api.iconify.design/lucide/lock.svg?color=%238f5e24&height=16" alt="" /> **Local-first** — Leave-device confirms; notes and charts stay on the machine
+- <img src="https://api.iconify.design/lucide/clock.svg?color=%238f5e24&height=16" alt="" /> **Fence** — Clocks not fortunes · PD honesty · historical shelves not ritual · local by default
 
 ---
 
@@ -108,10 +109,10 @@ Campaign line: *A study desk you keep, not a cloud Bible that keeps you.*
 
 ## Get started
 
-1. **Download** a desktop build from [Releases](https://github.com/quantumfiduciary/anointedstaff/releases/tag/v0.2.0):
-   - **Windows** — NSIS setup (`.exe`)
-   - **Linux** — AppImage and `.deb`
-   - **macOS** — `.dmg` (Apple Silicon). If Gatekeeper blocks an unsigned build, right-click → Open.
+1. **Download** a desktop build from [v0.2.0](https://github.com/quantumfiduciary/anointedstaff/releases/tag/v0.2.0):
+   - <img src="https://api.iconify.design/mdi/microsoft-windows.svg?color=%230078D6&height=16" alt="" /> **Windows** — [`Anointed.Staff_0.2.0_x64-setup.exe`](https://github.com/quantumfiduciary/anointedstaff/releases/download/v0.2.0/Anointed.Staff_0.2.0_x64-setup.exe)
+   - <img src="https://api.iconify.design/mdi/linux.svg?color=%23FCC624&height=16" alt="" /> **Linux** — [`AppImage`](https://github.com/quantumfiduciary/anointedstaff/releases/download/v0.2.0/Anointed.Staff_0.2.0_amd64.AppImage) · [`.deb`](https://github.com/quantumfiduciary/anointedstaff/releases/download/v0.2.0/Anointed.Staff_0.2.0_amd64.deb)
+   - <img src="https://api.iconify.design/mdi/apple.svg?color=%23555555&height=16" alt="" /> **macOS** — [`Anointed.Staff_0.2.0_aarch64.dmg`](https://github.com/quantumfiduciary/anointedstaff/releases/download/v0.2.0/Anointed.Staff_0.2.0_aarch64.dmg) (Apple Silicon). If Gatekeeper blocks an unsigned build, right-click → Open.
 2. Or **run from source**:
 
 ```bash

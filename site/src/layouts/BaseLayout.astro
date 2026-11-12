@@ -1,5 +1,7 @@
 ---
 import "../styles/global.css"
+import Icon from "../components/Icon.astro"
+import { github, releasePage, releases } from "../data/downloads"
 
 interface Props {
   title: string
@@ -22,8 +24,6 @@ const {
 const site = "https://www.anointedstaff.com"
 const canonical = new URL(canonicalPath === "/" ? "/" : canonicalPath, site).href
 const og = new URL(ogImage, site).href
-const github = "https://github.com/quantumfiduciary/anointedstaff"
-const releases = `${github}/releases`
 ---
 
 <!doctype html>
@@ -63,11 +63,11 @@ const releases = `${github}/releases`
           />
         </a>
         <nav class="nav-links" aria-label="Primary">
-          <a href="/#catalog">Features</a>
-          <a href="/#fence">Fence</a>
-          <a href="/blog">Blog</a>
-          <a href={github}>GitHub</a>
-          <a class="btn btn-primary" href={releases}>Download desktop builds</a>
+          <a href="/#catalog"><Icon name="layout-list" />Features</a>
+          <a href="/#fence"><Icon name="shield" />Fence</a>
+          <a href="/blog"><Icon name="notebook" />Blog</a>
+          <a href={github}><Icon name="github" />GitHub</a>
+          <a class="btn btn-primary" href={releasePage}><Icon name="download" />Download</a>
         </nav>
       </div>
     </header>
@@ -86,9 +86,9 @@ const releases = `${github}/releases`
           not ritual. Heavens stay clocks beside Scripture — not fortunes.
         </p>
         <p class="footer-links">
-          <a href="/blog">Blog</a>
-          <a href={releases}>Download desktop builds</a>
-          <a href={github}>GitHub</a>
+          <a href="/blog"><Icon name="notebook" />Blog</a>
+          <a href={releasePage}><Icon name="download" />Download v0.2.0</a>
+          <a href={github}><Icon name="github" />GitHub</a>
           <a href="/#faq">FAQ</a>
         </p>
       </div>
