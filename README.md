@@ -41,31 +41,20 @@ Campaign line: *A study desk you keep, not a cloud Bible that keeps you.*
 <p align="center"><em>Heavens Cast beside Books — clocks and glory, not fortunes.</em></p>
 
 <p align="center">
-  <video
-    src="https://www.anointedstaff.com/marketing/comfy/video/kinetic-text-16x9.mp4"
-    poster="https://www.anointedstaff.com/marketing/stills/landing/hero-lamp-desk-16x9.png"
-    width="900"
-    controls
-    playsinline
-  ></video>
-</p>
-
-<!-- GitHub often strips &lt;video&gt;; poster + raw file still surface the same cut -->
-<p align="center">
   <a href="https://www.anointedstaff.com/marketing/comfy/video/kinetic-text-16x9.mp4">
     <img
       src="https://www.anointedstaff.com/marketing/stills/landing/hero-lamp-desk-16x9.png"
-      alt="Watch the desk · 25s — kinetic launch film"
+      alt="Watch the desk · 25s — kinetic launch film (same cut as the landing page)"
       width="900"
     />
   </a>
 </p>
 
+https://github.com/quantumfiduciary/anointedstaff/raw/main/site/public/marketing/comfy/video/kinetic-text-16x9.mp4
+
 <p align="center">
-  <em>Watch the desk · 25s</em> —
-  <a href="https://www.anointedstaff.com/#film">on the site</a>
-  ·
-  <a href="https://github.com/quantumfiduciary/anointedstaff/blob/main/site/public/marketing/comfy/video/kinetic-text-16x9.mp4">in the repo</a>
+  <em>Watch the desk · 25s</em> — same kinetic cut as
+  <a href="https://www.anointedstaff.com/#film">anointedstaff.com/#film</a>
 </p>
 
 ---
