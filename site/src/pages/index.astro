@@ -7,54 +7,51 @@ import { FeatureBento } from "../components/landing/FeatureBento"
 import { FenceList } from "../components/landing/FenceList"
 import { FaqAccordion } from "../components/landing/FaqAccordion"
 import { HebrewPlate } from "../components/landing/HebrewPlate"
+import { PromiseBand } from "../components/landing/PromiseBand"
 import { DownloadOs } from "../components/landing/DownloadOs"
 import { Reveal } from "../components/landing/Reveal"
 import { downloads, github, releasePage } from "../data/downloads"
 
 const title = "Anointed Staff — Local Scripture Study Desk"
 const description =
-  "A lamp-lit local desk for Scripture beside Strong’s, Extra-canon, Heavens clocks, Notes, Gematria, and optional AI. Public-domain texts. Notes and keys stay on your machine."
+  "One local desk that gathers public-domain Scripture, Extra-canon shelves, Strong’s, letters, Heavens clocks, Notes, Practice, and optional AI beside the open chapter—notes and keys stay on your machine."
 
 const features = [
   {
     icon: "book-open",
     title: "Bible · Books",
-    body: "Public-domain witnesses on the rail. Chapter stays the center while Books and search move you through the canon.",
+    body: "Public-domain witnesses on the rail. The chapter stays the altar while Books and search move you through the canon without leaving the room.",
   },
   {
     icon: "hash",
     title: "Strong’s",
-    body: "Look up a number, walk This verse, Paleo notes, Hear, and Ask about this word beside the open line.",
-  },
-  {
-    icon: "git-branch",
-    title: "Roots",
-    body: "Strong’s chains, Hitchcock names, and English trees so language study stays next to the chapter.",
-  },
-  {
-    icon: "kanban",
-    title: "Notes · Wiki · Kanban",
-    body: "Highlights, journals, wiki pages, cards, table, board, and Kanban lanes from To study to Applied — notes stay on this device.",
+    body: "Look up a number, walk This verse, Paleo notes, Hear, and Ask about this word — lexicon light beside the open line, not a separate tab.",
   },
   {
     icon: "sparkles",
     title: "AI beside the chapter",
-    body: "Optional local or cloud model with study chips (Explain, Strong’s, Extra-canon, Heavens…). Keys default to session-only.",
-  },
-  {
-    icon: "mic",
-    title: "Voice",
-    body: "Hands-free study window and chapter Listen with voices installed on your machine.",
+    body: "A study companion that packs Explain, Strong’s, Extra-canon, and Heavens chips around the verse you already have open. Optional local or cloud model; session-only keys by default — ingenuity that serves the Word without leasing your desk.",
+    featured: true,
   },
   {
     icon: "library",
     title: "Extra-canon shelf",
-    body: "Public-domain books beside the sixty-six — Enoch, Sophia, Gospels.net, Fathers, Hermetic history — credited and labeled.",
+    body: "Public-domain books beside the sixty-six — Enoch, Sophia, Gospels.net, Fathers, Hermetic history — credited, labeled, and never smuggled as Scripture.",
+  },
+  {
+    icon: "git-branch",
+    title: "Roots",
+    body: "Strong’s chains, Hitchcock names, and English trees so language study stays next to the chapter you are reading.",
+  },
+  {
+    icon: "kanban",
+    title: "Notes · Wiki · Kanban",
+    body: "Highlights, journals, wiki pages, and Kanban lanes from To study to Applied — your growth stays on this device.",
   },
   {
     icon: "alphabet-hebrew",
     title: "Gematria · letters",
-    body: "Learn the alef-bet, mothers/doubles/simples, count a word, Hear clips, and drills that link back to Strong’s and Scripture.",
+    body: "Learn the alef-bet, mothers/doubles/simples, count a word, Hear clips, and drills that send you back into Scripture.",
   },
   {
     icon: "orbit",
@@ -64,7 +61,12 @@ const features = [
   {
     icon: "flower-2",
     title: "Practice",
-    body: "Temple walk, Drill, Cards, Meditate, Quiet music, and offline Hebrew Hear — stillness baked into the build.",
+    body: "Temple walk, Drill, Cards, Meditate, Quiet music, and offline Hebrew Hear — stillness baked into the build so growth is not noise.",
+  },
+  {
+    icon: "mic",
+    title: "Voice",
+    body: "Hands-free study window and chapter Listen with voices installed on your machine.",
   },
   {
     icon: "audio-lines",
@@ -74,7 +76,7 @@ const features = [
   {
     icon: "palette",
     title: "Five appearances",
-    body: "Light, Dark, Mystic, Parchment, and Ink share Staff Gold — Outfit, Fraunces, Literata, and Noto across the desk.",
+    body: "Light, Dark, Mystic, Parchment, and Ink share Staff Gold — one voltage across five rooms for the hour you study.",
   },
 ]
 
@@ -183,19 +185,22 @@ const jsonLd = [
   <section class="section" id="why">
     <div class="wrap">
       <Reveal client:visible>
-        <div class="section-head">
+        <div class="section-head max-w-2xl">
           <p class="eyebrow">Why the desk</p>
-          <h2>Most study walks scatter across tabs</h2>
+          <h2>This kind of room almost never exists in one place</h2>
           <p>
-            One window for the chapter. Another for a lexicon. Another for a chart. Another for a
-            notebook that never quite stays yours. Anointed Staff keeps the open chapter as the
-            center of the desk and opens language, older shelves, and the sky as panes beside it —
-            not as a maze of accounts.
+            Most study walks scatter: a Bible tab, a lexicon site, a chart elsewhere, a notebook that
+            never quite stays yours. Anointed Staff gathers ancient witnesses and the tools that
+            serve them — Strong’s, letters, Extra-canon shelves, Heavens clocks, Notes, Practice,
+            and optional AI — into one lamp-lit desk with the chapter at the center. Local, not
+            leased. Glory with a fence.
           </p>
         </div>
       </Reveal>
     </div>
   </section>
+
+  <PromiseBand client:visible />
 
   <FilmStage client:visible />
 
@@ -207,9 +212,9 @@ const jsonLd = [
           <h2>Companion for the walk, not a relic shop</h2>
           <p>
             In the lore of this desk, the staff is what you lean on while you read: a quiet
-            companion for Word, language, and sky. It is not merchandise for seals or ceremony.
-            Anointing here means set-apart attention — the chapter lit, the side shelves labeled,
-            the room kept local so study does not leak into someone else’s cloud.
+            companion for Word, language, and sky. Anointing here means set-apart attention — the
+            chapter lit, the side shelves labeled, the room kept local so study does not leak into
+            someone else’s cloud. Ingenuity in service of Scripture, not spectacle.
           </p>
         </div>
       </Reveal>
@@ -233,8 +238,9 @@ const jsonLd = [
             <h2>The chapter is the altar of the room</h2>
             <p>
               Public-domain English witnesses stay on the line — KJV and listed PD packs, never
-              NIV/ESV/NET. Strong’s numbers mark the text. Optional AI packs a study packet when you
-              ask; keys default to session-only. Your notes live in this device’s profile.
+              NIV/ESV/NET. Strong’s marks the text. Older shelves open beside it. When you ask, AI
+              packs a study packet around the verse you already see — keys session-only by default.
+              Your notes live in this device’s profile so growth stays yours.
             </p>
           </div>
           <div class="cta-row">
@@ -261,8 +267,10 @@ const jsonLd = [
     <div class="wrap">
       <div class="section-head">
         <p class="eyebrow">Look inside</p>
-        <h2>Real panes from the running desk</h2>
-        <p>Heavens, Extra-canon, Notes, Gematria, Strong’s, and AI — screenshots, not mockups.</p>
+        <h2>Proof of the room, not mockups</h2>
+        <p>
+          Heavens, Extra-canon, Notes, Gematria, Strong’s, and AI — the same desk you download.
+        </p>
       </div>
       <div class="shot-grid">
         <figure>
@@ -335,8 +343,8 @@ const jsonLd = [
         <p class="eyebrow">Three deeper rooms</p>
         <h2>Shelf, sky, and quiet practice</h2>
         <p>
-          Longer walks through Extra-canon rights, Heavens clocks-not-fortunes, and offline
-          Practice.
+          Walk older texts honestly, read the heavens as clocks beside glory, and grow in stillness
+          that never needs a subscription.
         </p>
       </div>
       <div class="feature-grid">
@@ -350,7 +358,8 @@ const jsonLd = [
           />
           <h3>Extra-canon PD shelf</h3>
           <p>
-            Older books beside the sixty-six — credited, labeled, never smuggled as Scripture.
+            Ancient shelves beside the sixty-six — credited, labeled, never smuggled as Scripture.
+            History in reach of the chapter.
           </p>
         </a>
         <a class="feature-link" href="/blog/heavens-clocks-not-fortunes">
@@ -363,8 +372,8 @@ const jsonLd = [
           />
           <h3>Heavens: clocks, not fortunes</h3>
           <p>
-            Cast and Witness mark seasons and geometry beside the open chapter. Isaiah 47 keeps
-            the fence.
+            Cast and Witness mark seasons and geometry beside the open chapter — mystical glory with
+            Isaiah 47 as the fence.
           </p>
         </a>
         <a class="feature-link" href="/blog/offline-practice-quiet-desk">
@@ -377,7 +386,8 @@ const jsonLd = [
           />
           <h3>Letters · Practice · quiet desk</h3>
           <p>
-            Hear clips, drills, Temple walk, and Quiet music — stillness that stays offline.
+            Hear clips, drills, Temple walk, and Quiet music — grow offline in the same room as the
+            Word.
           </p>
         </a>
       </div>

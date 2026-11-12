@@ -15,11 +15,13 @@ import {
   Type,
 } from "lucide-react"
 import { Card, CardDescription, CardTitle } from "../ui/card"
+import { cn } from "../../lib/utils"
 
 export type FeatureItem = {
   icon: string
   title: string
   body: string
+  featured?: boolean
 }
 
 const iconMap: Record<string, ComponentType<{ className?: string }>> = {
@@ -45,16 +47,16 @@ export function FeatureBento({ features }: Props) {
   return (
     <section className="section py-20" id="catalog">
       <div className="wrap">
-        <div className="section-head mb-8 max-w-xl">
+        <div className="section-head mb-8 max-w-2xl">
           <p className="eyebrow mb-2 text-xs font-medium uppercase tracking-[0.14em] text-[var(--gold)]">
             On the desk
           </p>
           <h2 className="font-[family-name:var(--font-display)] text-[clamp(1.6rem,3.5vw,2.35rem)] font-semibold">
-            What you can open beside the chapter
+            A whole room for Word, language, sky, and growth
           </h2>
           <p className="mt-3 text-[var(--body)]">
-            Not every control — the ones that make the desk a whole room for Word, language, sky,
-            and notes.
+            Not a thin verse app — the tools that help you read deeply, remember honestly, and grow
+            beside Scripture without leaving the chapter behind.
           </p>
         </div>
 
@@ -73,17 +75,26 @@ export function FeatureBento({ features }: Props) {
             return (
               <motion.div
                 key={f.title}
+                className={cn(f.featured && "sm:col-span-2 lg:col-span-2")}
                 variants={{
                   hidden: reduce ? { opacity: 1 } : { opacity: 0, y: 18 },
                   show: { opacity: 1, y: 0, transition: { duration: 0.4, ease: [0.22, 1, 0.36, 1] } },
                 }}
               >
-                <Card className="h-full transition-transform hover:-translate-y-0.5">
+                <Card
+                  className={cn(
+                    "h-full transition-transform hover:-translate-y-0.5",
+                    f.featured &&
+                      "border-[color-mix(in_srgb,var(--gold)_40%,var(--hairline))] bg-[color-mix(in_srgb,var(--gold)_6%,var(--panel))]",
+                  )}
+                >
                   <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-[color-mix(in_srgb,var(--gold)_14%,transparent)] text-[var(--gold)]">
                     <Icon className="h-5 w-5" />
                   </div>
                   <CardTitle>{f.title}</CardTitle>
-                  <CardDescription>{f.body}</CardDescription>
+                  <CardDescription className={cn(f.featured && "max-w-2xl text-base")}>
+                    {f.body}
+                  </CardDescription>
                 </Card>
               </motion.div>
             )

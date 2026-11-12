@@ -31,10 +31,11 @@ export function BrandStrip() {
             loading="lazy"
           />
           <p className="font-[family-name:var(--font-display)] text-2xl font-semibold text-[var(--night-ink)] sm:text-3xl">
-            Scripture study desk. Local only.
+            Ancient witnesses. One local desk.
           </p>
           <p className="mt-3 max-w-md text-[var(--night-muted)]">
-            Stone · gold · olive on cream and dark sheets — a mark for the walk, not a relic shop.
+            Stone · gold · olive — a mark for the walk through Scripture, language, and sky. Not a
+            cloud Bible that keeps you.
           </p>
         </motion.div>
       </div>

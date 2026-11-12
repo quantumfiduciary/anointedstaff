@@ -55,11 +55,12 @@ export function Hero({ windowsHref, linuxHref, macHref, githubHref, releasePage 
             transition={{ duration: 5.5, repeat: Infinity, ease: "easeInOut" }}
           />
           <h1 className="font-[family-name:var(--font-display)] text-[clamp(1.85rem,4.5vw,3rem)] font-semibold leading-[1.12] tracking-[-0.02em] text-[var(--night-ink)]">
-            A lamp-lit desk for the Word you keep.
+            One desk for the Word—and every tool that serves it.
           </h1>
           <p className="mt-4 max-w-xl text-[1.05rem] leading-relaxed text-[color-mix(in_srgb,var(--night-ink)_82%,transparent)]">
-            Scripture at the center. Strong’s, Extra-canon, Heavens, Notes, Gematria, and optional AI
-            open beside the chapter — on a machine that holds your notes and keys.
+            Public-domain Scripture and Extra-canon shelves. Strong’s, letters, Heavens clocks,
+            Notes, Practice—and optional AI beside the open chapter. All of it local, lamp-lit, and
+            yours to keep.
           </p>
 
           <div className="cta-row download-os mt-7 flex flex-wrap gap-3" data-download-os>

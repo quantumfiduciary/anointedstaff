@@ -16,12 +16,12 @@ export function HebrewPlate() {
             Letters
           </p>
           <h2 className="font-[family-name:var(--font-display)] text-[clamp(1.6rem,3.5vw,2.35rem)] font-semibold">
-            Ayin · Beth · Resh beside the chapter
+            Grow in the letters that shaped the Word
           </h2>
           <p className="mt-3 max-w-md text-[var(--body)]">
-            Gematria and letter study stay on the desk — mothers, doubles, simples, Hear clips, and
-            drills that link back to Strong’s and Scripture. Read right to left; keep the Word in
-            the center.
+            Ayin, Beth, Resh and the full alef-bet live beside the chapter — mothers, doubles,
+            simples, Hear clips, and drills that send you back to Strong’s and Scripture. Language
+            study becomes a walk through glory, not a separate app.
           </p>
         </motion.div>
         <motion.img
