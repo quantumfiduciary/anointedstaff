@@ -1,6 +1,14 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro"
-import Icon from "../components/Icon.astro"
+import { Hero } from "../components/landing/Hero"
+import { BrandStrip } from "../components/landing/BrandStrip"
+import { FilmStage } from "../components/landing/FilmStage"
+import { FeatureBento } from "../components/landing/FeatureBento"
+import { FenceList } from "../components/landing/FenceList"
+import { FaqAccordion } from "../components/landing/FaqAccordion"
+import { HebrewPlate } from "../components/landing/HebrewPlate"
+import { DownloadOs } from "../components/landing/DownloadOs"
+import { Reveal } from "../components/landing/Reveal"
 import { downloads, github, releasePage } from "../data/downloads"
 
 const title = "Anointed Staff — Local Scripture Study Desk"
@@ -122,7 +130,7 @@ const jsonLd = [
     "@type": "Organization",
     name: "Anointed Staff",
     url: "https://www.anointedstaff.com",
-    logo: "https://www.anointedstaff.com/brand-mark.png",
+    logo: "https://www.anointedstaff.com/brand/icons/icon-192.png",
   },
   {
     "@context": "https://schema.org",
@@ -161,143 +169,79 @@ const jsonLd = [
   ogImage="/marketing/stills/landing/hero-lamp-desk-16x9.png"
   jsonLd={jsonLd}
 >
-  <section class="hero" aria-label="Anointed Staff">
-    <div class="hero-media" aria-hidden="true">
-      <video
-        class="hero-desk hero-bed"
-        src="/marketing/comfy/video/bed-lamp-desk.mp4"
-        poster="/marketing/stills/landing/hero-lamp-desk-16x9.png"
-        autoplay
-        muted
-        loop
-        playsinline
-        preload="metadata"
-      ></video>
-      <img
-        class="hero-atmosphere"
-        src="/marketing/stills/landing/heavens-clocks-16x9.png"
-        alt=""
-        width="1280"
-        height="720"
-      />
-    </div>
-    <div class="hero-copy">
-      <img
-        class="hero-wordmark"
-        src="/brand/wordmark-clean-dark.png"
-        alt="Anointed Staff"
-        width="720"
-        height="720"
-      />
-      <h1>A lamp-lit desk for the Word you keep.</h1>
-      <p>
-        Scripture at the center. Strong’s, Extra-canon, Heavens, Notes, Gematria, and optional AI
-        open beside the chapter — on a machine that holds your notes and keys.
-      </p>
-      <div class="cta-row download-os" data-download-os>
-        <a class="btn btn-primary" data-os="windows" href={downloads.windows.href}>
-          <Icon name="windows" />Windows
-        </a>
-        <a class="btn btn-ghost" data-os="linux" href={downloads.linuxAppImage.href}>
-          <Icon name="linux" />Linux AppImage
-        </a>
-        <a class="btn btn-ghost" data-os="linux" href={downloads.linuxDeb.href}>
-          <Icon name="linux" />Linux .deb
-        </a>
-        <a class="btn btn-ghost" data-os="mac" href={downloads.mac.href}>
-          <Icon name="apple" />macOS
-        </a>
-        <a class="btn btn-ghost" href={github}>
-          <Icon name="github" />View source
-        </a>
-      </div>
-      <p class="download-note">
-        Or browse all assets on <a href={releasePage}>Releases v0.2.0</a>. Unsigned macOS builds:
-        right-click → Open if Gatekeeper blocks.
-      </p>
-    </div>
-  </section>
+  <Hero
+    client:load
+    windowsHref={downloads.windows.href}
+    linuxHref={downloads.linuxAppImage.href}
+    macHref={downloads.mac.href}
+    githubHref={github}
+    releasePage={releasePage}
+  />
 
-  <section class="section reveal" id="why">
+  <BrandStrip client:visible />
+
+  <section class="section" id="why">
     <div class="wrap">
-      <div class="section-head">
-        <p class="eyebrow">Why the desk</p>
-        <h2>Most study walks scatter across tabs</h2>
-        <p>
-          One window for the chapter. Another for a lexicon. Another for a chart. Another for a
-          notebook that never quite stays yours. Anointed Staff keeps the open chapter as the
-          center of the desk and opens language, older shelves, and the sky as panes beside it —
-          not as a maze of accounts.
-        </p>
-      </div>
+      <Reveal client:visible>
+        <div class="section-head">
+          <p class="eyebrow">Why the desk</p>
+          <h2>Most study walks scatter across tabs</h2>
+          <p>
+            One window for the chapter. Another for a lexicon. Another for a chart. Another for a
+            notebook that never quite stays yours. Anointed Staff keeps the open chapter as the
+            center of the desk and opens language, older shelves, and the sky as panes beside it —
+            not as a maze of accounts.
+          </p>
+        </div>
+      </Reveal>
     </div>
   </section>
 
-  <section class="section muted-band reveal" id="film">
-    <div class="wrap">
-      <div class="section-head">
-        <p class="eyebrow">Watch</p>
-        <h2>A study desk you keep</h2>
-        <p>
-          Twenty-five seconds of kinetic type and real panes — Scripture at the center, Hebrew and
-          Strong’s beside the line, Heavens as clocks, notes that stay on your machine.
-        </p>
-      </div>
-      <figure class="kinetic-feature">
-        <video
-          controls
-          playsinline
-          preload="metadata"
-          poster="/marketing/stills/landing/hero-lamp-desk-16x9.png"
-          src="/marketing/exports/kinetic-text-ad.mp4"
-        ></video>
-        <figcaption>
-          Kinetic launch cut · 25s · 16:9 —
-          <a href="/marketing/exports/kinetic-text-ad-9x16.mp4">download 9:16</a>
-        </figcaption>
-      </figure>
-    </div>
-  </section>
+  <FilmStage client:visible />
 
-  <section class="section lore-band reveal" id="staff">
+  <section class="section lore-band" id="staff">
     <div class="wrap split">
-      <div class="section-head">
-        <p class="eyebrow">The Staff</p>
-        <h2>Companion for the walk, not a relic shop</h2>
-        <p>
-          In the lore of this desk, the staff is what you lean on while you read: a quiet
-          companion for Word, language, and sky. It is not merchandise for seals or ceremony.
-          Anointing here means set-apart attention — the chapter lit, the side shelves labeled,
-          the room kept local so study does not leak into someone else’s cloud.
-        </p>
-      </div>
+      <Reveal client:visible>
+        <div class="section-head">
+          <p class="eyebrow">The Staff</p>
+          <h2>Companion for the walk, not a relic shop</h2>
+          <p>
+            In the lore of this desk, the staff is what you lean on while you read: a quiet
+            companion for Word, language, and sky. It is not merchandise for seals or ceremony.
+            Anointing here means set-apart attention — the chapter lit, the side shelves labeled,
+            the room kept local so study does not leak into someone else’s cloud.
+          </p>
+        </div>
+      </Reveal>
       <img
         class="brand-plate"
-        src="/marketing/stills/landing/staff-gold-mark-1x1.png"
-        alt="Carved wooden staff in warm lamp light — companion atmosphere for Anointed Staff"
-        width="1024"
-        height="1024"
+        src="/brand/mark-as-dark.png"
+        alt="Anointed Staff mark — gold crook between A and S on charcoal"
+        width={1024}
+        height={1024}
         loading="lazy"
       />
     </div>
   </section>
 
-  <section class="section muted-band reveal" id="desk">
+  <section class="section muted-band" id="desk">
     <div class="wrap split">
       <div>
-        <div class="section-head">
-          <p class="eyebrow">The Desk</p>
-          <h2>The chapter is the altar of the room</h2>
-          <p>
-            Public-domain English witnesses stay on the line — KJV and listed PD packs, never
-            NIV/ESV/NET. Strong’s numbers mark the text. Optional AI packs a study packet when you
-            ask; keys default to session-only. Your notes live in this device’s profile.
-          </p>
-        </div>
-        <div class="cta-row">
-          <a class="btn btn-ghost" href="#catalog">See what’s on the desk</a>
-          <a class="btn btn-ghost" href="/blog">Read the desk notes</a>
-        </div>
+        <Reveal client:visible>
+          <div class="section-head">
+            <p class="eyebrow">The Desk</p>
+            <h2>The chapter is the altar of the room</h2>
+            <p>
+              Public-domain English witnesses stay on the line — KJV and listed PD packs, never
+              NIV/ESV/NET. Strong’s numbers mark the text. Optional AI packs a study packet when you
+              ask; keys default to session-only. Your notes live in this device’s profile.
+            </p>
+          </div>
+          <div class="cta-row">
+            <a class="btn btn-ghost" href="#catalog">See what’s on the desk</a>
+            <a class="btn btn-ghost" href="/blog">Read the desk notes</a>
+          </div>
+        </Reveal>
       </div>
       <img
         src="/screenshots/desk-strongs.png"
@@ -309,33 +253,11 @@ const jsonLd = [
     </div>
   </section>
 
-  <section class="section reveal" id="catalog">
-    <div class="wrap">
-      <div class="section-head">
-        <p class="eyebrow">On the desk</p>
-        <h2>What you can open beside the chapter</h2>
-        <p>
-          Not every control — the ones that make the desk a whole room for Word, language, sky,
-          and notes.
-        </p>
-      </div>
-      <div class="feature-catalog">
-        {
-          features.map((f) => (
-            <article>
-              <h3>
-                <Icon name={f.icon} class="feature-icon" />
-                {f.title}
-              </h3>
-              <p>{f.body}</p>
-            </article>
-          ))
-        }
-      </div>
-    </div>
-  </section>
+  <FeatureBento client:visible features={features} />
 
-  <section class="section muted-band reveal" id="gallery">
+  <HebrewPlate client:visible />
+
+  <section class="section" id="gallery">
     <div class="wrap">
       <div class="section-head">
         <p class="eyebrow">Look inside</p>
@@ -407,7 +329,7 @@ const jsonLd = [
     </div>
   </section>
 
-  <section class="section reveal" id="features">
+  <section class="section muted-band" id="features">
     <div class="wrap">
       <div class="section-head">
         <p class="eyebrow">Three deeper rooms</p>
@@ -462,33 +384,9 @@ const jsonLd = [
     </div>
   </section>
 
-  <section class="section lore-band reveal" id="fence">
-    <div class="wrap">
-      <div class="section-head">
-        <p class="eyebrow">The Fence</p>
-        <h2>What the desk will not become</h2>
-        <p>
-          Lore without a fence turns into marketing fog. These lines stay visible on the product
-          and on this page.
-        </p>
-      </div>
-      <ul class="fence-list">
-        {
-          fenceItems.map((item) => (
-            <li>
-              <strong>
-                <Icon name={item.icon} class="fence-icon" />
-                {item.title}
-              </strong>
-              <span>{item.body}</span>
-            </li>
-          ))
-        }
-      </ul>
-    </div>
-  </section>
+  <FenceList client:visible items={fenceItems} />
 
-  <section class="section muted-band reveal" id="appearances">
+  <section class="section muted-band" id="appearances">
     <div class="wrap split">
       <img
         src="/screenshots/desk-notes-kanban.png"
@@ -518,78 +416,15 @@ const jsonLd = [
     </div>
   </section>
 
-  <section class="section reveal" id="faq">
-    <div class="wrap">
-      <div class="section-head">
-        <p class="eyebrow">Questions</p>
-        <h2>Before you download</h2>
-        <p>Plain answers to the objections that usually stop a careful reader.</p>
-      </div>
-      <div class="faq">
-        {
-          faqItems.map((item) => (
-            <details>
-              <summary>{item.q}</summary>
-              <p>{item.a}</p>
-            </details>
-          ))
-        }
-      </div>
-    </div>
-  </section>
+  <FaqAccordion client:visible items={faqItems} />
 
-  <section class="section download-band reveal" id="download">
-    <div class="wrap">
-      <div class="section-head">
-        <p class="eyebrow">Keep the desk</p>
-        <h2>Run Anointed Staff on your machine</h2>
-        <p>
-          Pick your OS installer below, or clone the monorepo and run locally. This site does not
-          host the study runtime — that is intentional.
-        </p>
-      </div>
-      <div class="os-download-grid" data-download-os>
-        <a class="os-card" data-os="windows" href={downloads.windows.href}>
-          <Icon name="windows" class="os-icon" />
-          <strong>Windows</strong>
-          <span>{downloads.windows.filename}</span>
-        </a>
-        <a class="os-card" data-os="linux" href={downloads.linuxAppImage.href}>
-          <Icon name="linux" class="os-icon" />
-          <strong>Linux AppImage</strong>
-          <span>{downloads.linuxAppImage.filename}</span>
-        </a>
-        <a class="os-card" data-os="linux" href={downloads.linuxDeb.href}>
-          <Icon name="linux" class="os-icon" />
-          <strong>Linux .deb</strong>
-          <span>{downloads.linuxDeb.filename}</span>
-        </a>
-        <a class="os-card" data-os="mac" href={downloads.mac.href}>
-          <Icon name="apple" class="os-icon" />
-          <strong>macOS (Apple Silicon)</strong>
-          <span>{downloads.mac.filename}</span>
-        </a>
-      </div>
-      <div class="cta-row">
-        <a class="btn btn-ghost" href={releasePage}>
-          <Icon name="download" />All release assets
-        </a>
-        <a class="btn btn-ghost" href={github}>
-          <Icon name="github" />View source
-        </a>
-      </div>
-    </div>
-  </section>
+  <DownloadOs
+    client:visible
+    windowsHref={downloads.windows.href}
+    linuxHref={downloads.linuxAppImage.href}
+    linuxDebHref={downloads.linuxDeb.href}
+    macHref={downloads.mac.href}
+    githubHref={github}
+    releasePage={releasePage}
+  />
 </BaseLayout>
-
-<script>
-  const ua = navigator.userAgent.toLowerCase()
-  let os: "windows" | "mac" | "linux" = "windows"
-  if (ua.includes("mac")) os = "mac"
-  else if (ua.includes("linux")) os = "linux"
-  for (const root of document.querySelectorAll("[data-download-os]")) {
-    root.querySelectorAll("[data-os]").forEach((el) => {
-      if (el.getAttribute("data-os") === os) el.setAttribute("data-preferred", "true")
-    })
-  }
-</script>

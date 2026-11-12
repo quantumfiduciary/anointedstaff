@@ -44,7 +44,8 @@ const og = new URL(ogImage, site).href
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={og} />
-    <link rel="icon" href="/brand-mark.png" type="image/png" />
+    <link rel="icon" href="/brand/icons/icon-192.png" type="image/png" />
+    <link rel="apple-touch-icon" href="/brand/icons/icon-192.png" />
     {jsonLd && (
       <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
     )}
@@ -53,10 +54,10 @@ const og = new URL(ogImage, site).href
     <header class="site-header">
       <div class="wrap inner">
         <a class="brand-lockup" href="/">
-          <img class="brand-mark" src="/brand-mark.png" alt="" width="36" height="36" />
+          <img class="brand-mark" src="/brand/icons/icon-192.png" alt="" width="36" height="36" />
           <img
             class="brand-wordmark-nav"
-            src="/brand/wordmark-clean-cream.png"
+            src="/brand/wordmark-cream.png"
             alt="Anointed Staff"
             width="180"
             height="48"

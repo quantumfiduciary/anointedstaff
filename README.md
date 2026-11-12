@@ -110,9 +110,9 @@ Campaign line: *A study desk you keep, not a cloud Bible that keeps you.*
 ## Get started
 
 1. **Download** a desktop build from [v0.2.0](https://github.com/quantumfiduciary/anointedstaff/releases/tag/v0.2.0):
-   - <img src="https://api.iconify.design/mdi/microsoft-windows.svg?color=%230078D6&height=16" alt="" /> **Windows** — [`Anointed.Staff_0.2.0_x64-setup.exe`](https://github.com/quantumfiduciary/anointedstaff/releases/download/v0.2.0/Anointed.Staff_0.2.0_x64-setup.exe)
-   - <img src="https://api.iconify.design/mdi/linux.svg?color=%23FCC624&height=16" alt="" /> **Linux** — [`AppImage`](https://github.com/quantumfiduciary/anointedstaff/releases/download/v0.2.0/Anointed.Staff_0.2.0_amd64.AppImage) · [`.deb`](https://github.com/quantumfiduciary/anointedstaff/releases/download/v0.2.0/Anointed.Staff_0.2.0_amd64.deb)
-   - <img src="https://api.iconify.design/mdi/apple.svg?color=%23555555&height=16" alt="" /> **macOS** — [`Anointed.Staff_0.2.0_aarch64.dmg`](https://github.com/quantumfiduciary/anointedstaff/releases/download/v0.2.0/Anointed.Staff_0.2.0_aarch64.dmg) (Apple Silicon). If Gatekeeper blocks an unsigned build, right-click → Open.
+   - <img src="https://api.iconify.design/mdi/microsoft-windows.svg?color=%230078D6&height=16" alt="" /> **[Windows](https://github.com/quantumfiduciary/anointedstaff/releases/download/v0.2.0/Anointed.Staff_0.2.0_x64-setup.exe)**
+   - <img src="https://api.iconify.design/mdi/linux.svg?color=%23FCC624&height=16" alt="" /> **[Linux](https://github.com/quantumfiduciary/anointedstaff/releases/download/v0.2.0/Anointed.Staff_0.2.0_amd64.AppImage)** · [Debian .deb](https://github.com/quantumfiduciary/anointedstaff/releases/download/v0.2.0/Anointed.Staff_0.2.0_amd64.deb)
+   - <img src="https://api.iconify.design/mdi/apple.svg?color=%23555555&height=16" alt="" /> **[macOS](https://github.com/quantumfiduciary/anointedstaff/releases/download/v0.2.0/Anointed.Staff_0.2.0_aarch64.dmg)** (Apple Silicon). If Gatekeeper blocks an unsigned build, right-click → Open.
 2. Or **run from source**:
 
 ```bash
