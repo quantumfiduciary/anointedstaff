@@ -42,17 +42,31 @@ Campaign line: *A study desk you keep, not a cloud Bible that keeps you.*
 
 <p align="center">
   <video
-    src="https://github.com/quantumfiduciary/anointedstaff/raw/main/site/public/marketing/comfy/video/kinetic-text-16x9.mp4"
-    poster="https://raw.githubusercontent.com/quantumfiduciary/anointedstaff/main/site/public/marketing/stills/landing/hero-lamp-desk-16x9.png"
+    src="https://www.anointedstaff.com/marketing/comfy/video/kinetic-text-16x9.mp4"
+    poster="https://www.anointedstaff.com/marketing/stills/landing/hero-lamp-desk-16x9.png"
     width="900"
     controls
     playsinline
-  >
-    <a href="https://www.anointedstaff.com/#film">Watch the desk · 25s on anointedstaff.com</a>
-  </video>
+  ></video>
 </p>
 
-<p align="center"><em>Watch the desk · 25s — one room for Scripture, study tools, and local AI.</em></p>
+<!-- GitHub often strips &lt;video&gt;; poster + raw file still surface the same cut -->
+<p align="center">
+  <a href="https://www.anointedstaff.com/marketing/comfy/video/kinetic-text-16x9.mp4">
+    <img
+      src="https://www.anointedstaff.com/marketing/stills/landing/hero-lamp-desk-16x9.png"
+      alt="Watch the desk · 25s — kinetic launch film"
+      width="900"
+    />
+  </a>
+</p>
+
+<p align="center">
+  <em>Watch the desk · 25s</em> —
+  <a href="https://www.anointedstaff.com/#film">on the site</a>
+  ·
+  <a href="https://github.com/quantumfiduciary/anointedstaff/blob/main/site/public/marketing/comfy/video/kinetic-text-16x9.mp4">in the repo</a>
+</p>
 
 ---
 
