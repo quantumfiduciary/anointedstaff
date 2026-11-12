@@ -460,8 +460,10 @@ a:hover {
 }
 
 .kinetic-feature {
-  margin: 0;
-  max-width: 56rem;
+  display: block;
+  margin-block: 0;
+  margin-inline: auto;
+  max-width: min(56rem, 100%);
 }
 
 .kinetic-feature video {

@@ -41,14 +41,19 @@ Campaign line: *A study desk you keep, not a cloud Bible that keeps you.*
 <p align="center"><em>Heavens Cast beside Books — clocks and glory, not fortunes.</em></p>
 
 <p align="center">
-  <img src="site/public/brand/feature-staff.png" alt="Staff study atmosphere" width="220" />
-  &nbsp;
-  <img src="site/public/brand/feature-heavens.png" alt="Heavens sky wash" width="220" />
-  &nbsp;
-  <img src="site/public/brand/feature-practice.png" alt="Quiet Practice notebook" width="220" />
-  &nbsp;
-  <img src="site/public/brand/feature-shelf.png" alt="Parchment Extra-canon shelf" width="220" />
+  <video
+    src="site/public/marketing/comfy/video/kinetic-text-16x9.mp4"
+    poster="site/public/marketing/stills/landing/hero-lamp-desk-16x9.png"
+    width="900"
+    controls
+    playsinline
+    controlslist="nodownload"
+  >
+    <a href="https://www.anointedstaff.com/#film">Watch the desk on anointedstaff.com</a>
+  </video>
 </p>
+
+<p align="center"><em>Watch the desk · 25s — one room for Scripture, study tools, and local AI.</em></p>
 
 ---
 
