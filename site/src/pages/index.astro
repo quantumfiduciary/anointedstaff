@@ -1,8 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro"
+import { downloads, github, releasePage, releases } from "../data/downloads"
 
-const github = "https://github.com/quantumfiduciary/anointedstaff"
-const releases = `${github}/releases`
 const title = "Anointed Staff — Local Scripture Study Desk"
 const description =
   "A lamp-lit local desk for Scripture beside Strong’s, Extra-canon, Heavens clocks, Notes, Gematria, and optional AI. Public-domain texts. Notes and keys stay on your machine."
@@ -104,7 +103,7 @@ const jsonLd = [
     operatingSystem: "Windows, Linux, macOS",
     description,
     url: "https://www.anointedstaff.com",
-    downloadUrl: releases,
+    downloadUrl: releasePage,
     offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
     featureList: features.map((f) => f.title),
   },
@@ -123,24 +122,27 @@ const jsonLd = [
 <BaseLayout
   title={title}
   description={description}
-  ogImage="/screenshots/desk-heavens-cast.png"
+  ogImage="/marketing/stills/landing/hero-lamp-desk-16x9.png"
   jsonLd={jsonLd}
 >
   <section class="hero" aria-label="Anointed Staff">
     <div class="hero-media" aria-hidden="true">
-      <img
-        class="hero-desk"
-        src="/screenshots/desk-heavens-cast.png"
-        alt=""
-        width="1600"
-        height="1000"
-      />
+      <video
+        class="hero-desk hero-bed"
+        src="/marketing/comfy/video/bed-lamp-desk.mp4"
+        poster="/marketing/stills/landing/hero-lamp-desk-16x9.png"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="metadata"
+      ></video>
       <img
         class="hero-atmosphere"
-        src="/brand/heavens-sky.png"
+        src="/marketing/stills/landing/heavens-clocks-16x9.png"
         alt=""
-        width="1024"
-        height="1024"
+        width="1280"
+        height="720"
       />
     </div>
     <div class="hero-copy">
@@ -156,10 +158,17 @@ const jsonLd = [
         Scripture at the center. Strong’s, Extra-canon, Heavens, Notes, Gematria, and optional AI
         open beside the chapter — on a machine that holds your notes and keys.
       </p>
-      <div class="cta-row">
-        <a class="btn btn-primary" href={releases}>Download desktop builds</a>
+      <div class="cta-row download-os" data-download-os>
+        <a class="btn btn-primary" data-os="windows" href={downloads.windows.href}>Windows</a>
+        <a class="btn btn-ghost" data-os="linux" href={downloads.linuxAppImage.href}>Linux AppImage</a>
+        <a class="btn btn-ghost" data-os="linux" href={downloads.linuxDeb.href}>Linux .deb</a>
+        <a class="btn btn-ghost" data-os="mac" href={downloads.mac.href}>macOS</a>
         <a class="btn btn-ghost" href={github}>View source</a>
       </div>
+      <p class="download-note">
+        Or browse all assets on <a href={releasePage}>Releases v0.2.0</a>. Unsigned macOS builds:
+        right-click → Open if Gatekeeper blocks.
+      </p>
     </div>
   </section>
 
@@ -178,6 +187,32 @@ const jsonLd = [
     </div>
   </section>
 
+  <section class="section muted-band reveal" id="film">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Watch</p>
+        <h2>A study desk you keep</h2>
+        <p>
+          Twenty-five seconds of kinetic type and real panes — Scripture at the center, Hebrew and
+          Strong’s beside the line, Heavens as clocks, notes that stay on your machine.
+        </p>
+      </div>
+      <figure class="kinetic-feature">
+        <video
+          controls
+          playsinline
+          preload="metadata"
+          poster="/marketing/stills/landing/hero-lamp-desk-16x9.png"
+          src="/marketing/exports/kinetic-text-ad.mp4"
+        ></video>
+        <figcaption>
+          Kinetic launch cut · 25s · 16:9 —
+          <a href="/marketing/exports/kinetic-text-ad-9x16.mp4">download 9:16</a>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
   <section class="section lore-band reveal" id="staff">
     <div class="wrap split">
       <div class="section-head">
@@ -192,8 +227,8 @@ const jsonLd = [
       </div>
       <img
         class="brand-plate"
-        src="/brand/feature-staff.png"
-        alt="Lamp-lit study desk with open book — companion atmosphere for Anointed Staff"
+        src="/marketing/stills/landing/staff-gold-mark-1x1.png"
+        alt="Carved wooden staff in warm lamp light — companion atmosphere for Anointed Staff"
         width="1024"
         height="1024"
         loading="lazy"
@@ -477,15 +512,44 @@ const jsonLd = [
         <p class="eyebrow">Keep the desk</p>
         <h2>Run Anointed Staff on your machine</h2>
         <p>
-          Take Windows (NSIS), Linux (AppImage /&nbsp;.deb), or macOS (.dmg) from GitHub Releases,
-          or clone the monorepo and run locally. This site does not host the study runtime — that
-          is intentional.
+          Pick your OS installer below, or clone the monorepo and run locally. This site does not
+          host the study runtime — that is intentional.
         </p>
       </div>
+      <div class="os-download-grid" data-download-os>
+        <a class="os-card" data-os="windows" href={downloads.windows.href}>
+          <strong>Windows</strong>
+          <span>{downloads.windows.filename}</span>
+        </a>
+        <a class="os-card" data-os="linux" href={downloads.linuxAppImage.href}>
+          <strong>Linux AppImage</strong>
+          <span>{downloads.linuxAppImage.filename}</span>
+        </a>
+        <a class="os-card" data-os="linux" href={downloads.linuxDeb.href}>
+          <strong>Linux .deb</strong>
+          <span>{downloads.linuxDeb.filename}</span>
+        </a>
+        <a class="os-card" data-os="mac" href={downloads.mac.href}>
+          <strong>macOS (Apple Silicon)</strong>
+          <span>{downloads.mac.filename}</span>
+        </a>
+      </div>
       <div class="cta-row">
-        <a class="btn btn-primary" href={releases}>Download desktop builds</a>
+        <a class="btn btn-ghost" href={releasePage}>All release assets</a>
         <a class="btn btn-ghost" href={github}>View source</a>
       </div>
     </div>
   </section>
 </BaseLayout>
+
+<script>
+  const ua = navigator.userAgent.toLowerCase()
+  let os: "windows" | "mac" | "linux" = "windows"
+  if (ua.includes("mac")) os = "mac"
+  else if (ua.includes("linux")) os = "linux"
+  for (const root of document.querySelectorAll("[data-download-os]")) {
+    root.querySelectorAll("[data-os]").forEach((el) => {
+      if (el.getAttribute("data-os") === os) el.setAttribute("data-preferred", "true")
+    })
+  }
+</script>

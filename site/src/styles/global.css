@@ -182,13 +182,18 @@ a:hover {
 }
 
 .hero-media .hero-desk,
-.hero-media .hero-atmosphere {
+.hero-media .hero-atmosphere,
+.hero-media .hero-bed {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: top center;
+}
+
+.hero-media .hero-bed {
+  filter: saturate(0.92) brightness(0.92);
 }
 
 .hero-media .hero-atmosphere {
@@ -260,6 +265,70 @@ a:hover {
   display: flex;
   flex-wrap: wrap;
   gap: 0.7rem;
+}
+
+.download-note {
+  margin: 0.85rem 0 0;
+  font-size: 0.92rem;
+  color: color-mix(in srgb, var(--night-ink) 78%, transparent);
+  max-width: 36rem;
+}
+
+.download-note a {
+  color: var(--gold-lamp);
+}
+
+.hero .download-os .btn[data-preferred="true"] {
+  background: var(--gold);
+  color: var(--on-gold);
+  border-color: transparent;
+}
+
+.os-download-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin: 1.25rem 0 1rem;
+}
+
+.os-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: 1rem 1.1rem;
+  border: 1px solid color-mix(in srgb, var(--gold) 28%, var(--hairline, #cfcdc4));
+  border-radius: 10px;
+  text-decoration: none;
+  color: inherit;
+  background: color-mix(in srgb, var(--canvas-soft, #f7f7f4) 88%, transparent);
+  transition: border-color 0.18s ease, transform 0.18s ease;
+}
+
+.os-card:hover {
+  border-color: var(--gold);
+  transform: translateY(-1px);
+}
+
+.os-card[data-preferred="true"] {
+  border-color: var(--gold);
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--gold) 45%, transparent);
+}
+
+.os-card strong {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+}
+
+.os-card span {
+  font-size: 0.82rem;
+  color: var(--muted, #807d72);
+  word-break: break-all;
+}
+
+@media (max-width: 640px) {
+  .os-download-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .section {
@@ -380,6 +449,32 @@ a:hover {
   margin: 0;
   color: var(--body);
   font-size: 0.94rem;
+}
+
+.kinetic-feature {
+  margin: 0;
+  max-width: 56rem;
+}
+
+.kinetic-feature video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: var(--radius);
+  border: 1px solid var(--hairline);
+  background: #0c0c0b;
+  box-shadow: 0 18px 40px color-mix(in srgb, #000 16%, transparent);
+}
+
+.kinetic-feature figcaption {
+  margin-top: 0.65rem;
+  font-size: 0.92rem;
+  color: var(--muted);
+}
+
+.kinetic-feature figcaption a {
+  color: var(--gold-deep);
 }
 
 .shot-grid {
@@ -656,6 +751,10 @@ a:hover {
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
+  }
+
+  .hero-media .hero-bed {
+    display: none;
   }
 
   .hero-copy,
