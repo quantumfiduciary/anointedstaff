@@ -41,6 +41,15 @@ jobs:
 
     runs-on: ${{ matrix.platform }}
 
+    # Map secrets into env so step `if:` can test them (secrets.* is invalid in if expressions).
+    env:
+      APPLE_CERTIFICATE: ${{ secrets.APPLE_CERTIFICATE }}
+      APPLE_CERTIFICATE_PASSWORD: ${{ secrets.APPLE_CERTIFICATE_PASSWORD }}
+      APPLE_SIGNING_IDENTITY: ${{ secrets.APPLE_SIGNING_IDENTITY }}
+      APPLE_ID: ${{ secrets.APPLE_ID }}
+      APPLE_PASSWORD: ${{ secrets.APPLE_PASSWORD }}
+      APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -87,7 +96,7 @@ jobs:
 
       # Unsigned / ad-hoc path: Windows, Linux, or macOS without Apple Developer secrets.
       - name: Build and upload desktop bundles
-        if: matrix.platform != 'macos-latest' || secrets.APPLE_CERTIFICATE == ''
+        if: matrix.platform != 'macos-latest' || env.APPLE_CERTIFICATE == ''
         uses: tauri-apps/tauri-action@v0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -132,16 +141,10 @@ jobs:
 
       # Signed + notarized macOS only when the certificate secret is present.
       - name: Build and upload signed macOS bundle
-        if: matrix.platform == 'macos-latest' && secrets.APPLE_CERTIFICATE != ''
+        if: matrix.platform == 'macos-latest' && env.APPLE_CERTIFICATE != ''
         uses: tauri-apps/tauri-action@v0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          APPLE_CERTIFICATE: ${{ secrets.APPLE_CERTIFICATE }}
-          APPLE_CERTIFICATE_PASSWORD: ${{ secrets.APPLE_CERTIFICATE_PASSWORD }}
-          APPLE_SIGNING_IDENTITY: ${{ secrets.APPLE_SIGNING_IDENTITY }}
-          APPLE_ID: ${{ secrets.APPLE_ID }}
-          APPLE_PASSWORD: ${{ secrets.APPLE_PASSWORD }}
-          APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
         with:
           tagName: ${{ steps.meta.outputs.tag }}
           releaseName: ${{ steps.meta.outputs.tag }}
