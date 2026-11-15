@@ -9,11 +9,11 @@
 <p align="center">
   <a href="https://www.anointedstaff.com"><img src="https://api.iconify.design/lucide/lamp-desk.svg?color=%238f5e24&height=16" alt="" /> <b>www.anointedstaff.com</b></a>
   &nbsp;·&nbsp;
-  <a href="https://github.com/quantumfiduciary/anointedstaff/releases/tag/v0.2.1"><img src="https://api.iconify.design/lucide/download.svg?color=%238f5e24&height=16" alt="" /> <b>Download v0.2.1</b></a>
+  <a href="https://github.com/quantumfiduciary/anointedstaff/releases/tag/v0.2.2"><img src="https://api.iconify.design/lucide/download.svg?color=%238f5e24&height=16" alt="" /> <b>Download v0.2.2</b></a>
 </p>
 
 <p align="center">
-  <img src="https://shieldcn.dev/badge/version-0.2.1-blue.svg" alt="version" />
+  <img src="https://shieldcn.dev/badge/version-0.2.2-blue.svg" alt="version" />
   <img src="https://shieldcn.dev/badge/platform-Windows%20%7C%20Linux%20%7C%20macOS-0078D6.svg" alt="platform" />
   <img src="https://shieldcn.dev/badge/React-Vite-61DAFB.svg?logo=react" alt="React" />
   <img src="https://shieldcn.dev/badge/desktop-Tauri%202-FFC131.svg?logo=tauri" alt="Tauri" />
@@ -124,10 +124,10 @@ Campaign line: *A study desk you keep, not a cloud Bible that keeps you.*
 
 ## Get started
 
-1. **Download** a desktop build from [v0.2.1](https://github.com/quantumfiduciary/anointedstaff/releases/tag/v0.2.1) ([install notes](docs/install-desktop.md)):
-   - <img src="https://api.iconify.design/mdi/microsoft-windows.svg?color=%230078D6&height=16" alt="" /> **[Windows](https://github.com/quantumfiduciary/anointedstaff/releases/download/v0.2.1/Anointed.Staff_0.2.1_x64-setup.exe)**
-   - <img src="https://api.iconify.design/mdi/linux.svg?color=%23FCC624&height=16" alt="" /> **[Linux AppImage](https://github.com/quantumfiduciary/anointedstaff/releases/download/v0.2.1/Anointed.Staff_0.2.1_amd64.AppImage)** (`chmod +x` then run) · [Debian .deb](https://github.com/quantumfiduciary/anointedstaff/releases/download/v0.2.1/Anointed.Staff_0.2.1_amd64.deb)
-   - <img src="https://api.iconify.design/mdi/apple.svg?color=%23555555&height=16" alt="" /> **[macOS universal](https://github.com/quantumfiduciary/anointedstaff/releases/download/v0.2.1/Anointed.Staff_0.2.1_universal.dmg)** — right-click → Open. If macOS says “damaged”: `xattr -cr "/Applications/Anointed Staff.app"`
+1. **Download** a desktop build from [v0.2.2](https://github.com/quantumfiduciary/anointedstaff/releases/tag/v0.2.2) ([install notes](docs/install-desktop.md)):
+   - <img src="https://api.iconify.design/mdi/microsoft-windows.svg?color=%230078D6&height=16" alt="" /> **[Windows](https://github.com/quantumfiduciary/anointedstaff/releases/download/v0.2.2/Anointed.Staff_0.2.2_x64-setup.exe)**
+   - <img src="https://api.iconify.design/mdi/linux.svg?color=%23FCC624&height=16" alt="" /> **[Linux AppImage](https://github.com/quantumfiduciary/anointedstaff/releases/download/v0.2.2/Anointed.Staff_0.2.2_amd64.AppImage)** (`chmod +x` then run) · [Debian .deb](https://github.com/quantumfiduciary/anointedstaff/releases/download/v0.2.2/Anointed.Staff_0.2.2_amd64.deb)
+   - <img src="https://api.iconify.design/mdi/apple.svg?color=%23555555&height=16" alt="" /> **[macOS universal](https://github.com/quantumfiduciary/anointedstaff/releases/download/v0.2.2/Anointed.Staff_0.2.2_universal.dmg)** — right-click → Open. If macOS says “damaged”: `xattr -cr "/Applications/Anointed Staff.app"`
 2. Or **run from source**:
 
 ```bash

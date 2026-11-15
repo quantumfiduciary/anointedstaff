@@ -14,7 +14,7 @@ export type ChangeEntry = {
 export const changeLog: ChangeEntry[] = [
   {
     date: "2026-11-14",
-    title: "macOS · Linux installers",
+    title: "macOS · Linux installers (v0.2.2)",
     items: [
       "macOS builds are ad-hoc signed and ship as a universal DMG (Apple Silicon and Intel).",
       "If macOS still says the app is damaged, clear quarantine with xattr — see the Release notes.",

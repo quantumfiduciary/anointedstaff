@@ -3,9 +3,12 @@
 #
 # Trigger: push a version tag, e.g. git tag v0.2.1 && git push origin v0.2.1
 #
-# macOS: ad-hoc signed by default (signingIdentity "-") so Apple Silicon does not
-# show the false "damaged / Move to Trash" dialog. Full Developer ID + notarization
-# still preferred when APPLE_* secrets are set.
+# macOS: ad-hoc signed by default (signingIdentity "-" in tauri.conf.json) so Apple
+# Silicon does not show the false "damaged / Move to Trash" dialog. Full Developer ID
+# + notarization runs only when APPLE_CERTIFICATE is a real non-empty secret.
+#
+# Important: do NOT export empty APPLE_* env vars on the unsigned path — Tauri treats
+# an empty APPLE_CERTIFICATE as a broken PKCS#12 and fails the bundle step.
 name: Desktop release
 
 on:
@@ -41,15 +44,6 @@ jobs:
 
     runs-on: ${{ matrix.platform }}
 
-    # Map secrets into env so step `if:` can test them (secrets.* is invalid in if expressions).
-    env:
-      APPLE_CERTIFICATE: ${{ secrets.APPLE_CERTIFICATE }}
-      APPLE_CERTIFICATE_PASSWORD: ${{ secrets.APPLE_CERTIFICATE_PASSWORD }}
-      APPLE_SIGNING_IDENTITY: ${{ secrets.APPLE_SIGNING_IDENTITY }}
-      APPLE_ID: ${{ secrets.APPLE_ID }}
-      APPLE_PASSWORD: ${{ secrets.APPLE_PASSWORD }}
-      APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
-
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -67,6 +61,16 @@ jobs:
             exit 1
           fi
           echo "tag=$TAG" >> "$GITHUB_OUTPUT"
+
+      - name: Detect Apple signing certificate
+        id: apple
+        shell: bash
+        run: |
+          if [ -n "${{ secrets.APPLE_CERTIFICATE }}" ]; then
+            echo "has_cert=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "has_cert=false" >> "$GITHUB_OUTPUT"
+          fi
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -94,9 +98,9 @@ jobs:
       - name: Install frontend deps
         run: npm ci
 
-      # Unsigned / ad-hoc path: Windows, Linux, or macOS without Apple Developer secrets.
+      # Ad-hoc / unsigned path. Keep APPLE_* unset so tauri.conf signingIdentity "-" is used.
       - name: Build and upload desktop bundles
-        if: matrix.platform != 'macos-latest' || env.APPLE_CERTIFICATE == ''
+        if: matrix.platform != 'macos-latest' || steps.apple.outputs.has_cert != 'true'
         uses: tauri-apps/tauri-action@v0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -116,7 +120,7 @@ jobs:
             ### macOS install
             1. Open the `.dmg` and drag **Anointed Staff** to Applications.
             2. First launch: right-click the app → **Open** (or allow it under System Settings → Privacy & Security).
-            3. If macOS still says the app is “damaged”, the quarantine flag is stuck — in Terminal:
+            3. If macOS still says the app is “damaged”, clear quarantine in Terminal:
                `xattr -cr "/Applications/Anointed Staff.app"`
                then open the app again.
 
@@ -139,12 +143,18 @@ jobs:
           prerelease: false
           args: ${{ matrix.args }}
 
-      # Signed + notarized macOS only when the certificate secret is present.
+      # Signed + notarized macOS only when a real certificate secret is present.
       - name: Build and upload signed macOS bundle
-        if: matrix.platform == 'macos-latest' && env.APPLE_CERTIFICATE != ''
+        if: matrix.platform == 'macos-latest' && steps.apple.outputs.has_cert == 'true'
         uses: tauri-apps/tauri-action@v0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          APPLE_CERTIFICATE: ${{ secrets.APPLE_CERTIFICATE }}
+          APPLE_CERTIFICATE_PASSWORD: ${{ secrets.APPLE_CERTIFICATE_PASSWORD }}
+          APPLE_SIGNING_IDENTITY: ${{ secrets.APPLE_SIGNING_IDENTITY }}
+          APPLE_ID: ${{ secrets.APPLE_ID }}
+          APPLE_PASSWORD: ${{ secrets.APPLE_PASSWORD }}
+          APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
         with:
           tagName: ${{ steps.meta.outputs.tag }}
           releaseName: ${{ steps.meta.outputs.tag }}

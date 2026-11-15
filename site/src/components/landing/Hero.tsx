@@ -111,7 +111,7 @@ export function Hero({ windowsHref, linuxHref, macHref, githubHref, releasePage 
           <p className="download-note mt-3 text-sm text-[color-mix(in_srgb,var(--night-ink)_75%,transparent)]">
             Or browse all assets on{" "}
             <a className="text-[var(--gold-lamp)] underline-offset-2 hover:underline" href={releasePage}>
-              Releases v0.2.1
+              Releases v0.2.2
             </a>
             . macOS: right-click → Open on first launch. If it says “damaged”, run{" "}
             <code className="text-[0.85em]">xattr -cr "/Applications/Anointed Staff.app"</code>
