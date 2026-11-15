@@ -13,6 +13,24 @@ export type ChangeEntry = {
  */
 export const changeLog: ChangeEntry[] = [
   {
+    date: "2026-11-14",
+    title: "macOS · Linux installers",
+    items: [
+      "macOS builds are ad-hoc signed and ship as a universal DMG (Apple Silicon and Intel).",
+      "If macOS still says the app is damaged, clear quarantine with xattr — see the Release notes.",
+      "Linux AppImage needs chmod +x; .deb needs WebKitGTK 4.1.",
+    ],
+  },
+  {
+    date: "2026-11-13",
+    title: "Phone desk · share sheet",
+    items: [
+      "Narrow phone layout uses larger taps and safe-area insets; the dock stays the study switcher.",
+      "On phone, Settings guides you toward cloud AI and remote search; exports can use the share sheet.",
+      "The drawing board asks before loading on small screens so notebooks stay light.",
+    ],
+  },
+  {
     date: "2026-11-11",
     title: "Desktop builds · Windows · Linux · macOS",
     items: [

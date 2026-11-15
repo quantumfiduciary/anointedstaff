@@ -99,18 +99,24 @@ Installers attach to **GitHub Releases** only. Do not commit `release/`, AABs, o
 |----|------|---------|--------|
 | Windows | This machine / `windows-latest` | Rust stable, MSVC, Node 22, WebView2 | NSIS `.exe` |
 | Linux | Linux host / `ubuntu-22.04` | Rust stable, Node 22, `libwebkit2gtk-4.1-dev`, `libayatana-appindicator3-dev`, `librsvg2-dev`, `patchelf` | AppImage + `.deb` |
-| macOS | Mac host / `macos-latest` | Rust stable, Node 22, Xcode CLT | `.dmg` (`aarch64-apple-darwin` first) |
+| macOS | Mac host / `macos-latest` | Rust stable, Node 22, Xcode CLT | universal `.dmg` (`universal-apple-darwin`, ad-hoc `signingIdentity: "-"`) |
 
 macOS and iOS cannot be cross-compiled from Windows. Use a Mac or GitHub `macos-latest`.
 
-### Tag a multi-OS release
+### Release loop (tag → CI → verify → Pages)
 
-```bash
-git tag v0.2.0
-git push origin v0.2.0
-```
-
-The desktop-release workflow builds Windows, Linux, and macOS and uploads artifacts to that tag’s Release. Marketing CTAs stay “Download for Windows” until a non-Windows asset is actually on the Release — then update the root README and `site/` download copy.
+1. Bump versions in root `package.json`, `src-tauri/tauri.conf.json`, `src-tauri/Cargo.toml`, and `site/package.json` together.
+2. Keep `src/changelog.ts` brief and **reader-only** (what they can do or see).
+3. Update download filenames in [`site/src/data/downloads.ts`](../site/src/data/downloads.ts), root README OS links, and any landing copy that hard-codes the tag.
+4. Commit, then tag and push:
+   ```bash
+   git tag v0.2.1
+   git push origin v0.2.1
+   ```
+5. Wait for [`.github/workflows/desktop-release.yml`](../.github/workflows/desktop-release.yml) on Windows / Ubuntu / macOS. Confirm Release assets match `site/src/data/downloads.ts` names (expect `*_universal.dmg` on macOS).
+6. Smoke: install Windows NSIS + one Linux artifact; open a chapter offline; open Settings → About → What’s new.
+7. Redeploy marketing: `cd site && npm run build` then `npx wrangler pages deploy site/dist --project-name=anointedstaff` (see [deploy-github-pages.md](deploy-github-pages.md)).
+8. Optional metric: GitHub Release download counts + Cloudflare analytics on CTA clicks — no in-app analytics SDK.
 
 ### Signing secrets (GitHub Actions)
 
@@ -124,20 +130,40 @@ The desktop-release workflow builds Windows, Linux, and macOS and uploads artifa
 | `APPLE_PASSWORD` | macOS notarization | App-specific password |
 | `APPLE_TEAM_ID` | macOS notarization | 10-character team id |
 
-Unsigned macOS `.dmg` still builds and uploads; Gatekeeper will require right-click → Open until notarization secrets are set. Apple Developer Program is $99/year.
+**Never set empty Apple secrets.** The workflow only injects `APPLE_*` env when `APPLE_CERTIFICATE` is non-empty. Empty strings break codesign.
 
-### Mobile (deferred)
+#### Apple notarization checklist (when you have a Developer ID)
 
-Android and iOS stay **out of CI** until a phone layout exists. The desk is a multi-pane 1280-wide room; store builds before a stacked rail/chapter layout will fail review and daily use. Keep one React desk — do not fork React Native or Flutter.
+1. Enroll in Apple Developer Program; create a **Developer ID Application** certificate; export `.p12`.
+2. Create an app-specific password for notarization; note Team ID.
+3. Base64 the `.p12` (no line breaks) into `APPLE_CERTIFICATE`.
+4. Set all six Apple secrets in the repo; leave none blank.
+5. Retag or `workflow_dispatch` so the signed macOS job runs; verify Gatekeeper opens the `.dmg` without right-click → Open.
+6. Update landing Gatekeeper note once notarized builds ship.
 
-When ready (separate PRs):
+Until notarization lands, macOS builds use **ad-hoc signing** (`signingIdentity: "-"`) so Apple Silicon does not show the false “damaged / Move to Trash” dialog. Users may still need right-click → Open, or `xattr -cr` if quarantine sticks — see [install-desktop.md](install-desktop.md). Apple Developer Program is $99/year. Windows code signing (SmartScreen) is optional and lower urgency.
 
-1. **Phone layout** — rail, panes, and chapter stack under ~430px; verify notes/`localStorage` and Practice audio.
-2. **Android** — `npm run tauri android init` (same id family `app.anointedstaff.desk`), JDK 17, Android SDK + NDK; ship an **AAB** to Play internal testing first.
-3. **iOS** — same Tauri mobile project on `macos-latest` + Xcode; Apple Developer Program, provisioning, privacy nutrition labels (local notes; optional network for AI/search); **TestFlight** before App Store.
-4. Watch AAB/IPA size (`public/` scripture + Practice audio). If stores reject size, make Practice audio optional later — not before the first desktop Linux/macOS ports.
+### Mobile
 
-Play / Apple store secrets (later): `ANDROID_KEYSTORE_*`, Play service account JSON, iOS provisioning profile + distribution cert. Still never commit binaries; still never host them on Pages.
+Full runbook: **[mobile.md](mobile.md)**.
+
+Android and iOS stay **out of CI** until the phone/narrow layout gate in that doc is checked. Keep one React desk — do not fork React Native or Flutter.
+
+Shipped in the desk already:
+
+- Phone CSS (~430px) + safe areas / tap targets in `src/styles.css`
+- `src/mobile.ts` runtime helpers; `src/share.ts` share-sheet exports
+- Settings hides desktop-local Ollama/LM Studio on phone; SearXNG / STT callouts; Excalidraw opt-in on small screens
+- npm scripts: `tauri:android:*`, `tauri:ios:*`
+
+When generating native projects (separate commits):
+
+1. Confirm layout gate in [mobile.md](mobile.md).
+2. **Android** — `npm run tauri:android:init` (id family `app.anointedstaff.desk`), JDK 17, SDK + NDK; Play internal **AAB** first.
+3. **iOS** — `npm run tauri:ios:init` on Mac / `macos-latest` + Xcode; TestFlight before App Store.
+4. Watch AAB/IPA size (`public/`). If stores reject size, make Practice audio optional later.
+
+Play / Apple secrets (later): `ANDROID_KEYSTORE_*`, Play service account JSON, iOS provisioning + distribution cert. Never commit binaries; never host them on Pages.
 
 ## Security (summary)
 
@@ -155,4 +181,4 @@ Local-first desk; browser/desktop profile is the trust boundary.
 3. What’s New (`src/changelog.ts`) is **brief user notice only** — what they can do or see. Never list ingest, rights gates, Gutenberg ids, packaging, CSP, or other development tracking there (use git + this doc).
 4. Update Guide copy in `src/guide.ts` when a surface changes for users.
 5. Keep the **root README** product-facing — put engineering notes here, not in the GitHub landing page.
-6. Marketing/lore edits: update `site/` and [marketing.md](marketing.md). Touch What’s New only if readers need a short product notice (not a deploy diary).
+6. Marketing/lore edits: update `site/` and [marketing.md](marketing.md). Voice for posts/ads: [voice-profile.md](voice-profile.md). Touch What’s New only if readers need a short product notice (not a deploy diary).

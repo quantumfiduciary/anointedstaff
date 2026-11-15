@@ -14,9 +14,9 @@ type Props = {
 }
 
 const tiles = [
-  { os: "windows" as const, label: "Windows", Icon: WindowsIcon, detail: "Desktop installer" },
-  { os: "linux" as const, label: "Linux", Icon: LinuxIcon, detail: "AppImage" },
-  { os: "mac" as const, label: "macOS", Icon: AppleIcon, detail: "Apple Silicon" },
+  { os: "windows" as const, label: "Windows", Icon: WindowsIcon, detail: "NSIS setup" },
+  { os: "linux" as const, label: "Linux", Icon: LinuxIcon, detail: "AppImage · chmod +x" },
+  { os: "mac" as const, label: "macOS", Icon: AppleIcon, detail: "Universal DMG" },
 ]
 
 export function DownloadOs({
@@ -84,6 +84,8 @@ export function DownloadOs({
           <a className="text-[var(--gold-lamp)] underline-offset-2 hover:underline" href={linuxDebHref}>
             Download Linux .deb
           </a>
+          . macOS first launch: right-click → Open. If it says “damaged”, run{" "}
+          <code className="text-[0.85em]">xattr -cr "/Applications/Anointed Staff.app"</code>.
         </p>
 
         <div className="cta-row mt-6 flex flex-wrap gap-3">

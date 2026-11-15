@@ -1,13 +1,11 @@
 # Build desktop installers and attach them to the GitHub Release for the pushed tag.
 # Cloudflare Pages stays marketing-only — do not upload installers there.
 #
-# Trigger: push a version tag, e.g. git tag v0.2.0 && git push origin v0.2.0
+# Trigger: push a version tag, e.g. git tag v0.2.1 && git push origin v0.2.1
 #
-# macOS builds unsigned by default (Gatekeeper: right-click Open).
-# When Apple Developer secrets exist, add them to the build step env:
-#   APPLE_CERTIFICATE, APPLE_CERTIFICATE_PASSWORD, APPLE_SIGNING_IDENTITY,
-#   APPLE_ID, APPLE_PASSWORD, APPLE_TEAM_ID
-# Do not pass empty APPLE_* values — empty strings make codesign fail.
+# macOS: ad-hoc signed by default (signingIdentity "-") so Apple Silicon does not
+# show the false "damaged / Move to Trash" dialog. Full Developer ID + notarization
+# still preferred when APPLE_* secrets are set.
 name: Desktop release
 
 on:
@@ -15,6 +13,11 @@ on:
     tags:
       - "v*"
   workflow_dispatch:
+    inputs:
+      tag:
+        description: "Existing version tag to rebuild (e.g. v0.2.1). Leave empty to use the pushed tag."
+        required: false
+        default: ""
 
 permissions:
   contents: write
@@ -34,13 +37,27 @@ jobs:
           - platform: ubuntu-22.04
             args: ""
           - platform: macos-latest
-            args: "--target aarch64-apple-darwin"
+            args: "--target universal-apple-darwin"
 
     runs-on: ${{ matrix.platform }}
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Resolve release tag
+        id: meta
+        shell: bash
+        run: |
+          if [ -n "${{ github.event.inputs.tag }}" ]; then
+            TAG="${{ github.event.inputs.tag }}"
+          elif [[ "${{ github.ref }}" == refs/tags/* ]]; then
+            TAG="${{ github.ref_name }}"
+          else
+            echo "No tag on workflow_dispatch and not a tag push." >&2
+            exit 1
+          fi
+          echo "tag=$TAG" >> "$GITHUB_OUTPUT"
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -51,7 +68,7 @@ jobs:
       - name: Install Rust stable
         uses: dtolnay/rust-toolchain@stable
         with:
-          targets: ${{ matrix.platform == 'macos-latest' && 'aarch64-apple-darwin' || '' }}
+          targets: ${{ matrix.platform == 'macos-latest' && 'aarch64-apple-darwin,x86_64-apple-darwin' || '' }}
 
       - name: Linux WebKit and AppImage deps
         if: matrix.platform == 'ubuntu-22.04'
@@ -62,27 +79,85 @@ jobs:
             libayatana-appindicator3-dev \
             librsvg2-dev \
             patchelf \
-            libssl-dev
+            libssl-dev \
+            file
 
       - name: Install frontend deps
         run: npm ci
 
+      # Unsigned / ad-hoc path: Windows, Linux, or macOS without Apple Developer secrets.
       - name: Build and upload desktop bundles
+        if: matrix.platform != 'macos-latest' || secrets.APPLE_CERTIFICATE == ''
         uses: tauri-apps/tauri-action@v0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tagName: ${{ github.ref_name }}
-          releaseName: ${{ github.ref_name }}
+          tagName: ${{ steps.meta.outputs.tag }}
+          releaseName: ${{ steps.meta.outputs.tag }}
           releaseBody: |
             Desktop installers for Anointed Staff.
 
             - **Windows:** NSIS setup (`.exe`)
-            - **Linux:** AppImage + `.deb`
-            - **macOS:** `.dmg` (Apple Silicon)
+            - **Linux:** AppImage + `.deb` (amd64)
+            - **macOS:** universal `.dmg` (Apple Silicon + Intel), ad-hoc signed
 
             Marketing site: https://www.anointedstaff.com  
             Installers live on this Release only — not on Cloudflare Pages.
+
+            ### macOS install
+            1. Open the `.dmg` and drag **Anointed Staff** to Applications.
+            2. First launch: right-click the app → **Open** (or allow it under System Settings → Privacy & Security).
+            3. If macOS still says the app is “damaged”, the quarantine flag is stuck — in Terminal:
+               `xattr -cr "/Applications/Anointed Staff.app"`
+               then open the app again.
+
+            Full Developer ID + notarization removes those steps when Apple secrets are configured.
+
+            ### Linux install
+            **AppImage**
+            ```
+            chmod +x Anointed.Staff_*_amd64.AppImage
+            ./Anointed.Staff_*_amd64.AppImage
+            ```
+            On Ubuntu 24.04+, install FUSE if needed: `sudo apt install libfuse2t64` (or `libfuse2`).
+
+            **Debian / Ubuntu `.deb`**
+            ```
+            sudo apt install ./Anointed.Staff_*_amd64.deb
+            ```
+            Runtime needs WebKitGTK 4.1 (`libwebkit2gtk-4.1-0` on recent Ubuntu/Debian).
+          releaseDraft: false
+          prerelease: false
+          args: ${{ matrix.args }}
+
+      # Signed + notarized macOS only when the certificate secret is present.
+      - name: Build and upload signed macOS bundle
+        if: matrix.platform == 'macos-latest' && secrets.APPLE_CERTIFICATE != ''
+        uses: tauri-apps/tauri-action@v0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          APPLE_CERTIFICATE: ${{ secrets.APPLE_CERTIFICATE }}
+          APPLE_CERTIFICATE_PASSWORD: ${{ secrets.APPLE_CERTIFICATE_PASSWORD }}
+          APPLE_SIGNING_IDENTITY: ${{ secrets.APPLE_SIGNING_IDENTITY }}
+          APPLE_ID: ${{ secrets.APPLE_ID }}
+          APPLE_PASSWORD: ${{ secrets.APPLE_PASSWORD }}
+          APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
+        with:
+          tagName: ${{ steps.meta.outputs.tag }}
+          releaseName: ${{ steps.meta.outputs.tag }}
+          releaseBody: |
+            Desktop installers for Anointed Staff.
+
+            - **Windows:** NSIS setup (`.exe`)
+            - **Linux:** AppImage + `.deb` (amd64)
+            - **macOS:** notarized universal `.dmg` (Apple Silicon + Intel)
+
+            Marketing site: https://www.anointedstaff.com  
+            Installers live on this Release only — not on Cloudflare Pages.
+
+            ### Linux install
+            **AppImage:** `chmod +x` then run. Ubuntu 24.04+ may need `libfuse2t64`.
+            **`.deb`:** `sudo apt install ./Anointed.Staff_*_amd64.deb` (needs WebKitGTK 4.1).
           releaseDraft: false
           prerelease: false
           args: ${{ matrix.args }}

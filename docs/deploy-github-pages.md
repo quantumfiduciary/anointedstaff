@@ -8,7 +8,9 @@ Public monorepo + Astro marketing in `site/`. Application source is Apache-2.0; 
 |------|--------|
 | Public GitHub repo | https://github.com/quantumfiduciary/anointedstaff |
 | Tag + Release `v0.1.0` + NSIS | https://github.com/quantumfiduciary/anointedstaff/releases/tag/v0.1.0 |
-| Tag + Release `v0.2.0` + desktop CI | https://github.com/quantumfiduciary/anointedstaff/releases/tag/v0.2.0 (Windows NSIS, Linux AppImage/deb, macOS dmg via `desktop-release.yml`) |
+| Tag + Release `v0.2.1` + desktop CI | https://github.com/quantumfiduciary/anointedstaff/releases/tag/v0.2.1 — assets: setup.exe, AppImage/deb, `universal.dmg` |
+| OS download CTAs | Landing + README point at exact filenames via `site/src/data/downloads.ts` |
+| macOS signing | Ad-hoc `signingIdentity: "-"` until Apple notarization secrets are set |
 | Cloudflare Pages project `anointedstaff` | Live |
 | Marketing deploy | https://www.anointedstaff.com |
 | Custom domain on Pages | `anointedstaff.com` (+ www) registered on the project |
@@ -48,8 +50,8 @@ Do **not** commit `release/`, AABs, or IPAs. Do **not** upload installers to Clo
 Preferred path: push a version tag; [`.github/workflows/desktop-release.yml`](../.github/workflows/desktop-release.yml) builds Windows NSIS, Linux AppImage + `.deb`, and macOS `.dmg`, then attaches them to the GitHub Release.
 
 ```bash
-git tag v0.2.0
-git push origin v0.2.0
+git tag v0.2.1
+git push origin v0.2.1
 ```
 
 Local Windows-only fallback:
@@ -59,7 +61,7 @@ npm run tauri:build   # requires Rust
 # Attach the NSIS under src-tauri/target/release/bundle/nsis/ to the Release
 ```
 
-Per-OS toolchains and Apple signing secrets: [developer.md](developer.md). CTAs in `site/` and the root README stay Windows-first until Linux/macOS assets exist on the Release.
+Per-OS toolchains, release loop, and Apple signing secrets: [developer.md](developer.md). After each tag, refresh `site/src/data/downloads.ts` + README if filenames change, then redeploy Pages.
 
 ## Site internals
 
